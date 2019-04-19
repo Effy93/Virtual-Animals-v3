@@ -1,0 +1,111 @@
+{% extends 'private-space/layout.html.twig' %}
+
+{% block title %} 
+  {{parent()}} 
+{% endblock %}
+
+{% block body %} 
+{{parent()}}
+<main class="container-main">
+
+    {# Container flex pour les infos et les jeux #}
+       <div class="container-row-reverse">
+        {# OPEN user info section #}
+            <section class="container-user-infos">
+              <h1> Bienvenue {{ app.user.nom }} </h1>
+              <img class="glowing-img" src="/images/panda-feroce2.png" width="100px" heigth="100px" alt="avatar utilisateur" />
+              <p> <span style=color:red;> {{ app.user.argent}} </span> Ruby </p>
+              {# <a href="{{path('delete_comment', {'id_article':article.id,'id_comment':comment.id} ) }}"></a> #}
+              {# ANIMATE BORDER BOX CONTAINER #}
+              <div class="animate-box">
+              {# ANIMATE BORDER BOX => display Bestiary button #}
+                <a href="{{path('bestiary')}}" >
+                  <div class="animate-box-hidden">
+                  <p> <span style=color:orange;> [nb] </span> monstres </p>
+                  <button>
+                    <span>
+                    <span>
+                    <span data-attr-span="Bestiaire"> Bestiaire
+                    </span>
+                    </span>
+                    </span>
+                  </button>
+                  </div>
+                </a>
+                </div>
+                {# ANIMATE BORDER BOX => display Inventory button #}
+                <div class="animate-box">
+                  <a href="{{path('inventory')}}" >
+                    <div class="animate-box-hidden">
+                      <p> <span style=color:orange;> [nb] </span> accessoires </p>
+                      <button>
+                        <span>
+                        <span>
+                        <span data-attr-span="Inventaire"> Inventaire
+                        </span>
+                        </span>
+                        </span>
+                      </button>
+                    </div>
+                    </a>
+                  </div>
+            {# CLOSE user info section #}
+            </section>
+
+            {# OUVERTURE CONTAINER DES JEUX #}
+            <section class="container-games">
+    
+            {# HEAD SECTION JS: cliquable pour afficher le 1er jeux  #}
+            <h1 id="'.self::TO_CLICK.'"> Jouer à Pierre-Papier-Ciseaux ?</h1>
+            <section class="container-head-PPC">
+            {# ARTICLE hidden jeuPPC pour JS #}
+            {# hidden a remettre si event click #}
+            <article id="'.self::TO_HIDDEN.'">
+            <div id="'.self::TO_RESTORE.'" class="head-PPC">
+            <h2>Les règles sont simple, choisissez entre Pierre Papier et Ciseaux.</h2>
+            <h4>Pour chaque partie gagnée, vous obtenez un ruby!</h4>
+            <p><b>Bonne chance :D</b></p>
+            </div>
+            {# FORMULAIRE : corp du jeux => choix  #}
+            <form method="post" action="">
+            <div class="container-body-PPC">
+            {# Div pour choix 1 #}
+            <div>
+            <label id="choixUser" for="pierre"><img src="/images/pierre.png" alt="représente le signe de la pierre" width="100px" height="100px" /></label>
+            <input type="radio" name="choix" id="pierre" value="1" required />
+            </div>
+            {# Div pour choix 2 #}
+            <div>
+            <label id="choixUser" for="papier"><img src="/images/papier.png" alt="représente le signe de la feuille" width="100px" height="100px" /></label>
+            <input type="radio" name="choix" id="papier" value="2" required />
+            </div>
+            {# Div pour choix 3 #}
+            <div>
+            <label id="choixUser" for="ciseaux"><img src="/images/ciseaux.png" alt="représente le signe ciseaux" width="100px" height="100px" /></label>
+            <input type="radio" name="choix" id="ciseaux" value="3" required />
+            </div>
+            {# CLOSE container-body du jeux #}
+            </div>
+            {# submit choix #}
+            <input type="submit" name="submit_choix" value="Valider le Choix" />
+            {# CLOSE formulaire / article caché (container-body du jeux) / section (header cliquable) #}
+            </form>
+            </article>
+            </section>
+    
+            {# CLOSE CONTAINER DES JEUX  #}
+          </section>
+            {# CLOSE CONTAINER-ROW #}
+            </div>
+    
+     
+
+        </main>
+
+
+
+
+
+
+
+{% endblock %}

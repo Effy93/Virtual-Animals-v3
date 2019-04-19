@@ -1,0 +1,37 @@
+{% extends 'private-space/layout.html.twig' %}
+
+{% block title %} {{parent()}} {% endblock %}
+
+{% block body %}
+{{parent()}} 
+
+
+
+
+<section class="container-bestiary">
+    <h2> Bestiaire </h2>
+    <div class="container-row-reverse">
+
+    {% for monstre in app.user.monstre %} 
+        <article class="container-monster">
+            <h2> {{ monstre.nom }}</h2> 
+             {# ECHO STATS DES MONSTRES dans le pop-up #}
+             <p> Classe : {{ monstre.classe.nom }} <span> 
+                    {{ monstre.classe.pv }} PV </br>
+                    {{ monstre.classe.mp }} MP </br> 
+                Force : {{ monstre.classe.puissance }} </br> 
+                Defense : {{ monstre.classe.defense }}</br> 
+                Vitesse : {{ monstre.classe.vitesse }}
+                </span></p>
+            <img src={{ monstre.photo }} class="glowing-img" width="150px" height="150px" alt="image du monstre"/>
+        </article>    
+    {% endfor %}
+
+    </div>
+</section>
+{% endblock %}
+
+
+       
+
+
