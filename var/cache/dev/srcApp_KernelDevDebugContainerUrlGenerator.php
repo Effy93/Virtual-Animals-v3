@@ -34,6 +34,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
         'home' => [[], ['_controller' => 'App\\Controller\\HomeController::displayHome'], [], [['text', '/home/']], [], []],
         'shop' => [[], ['_controller' => 'App\\Controller\\HomeController::displayShop'], [], [['text', '/home/shop']], [], []],
+        'buy_monster' => [['id'], ['_controller' => 'App\\Controller\\HomeController::buyMonster'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id', true], ['text', '/home/shop/buy']], [], []],
         'home-private' => [[], ['_controller' => 'App\\Controller\\PrivateSpaceController::displayHome'], [], [['text', '/private/home']], [], []],
         'bestiary' => [[], ['_controller' => 'App\\Controller\\PrivateSpaceController::displayBestiary'], [], [['text', '/private/bestiary']], [], []],
         'inventory' => [[], ['_controller' => 'App\\Controller\\PrivateSpaceController::displayInventory'], [], [['text', '/private/inventory']], [], []],

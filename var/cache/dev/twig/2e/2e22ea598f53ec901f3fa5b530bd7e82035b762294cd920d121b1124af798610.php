@@ -100,14 +100,15 @@ class __TwigTemplate_b2ecd6ef9da1a3b21aeda9e49a04f5f936f62d31722b94d438596bff3d9
         }
         // line 15
         echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez vous</h1>
-    <label for=\"inputEmail\" class=\"sr-only\">Email</label>
-    <input type=\"email\" value=\"";
+    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez-vous</h1>
+    ";
         // line 18
+        echo "    <input type=\"email\" value=\"";
         echo twig_escape_filter($this->env, (isset($context["last_username"]) || array_key_exists("last_username", $context) ? $context["last_username"] : (function () { throw new RuntimeError('Variable "last_username" does not exist.', 18, $this->source); })()), "html", null, true);
         echo "\" name=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email\" required autofocus>
-    <label for=\"inputPassword\" class=\"sr-only\"> Mot de passe</label>
-    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe\" required>
+    ";
+        // line 20
+        echo "    <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
            value=\"";
@@ -116,9 +117,17 @@ class __TwigTemplate_b2ecd6ef9da1a3b21aeda9e49a04f5f936f62d31722b94d438596bff3d9
         echo "\"
     >
 
-    ";
-        // line 36
+    
+        ";
+        // line 29
         echo "
+        <div class=\"checkbox mb-3\">
+            <label>
+                <input type=\"checkbox\" name=\"_remember_me\"> Se souvenir de moi
+            </label>
+        </div>
+
+
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Se connecter
     </button>
@@ -146,7 +155,7 @@ class __TwigTemplate_b2ecd6ef9da1a3b21aeda9e49a04f5f936f62d31722b94d438596bff3d9
 
     public function getDebugInfo()
     {
-        return array (  121 => 36,  115 => 23,  107 => 18,  102 => 15,  96 => 13,  94 => 12,  84 => 5,  75 => 4,  57 => 3,  27 => 1,);
+        return array (  123 => 29,  116 => 23,  111 => 20,  106 => 18,  102 => 15,  96 => 13,  94 => 12,  84 => 5,  75 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -166,26 +175,26 @@ class __TwigTemplate_b2ecd6ef9da1a3b21aeda9e49a04f5f936f62d31722b94d438596bff3d9
         <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez vous</h1>
-    <label for=\"inputEmail\" class=\"sr-only\">Email</label>
+    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez-vous</h1>
+    {# <label for=\"inputEmail\" class=\"sr-only\">Email</label> #}
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email\" required autofocus>
-    <label for=\"inputPassword\" class=\"sr-only\"> Mot de passe</label>
+    {# <label for=\"inputPassword\" class=\"sr-only\"> Mot de passe</label> #}
     <input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" placeholder=\"Mot de passe\" required>
 
     <input type=\"hidden\" name=\"_csrf_token\"
            value=\"{{ csrf_token('authenticate') }}\"
     >
 
-    {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+    
+        {# Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+        See https://symfony.com/doc/current/security/remember_me.html #}
 
         <div class=\"checkbox mb-3\">
             <label>
-                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
+                <input type=\"checkbox\" name=\"_remember_me\"> Se souvenir de moi
             </label>
         </div>
-    #}
+
 
     <button class=\"btn btn-lg btn-primary\" type=\"submit\">
         Se connecter
@@ -194,6 +203,6 @@ class __TwigTemplate_b2ecd6ef9da1a3b21aeda9e49a04f5f936f62d31722b94d438596bff3d9
 </section>
 </div>
 {% endblock %}
-", "security/login.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/Virtual-Animals/templates/security/login.html.twig");
+", "security/login.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/security/login.html.twig");
     }
 }

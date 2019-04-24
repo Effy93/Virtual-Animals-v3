@@ -1,23 +1,29 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscription{% endblock %}
+{% block title %} Inscription {% endblock %}
 
 {% block body %}
     {{parent()}}
-    <h1>S'inscrire</h1>
+    <div class="container-row">
+              
+        {{ form_start(registrationForm) }}
+            <h1 class="h3 mb-3 font-weight-normal"> Inscrivez-vous </h1>
+            {# {{ form_label(registrationForm.nom) }} #}
+            {{ form_widget(registrationForm.nom, {'attr': {'placeholder': 'nom'}} ) }}
+            {{ form_errors(registrationForm.nom) }}
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword) }}
+            {# {{ form_label(registrationForm.email) }} #}
+            {{ form_widget(registrationForm.email, {'attr': {'placeholder': 'email'}} ) }}
+            {{ form_errors(registrationForm.email) }}
 
-        <button class="btn">S'inscrire</button>
-    {{ form_end(registrationForm) }}
+            {# {{ form_label(registrationForm.password) }} #}
+            {{ form_widget(registrationForm.password, {'attr': {'placeholder': 'mot de passe'}} ) }}
+            {{ form_errors(registrationForm.password) }}
 
+            {{ form_widget(registrationForm.termsAccepted) }} J'accepte les conditions d'utilisation.
+            <button class="btn btn-lg btn-primary"> S'inscrire </button>
+          
+        {{ form_end(registrationForm) }}
+    </div>
 
-
-
-
-
-
-    
 {% endblock %}

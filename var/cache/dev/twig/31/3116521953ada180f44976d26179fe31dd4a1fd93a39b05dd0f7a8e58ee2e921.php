@@ -100,10 +100,10 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
         foreach ($context['_seq'] as $context["_key"] => $context["monstre"]) {
             echo " 
         <article class=\"container-monster\">
-            <h2> ";
+            <h5> ";
             // line 17
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "nom", []), "html", null, true);
-            echo "</h2> 
+            echo "</h5> 
              ";
             // line 19
             echo "             <p> Classe : ";
@@ -186,7 +186,7 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
 
     {% for monstre in app.user.monstre %} 
         <article class=\"container-monster\">
-            <h2> {{ monstre.nom }}</h2> 
+            <h5> {{ monstre.nom }}</h5> 
              {# ECHO STATS DES MONSTRES dans le pop-up #}
              <p> Classe : {{ monstre.classe.nom }} <span> 
                     {{ monstre.classe.pv }} PV </br>
@@ -207,6 +207,6 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
        
 
 
-", "private-space/bestiary.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/Virtual-Animals/templates/private-space/bestiary.html.twig");
+", "private-space/bestiary.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/bestiary.html.twig");
     }
 }

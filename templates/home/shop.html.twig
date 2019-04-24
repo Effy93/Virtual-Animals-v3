@@ -2,6 +2,48 @@
 {% block title %} {{parent()}} {% endblock %}
 
 {% block body %}
-{{parent()}} 
-<h1> Boutique &hearts; </h1>
+    {{parent()}} 
+    {# <h1> Boutique &hearts; </h1> #}
+    {% for message in app.session.flashBag.get('success') %}
+        <p> {{ message }}</p>
+    {% endfor %}
+    <section class="container-bestiary">
+        <h2> Boutique </h2>
+        <div class="container-row-reverse">
+            {% for monstre in monstres %} 
+                <article class="container-monster">
+                    <h5> {{ monstre.nom }}</h5> 
+                    <p style=color:orange;> {{monstre.description}} </p>
+                    {# ECHO STATS DES MONSTRES dans le pop-up #}
+                    <p> Classe : {{ monstre.classe.nom }} <span> 
+                            {{ monstre.classe.pv }} PV </br>
+                            {{ monstre.classe.mp }} MP </br> 
+                        Force : {{ monstre.classe.puissance }} </br> 
+                        Defense : {{ monstre.classe.defense }}</br> 
+                        Vitesse : {{ monstre.classe.vitesse }}
+                        </span>
+                    </p>
+                    <img src={{ monstre.photo }} class="glowing-img" width="150px" height="150px" alt="image du monstre"/>
+                    
+                    <div class="animate-box">
+                    {# ANIMATE BORDER BOX => display Bestiary button #}
+                        <a href="{{ path('buy_monster', {'id':monstre.id}) }}">  
+                            <div class="animate-box-hidden">
+                                <p style=color:orange;>  {{ monstre.tarif.prix }} ruby </p>
+                                <button>
+                                    <span>
+                                        <span>
+                                            <span  data-attr-span="Acheter">  {{ monstre.tarif.prix }} ruby 
+                                            </span>
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </article> 
+            {% endfor %}
+        
+            </div>
+        </section>
 {% endblock %}

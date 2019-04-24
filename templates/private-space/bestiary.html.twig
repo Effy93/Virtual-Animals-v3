@@ -14,7 +14,7 @@
 
     {% for monstre in app.user.monstre %} 
         <article class="container-monster">
-            <h2> {{ monstre.nom }}</h2> 
+            <h5> {{ monstre.nom }}</h5> 
              {# ECHO STATS DES MONSTRES dans le pop-up #}
              <p> Classe : {{ monstre.classe.nom }} <span> 
                     {{ monstre.classe.pv }} PV </br>

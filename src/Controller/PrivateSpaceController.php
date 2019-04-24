@@ -11,7 +11,7 @@ use App\Entity\User;
 use App\Entity\Monstre;
 
 // Utilisation du bundle pour les roles (connexion)
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\isGranted;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 /**
  * @Route ("/private")
@@ -21,7 +21,7 @@ class PrivateSpaceController extends AbstractController
 {
     /**
      * @Route("/home" , name="home-private")
-     * @isGranted("ROLE_USER")
+     * @IsGranted("ROLE_USER")
      */
     public function displayHome()
     {
