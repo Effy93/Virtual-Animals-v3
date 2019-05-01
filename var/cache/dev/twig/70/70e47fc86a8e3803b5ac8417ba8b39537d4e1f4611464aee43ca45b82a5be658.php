@@ -91,6 +91,7 @@ class __TwigTemplate_1fa6229bca2999d11239a57da86eb47557d801e8aabcd8dac26c0debb6c
 <header>
     <h1> Bienvenue dans Virtual Animals </h1>
 </header>
+<main>
 
 
 ";
@@ -129,6 +130,7 @@ class __TwigTemplate_1fa6229bca2999d11239a57da86eb47557d801e8aabcd8dac26c0debb6c
 <header>
     <h1> Bienvenue dans Virtual Animals </h1>
 </header>
+<main>
 
 
 {% endblock %}", "home/layout.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/home/layout.html.twig");

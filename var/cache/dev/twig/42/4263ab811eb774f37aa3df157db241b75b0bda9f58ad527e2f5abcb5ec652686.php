@@ -105,7 +105,7 @@ class __TwigTemplate_4949c08dbc65b58bef52c5bf376d343da1cc7cdbef0b264cdb113faaf95
             echo "');
     document.location.href=\"";
             // line 15
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_ppc");
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ppc");
             echo "\"
 </script>
 
@@ -156,7 +156,7 @@ class __TwigTemplate_4949c08dbc65b58bef52c5bf376d343da1cc7cdbef0b264cdb113faaf95
 
 <script> 
     alert('{{message}}');
-    document.location.href=\"{{ path('home_ppc') }}\"
+    document.location.href=\"{{ path('ppc') }}\"
 </script>
 
 {% endfor %}

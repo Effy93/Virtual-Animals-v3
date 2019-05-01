@@ -15,9 +15,10 @@
     </head>
     <body>
         {% block body %}
-
+        
                 <nav id="menu">
                     <ul>
+                        
                 
 <!-- ADMIN / DESIGNER  -->
                         {% if (is_granted('ROLE_ADMIN')) %}
@@ -54,6 +55,7 @@
                         {% endif %}
                     </ul>
                 </nav>
+            
             {# <header>
                 <h1> Bienvenue dans Virtual Animals </h1>
             </header> #}

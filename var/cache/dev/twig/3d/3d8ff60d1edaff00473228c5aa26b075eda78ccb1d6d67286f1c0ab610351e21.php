@@ -76,7 +76,7 @@ class __TwigTemplate_fb05c8d15b7eb1a21b04831e02ee17b3054e2a67b96dc2cc4c26d866157
 
     }
 
-    // line 8
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -85,65 +85,65 @@ class __TwigTemplate_fb05c8d15b7eb1a21b04831e02ee17b3054e2a67b96dc2cc4c26d866157
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 9
-        echo "
-\t\t";
-        // line 10
+        // line 8
+        echo "\t";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-
     ";
-        // line 15
-        echo "\t\t";
+        // line 11
+        echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", []), "jeux", []));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", []), "jeux", []));
         foreach ($context['_seq'] as $context["_key"] => $context["jeux"]) {
-            // line 16
-            echo "\t";
+            // line 12
+            echo "        ";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "1")) {
-                // line 17
-                echo "        <h5> ";
+                // line 13
+                echo "            <h5> ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
                 echo " </h5>
-        <p> ";
-                // line 18
+            <p> ";
+                // line 14
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "description", []), "html", null, true);
                 echo " </p>
-    ";
+        ";
             }
+            // line 16
+            echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 21
+        // line 17
         echo "    <div class=\"animate-box\">
-\t\t\t\t";
-        // line 23
-        echo "\t\t\t\t<a href=\"";
+\t\t";
+        // line 19
+        echo "        <a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ppc");
         echo "\">
-\t\t\t\t<div class=\"animate-box-hidden\">
-\t\t\t\t\t";
-        // line 28
-        echo "\t\t\t\t\t<p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/logo-red-panda.png\" width=\"100px\" height=\"100px\"/> </span>  </p>
-\t\t\t\t\t<button>
-\t\t\t\t\t<span>
-\t\t\t\t\t\t<span>
-\t\t\t\t\t\t<span data-attr-span=\"Jouer\"> PPC
-\t\t\t\t\t\t</span>
-\t\t\t\t\t\t</span>
-\t\t\t\t\t</span>
-\t\t\t\t\t</button>
-\t\t\t\t</div>
-\t\t\t\t</a>
-      </div>
-      
-    ";
-        // line 42
-        echo "    <button class=\"btn btn-error\"> <a href=\"";
+            <div class=\"animate-box-hidden\">
+                ";
+        // line 24
+        echo "                <p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/logo-red-panda.png\" width=\"100px\" height=\"100px\"/> </span>  </p>
+                <button>
+                    <span>
+                        <span>
+                            <span data-attr-span=\"Jouer\"> PPC
+                            </span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </a>
+    </div>
+\t";
+        // line 37
+        echo "    <div>
+        <button class=\"btn btn-error \"> <a href=\"";
+        // line 38
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
-
+    </div>
 
 ";
         
@@ -166,7 +166,7 @@ class __TwigTemplate_fb05c8d15b7eb1a21b04831e02ee17b3054e2a67b96dc2cc4c26d866157
 
     public function getDebugInfo()
     {
-        return array (  143 => 42,  128 => 28,  122 => 23,  119 => 21,  110 => 18,  105 => 17,  102 => 16,  97 => 15,  92 => 10,  89 => 9,  80 => 8,  68 => 4,  57 => 3,  27 => 1,);
+        return array (  144 => 38,  141 => 37,  127 => 24,  121 => 19,  118 => 17,  112 => 16,  107 => 14,  102 => 13,  99 => 12,  94 => 11,  89 => 8,  80 => 7,  68 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -177,43 +177,39 @@ class __TwigTemplate_fb05c8d15b7eb1a21b04831e02ee17b3054e2a67b96dc2cc4c26d866157
   {{parent()}} 
 {% endblock %}
 
-
 {% block body %}
-
-\t\t{{parent()}}
-
+\t{{parent()}}
     {# <h5> Pierre feuille ciseaux </h5>
-    <p> Les ciseaux battent la pierre, la pierre bat la feuille et la feuille bat la pierre, fait le bon choix et gagne 1 ruby ! </p>
-\t\t #}
-\t\t{% for jeux in app.user.jeux %}
-\t{% if (jeux.id == '1') %}
-        <h5> {{ jeux.nom }} </h5>
-        <p> {{ jeux.description }} </p>
-    {% endif %}
-{% endfor %}
+    <p> Les ciseaux battent la pierre, la pierre bat la feuille et la feuille bat la pierre, fait le bon choix et gagne 1 ruby ! </p> #}
+    {% for jeux in app.user.jeux %}
+        {% if (jeux.id == '1') %}
+            <h5> {{ jeux.nom }} </h5>
+            <p> {{ jeux.description }} </p>
+        {% endif %}
+    {% endfor %}
     <div class=\"animate-box\">
-\t\t\t\t{# ANIMATE BORDER BOX => display Bestiary button #}
-\t\t\t\t<a href=\"{{path('ppc')}}\">
-\t\t\t\t<div class=\"animate-box-hidden\">
-\t\t\t\t\t{# {% for nb in nbMonstre %}
-\t\t\t\t\t\t<p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
-\t\t\t\t\t\t{% endfor %} #}
-\t\t\t\t\t<p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/logo-red-panda.png\" width=\"100px\" height=\"100px\"/> </span>  </p>
-\t\t\t\t\t<button>
-\t\t\t\t\t<span>
-\t\t\t\t\t\t<span>
-\t\t\t\t\t\t<span data-attr-span=\"Jouer\"> PPC
-\t\t\t\t\t\t</span>
-\t\t\t\t\t\t</span>
-\t\t\t\t\t</span>
-\t\t\t\t\t</button>
-\t\t\t\t</div>
-\t\t\t\t</a>
-      </div>
-      
-    {# <button class=\"btn btn-success\"> <a href=\"{{ path('ppc') }}\"> Jouer </a> </button> #}
-    <button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>
-
+\t\t{# ANIMATE BORDER BOX => display Bestiary button #}
+        <a href=\"{{path('ppc')}}\">
+            <div class=\"animate-box-hidden\">
+                {# {% for nb in nbMonstre %}
+                    <p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
+                {% endfor %} #}
+                <p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/logo-red-panda.png\" width=\"100px\" height=\"100px\"/> </span>  </p>
+                <button>
+                    <span>
+                        <span>
+                            <span data-attr-span=\"Jouer\"> PPC
+                            </span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </a>
+    </div>
+\t{# <button class=\"btn btn-success\"> <a href=\"{{ path('ppc') }}\"> Jouer </a> </button> #}
+    <div>
+        <button class=\"btn btn-error \"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>
+    </div>
 
 {% endblock %}", "private-space/games/ppc/home_ppc.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/games/ppc/home_ppc.html.twig");
     }

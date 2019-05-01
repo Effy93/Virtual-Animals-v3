@@ -1,22 +1,19 @@
 {% extends 'private-space/games/ppc/home_ppc.html.twig' %}
 
 {% block title %} 
-  {{parent()}} 
+    {{parent()}} 
 {% endblock %}
 
 {% block body %} 
-{{parent()}}
-
+    {{parent()}}
 {# /* AFFICHAGE DES CHOIX */ #}
-{% for message in app.session.flashBag.get('msgInfos') %}
-
-<script> 
-    alert('{{message}}');
-    document.location.href="{{ path('home_ppc') }}"
-</script>
-
-{% endfor %}
-    
+    {% for message in app.session.flashBag.get('msgInfos') %}
+        <script> 
+            alert('{{message}}');
+            document.location.href="{{ path('ppc') }}"
+        </script>
+    {% endfor %}
+  
 {% endblock %}
 
 

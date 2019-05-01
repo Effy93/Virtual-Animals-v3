@@ -63,7 +63,7 @@ class __TwigTemplate_db3748052541c71e6a070be026c8440e44137b55f1f979c57430ffc735b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         echo " 
-  ";
+    ";
         // line 4
         $this->displayParentBlock("title", $context, $blocks);
         echo " 
@@ -76,7 +76,7 @@ class __TwigTemplate_db3748052541c71e6a070be026c8440e44137b55f1f979c57430ffc735b
 
     }
 
-    // line 8
+    // line 7
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -85,64 +85,64 @@ class __TwigTemplate_db3748052541c71e6a070be026c8440e44137b55f1f979c57430ffc735b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 9
-        echo "
-";
-        // line 10
+        // line 8
+        echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-
-";
-        // line 12
+    ";
+        // line 9
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", []), "jeux", []));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 9, $this->source); })()), "user", []), "jeux", []));
         foreach ($context['_seq'] as $context["_key"] => $context["jeux"]) {
-            // line 13
-            echo "\t";
+            // line 10
+            echo "        ";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "3")) {
-                // line 14
-                echo "        <h5> ";
+                // line 11
+                echo "            <h5> ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
                 echo " </h5>
-        <p> ";
-                // line 15
+            <p> ";
+                // line 12
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "description", []), "html", null, true);
                 echo " </p>
-    ";
+        ";
             }
+            // line 14
+            echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 18
+        // line 15
         echo "
-<div class=\"animate-box\">
-    ";
-        // line 21
-        echo "    <a href=\"";
+    <div class=\"animate-box\">
+        ";
+        // line 18
+        echo "        <a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bb");
         echo "\">
-    <div class=\"animate-box-hidden\">
-      ";
-        // line 26
-        echo "      <p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/logo-red-panda.png\" width=\"100px\" height=\"100px\"/> </span>  </p>
-      <button>
-      <span>
-        <span>
-        <span data-attr-span=\"Jouer\"> Broken Brick
-        </span>
-        </span>
-      </span>
-      </button>
+            <div class=\"animate-box-hidden\">
+            ";
+        // line 23
+        echo "                <p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/logo-red-panda.png\" width=\"100px\" height=\"100px\"/> </span>  </p>
+                <button>
+                    <span>
+                        <span>
+                            <span data-attr-span=\"Jouer\"> Broken Brick
+                            </span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </a>
     </div>
-    </a>
-  </div>
 
-<button class=\"btn btn-error\"> <a href=\"";
-        // line 39
+    <div>
+        <button class=\"btn btn-error\"> <a href=\"";
+        // line 37
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
-
+    </div>
 
 ";
         
@@ -165,7 +165,7 @@ class __TwigTemplate_db3748052541c71e6a070be026c8440e44137b55f1f979c57430ffc735b
 
     public function getDebugInfo()
     {
-        return array (  143 => 39,  128 => 26,  122 => 21,  118 => 18,  109 => 15,  104 => 14,  101 => 13,  97 => 12,  92 => 10,  89 => 9,  80 => 8,  68 => 4,  57 => 3,  27 => 1,);
+        return array (  143 => 37,  127 => 23,  121 => 18,  117 => 15,  111 => 14,  106 => 12,  101 => 11,  98 => 10,  94 => 9,  89 => 8,  80 => 7,  68 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -173,43 +173,41 @@ class __TwigTemplate_db3748052541c71e6a070be026c8440e44137b55f1f979c57430ffc735b
         return new Source("{% extends 'private-space/games/layout.html.twig' %}
 
 {% block title %} 
-  {{parent()}} 
+    {{parent()}} 
 {% endblock %}
 
-
 {% block body %}
+    {{parent()}}
+    {% for jeux in app.user.jeux %}
+        {% if (jeux.id == '3') %}
+            <h5> {{ jeux.nom }} </h5>
+            <p> {{ jeux.description }} </p>
+        {% endif %}
+    {% endfor %}
 
-{{parent()}}
-
-{% for jeux in app.user.jeux %}
-\t{% if (jeux.id == '3') %}
-        <h5> {{ jeux.nom }} </h5>
-        <p> {{ jeux.description }} </p>
-    {% endif %}
-{% endfor %}
-
-<div class=\"animate-box\">
-    {# ANIMATE BORDER BOX => display Bestiary button #}
-    <a href=\"{{path('bb')}}\">
-    <div class=\"animate-box-hidden\">
-      {# {% for nb in nbMonstre %}
-        <p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
-        {% endfor %} #}
-      <p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/logo-red-panda.png\" width=\"100px\" height=\"100px\"/> </span>  </p>
-      <button>
-      <span>
-        <span>
-        <span data-attr-span=\"Jouer\"> Broken Brick
-        </span>
-        </span>
-      </span>
-      </button>
+    <div class=\"animate-box\">
+        {# ANIMATE BORDER BOX => display Bestiary button #}
+        <a href=\"{{path('bb')}}\">
+            <div class=\"animate-box-hidden\">
+            {# {% for nb in nbMonstre %}
+                <p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
+            {% endfor %} #}
+                <p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/logo-red-panda.png\" width=\"100px\" height=\"100px\"/> </span>  </p>
+                <button>
+                    <span>
+                        <span>
+                            <span data-attr-span=\"Jouer\"> Broken Brick
+                            </span>
+                        </span>
+                    </span>
+                </button>
+            </div>
+        </a>
     </div>
-    </a>
-  </div>
 
-<button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>
-
+    <div>
+        <button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>
+    </div>
 
 {% endblock %}", "private-space/games/bb/home_bb.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/games/bb/home_bb.html.twig");
     }

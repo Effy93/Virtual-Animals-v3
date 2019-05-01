@@ -64,7 +64,7 @@ class __TwigTemplate_b41628ff51a291544715c569962c98c9af9261168016e723566b9902d45
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         echo " 
-  ";
+    ";
         // line 4
         $this->displayParentBlock("title", $context, $blocks);
         echo " 
@@ -87,9 +87,7 @@ class __TwigTemplate_b41628ff51a291544715c569962c98c9af9261168016e723566b9902d45
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 8
-        echo "
-<script src=\"/assets/js/bb.js\" />
-
+        echo "    <script src=\"/assets/js/bb.js\" />
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -99,7 +97,7 @@ class __TwigTemplate_b41628ff51a291544715c569962c98c9af9261168016e723566b9902d45
 
     }
 
-    // line 13
+    // line 11
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -108,21 +106,18 @@ class __TwigTemplate_b41628ff51a291544715c569962c98c9af9261168016e723566b9902d45
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 14
-        echo "
-";
-        // line 15
+        // line 12
+        echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-<h5> Broken Brick </h5>
-
-<canvas id=\"bb\" width=\"460\" height=\"320\"></canvas>
-
-<button class=\"btn btn-error\"> <a href=\"";
-        // line 20
+    <h5> Broken Brick </h5>
+    <canvas id=\"bb\" width=\"460\" height=\"320\"></canvas>
+    <div>
+        <button class=\"btn btn-error\"> <a href=\"";
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
-
+    </div>
 
 ";
         
@@ -145,7 +140,7 @@ class __TwigTemplate_b41628ff51a291544715c569962c98c9af9261168016e723566b9902d45
 
     public function getDebugInfo()
     {
-        return array (  123 => 20,  115 => 15,  112 => 14,  103 => 13,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
+        return array (  118 => 16,  110 => 12,  101 => 11,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -153,24 +148,20 @@ class __TwigTemplate_b41628ff51a291544715c569962c98c9af9261168016e723566b9902d45
         return new Source("{% extends 'private-space/games/layout.html.twig' %}
 
 {% block title %} 
-  {{parent()}} 
+    {{parent()}} 
 {% endblock %}
 
 {% block javascripts %}
-
-<script src=\"/assets/js/bb.js\" />
-
+    <script src=\"/assets/js/bb.js\" />
 {% endblock %}
 
 {% block body %}
-
-{{parent()}}
-<h5> Broken Brick </h5>
-
-<canvas id=\"bb\" width=\"460\" height=\"320\"></canvas>
-
-<button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>
-
+    {{parent()}}
+    <h5> Broken Brick </h5>
+    <canvas id=\"bb\" width=\"460\" height=\"320\"></canvas>
+    <div>
+        <button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>
+    </div>
 
 {% endblock %}", "private-space/games/bb/bb.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/games/bb/bb.html.twig");
     }

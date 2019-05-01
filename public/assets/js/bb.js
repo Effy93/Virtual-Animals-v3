@@ -1,4 +1,3 @@
-
 // définit le document html qui contient le canvas et le type de canvas (2D ou 3D)
 var canvas = document.getElementById("bb");
 var ctx = canvas.getContext("2d");
@@ -49,7 +48,6 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 
 // Win et score
 var score = 0;
-
 
 // Fonction qui définit le sprite 1 (taille position de départ, couleurs, plein ou non, forme)
 function drawBall() {
@@ -142,7 +140,7 @@ document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
 
 // Fonction déclanché lors du keydown (touche pressé)
-// Si la touche rigth est enfoncé passe la variable rightpress a true // pareil pour left
+// Si la touche right est enfoncé passe la variable rightpress a true // pareil pour left
 function keyDownHandler(e) {
     if(e.key == "Right" || e.key == "ArrowRight") {
         rightPressed = true;
@@ -173,8 +171,9 @@ function collisionDetection() {
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
                         alert("Gagné ! Bravo ! ");
-                        $_SESSION['win'] = 1
+                        // $_SESSION['win'] = 1
                         document.location.reload();
+                        var win = Routing.generate('home', {'param' : score});
                         clearInterval(interval); // Needed for Chrome to end game
                     }
                 }

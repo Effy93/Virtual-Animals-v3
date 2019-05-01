@@ -95,7 +95,7 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
         // line 14
         echo "\t\t<section class=\"container-user-infos\">
 \t\t\t<h5> Mon compte </h5>
-\t\t\t<img class=\"glowing-img\" src=\"/images/logos/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
+\t\t\t<img class=\"glowing-img shake\" src=\"/images/logos/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
 \t\t\t<h4> ";
         // line 17
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", []), "nom", []), "html", null, true);
@@ -167,18 +167,20 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
     <section class=\"container-games\">
 \t\t";
         // line 65
-        echo "\t\t";
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "user", []), "jeux", []), "count", []) == "0")) {
-            // line 66
-            echo "\t\t\t<h5> Aucun jeux disponibles </h5>
+        echo "\t\t<h5> Mes Jeux </h5>
+\t\t";
+        // line 66
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 66, $this->source); })()), "user", []), "jeux", []), "count", []) == "0")) {
+            // line 67
+            echo "\t\t\t<p> Aucun jeux disponibles </p>
 \t\t\t<div class=\"animate-box\">
 \t\t\t\t<a href=\"";
-            // line 68
+            // line 69
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop");
             echo "\">  
 \t\t\t\t\t<div class=\"animate-box-hidden\">
-\t\t\t\t\t\t<p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/panda-sad.png\" width=\"100px\" height=\"100px\" alt=\"photo d'un panda triste, car aucun jeux n'est disponible !\"/> </span>  </p>
-\t\t\t\t\t\t<button>
+\t\t\t\t\t\t<p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/red-panda-sad.png\" width=\"100px\" height=\"100px\" alt=\"photo d'un panda triste, car aucun jeux n'est disponible !\"/> </span>  </p>
+\t\t\t\t\t\t<button >
 \t\t\t\t\t\t\t<span>
 \t\t\t\t\t\t\t\t<span>
 \t\t\t\t\t\t\t\t\t<span data-attr-span=\"Go boutique\"> Acheter des jeux 
@@ -191,24 +193,20 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
 \t\t\t\t</a>
 \t\t\t</div>
 \t\t";
-        } else {
-            // line 84
-            echo "\t\t\t<h5> Jeux disponibles </h5>
-\t\t";
         }
-        // line 86
+        // line 85
         echo "<!-- LISTE DES JEUX -->
 \t  <div class=\"games-list\">
 \t\t\t<ul>
 \t\t\t\t";
-        // line 89
+        // line 88
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 89, $this->source); })()), "user", []), "jeux", []));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 88, $this->source); })()), "user", []), "jeux", []));
         foreach ($context['_seq'] as $context["_key"] => $context["jeux"]) {
-            // line 90
+            // line 89
             echo "\t\t\t\t\t";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "1")) {
-                // line 91
+                // line 90
                 echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_ppc");
                 echo "\"> ";
@@ -216,10 +214,10 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
                 echo "</a> </button> </li>
 \t\t\t\t\t";
             }
-            // line 93
+            // line 92
             echo "\t\t\t\t\t";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "2")) {
-                // line 94
+                // line 93
                 echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_ttt");
                 echo "\"> ";
@@ -227,10 +225,10 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
                 echo "</a> </button> </li>
 \t\t\t\t\t";
             }
-            // line 96
+            // line 95
             echo "\t\t\t\t\t";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "3")) {
-                // line 97
+                // line 96
                 echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_bb");
                 echo "\"> ";
@@ -238,21 +236,21 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
                 echo "</a> </button> </li>
 \t\t\t\t\t";
             }
-            // line 99
+            // line 98
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 100
+        // line 99
         echo "\t\t\t\t\t
 \t\t\t</ul>
 \t  </div>
 
 \t  ";
-        // line 105
+        // line 104
         echo "      ";
-        // line 106
+        // line 105
         echo "
 
 ";
@@ -276,7 +274,7 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
 
     public function getDebugInfo()
     {
-        return array (  256 => 106,  254 => 105,  248 => 100,  242 => 99,  234 => 97,  231 => 96,  223 => 94,  220 => 93,  212 => 91,  209 => 90,  205 => 89,  200 => 86,  196 => 84,  177 => 68,  173 => 66,  170 => 65,  164 => 60,  148 => 46,  143 => 44,  140 => 43,  124 => 30,  118 => 25,  115 => 23,  109 => 19,  105 => 18,  101 => 17,  96 => 14,  93 => 12,  87 => 8,  78 => 7,  66 => 4,  57 => 3,  27 => 1,);
+        return array (  254 => 105,  252 => 104,  246 => 99,  240 => 98,  232 => 96,  229 => 95,  221 => 93,  218 => 92,  210 => 90,  207 => 89,  203 => 88,  198 => 85,  179 => 69,  175 => 67,  173 => 66,  170 => 65,  164 => 60,  148 => 46,  143 => 44,  140 => 43,  124 => 30,  118 => 25,  115 => 23,  109 => 19,  105 => 18,  101 => 17,  96 => 14,  93 => 12,  87 => 8,  78 => 7,  66 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -296,7 +294,7 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
 \t\t{# OPEN user info section #}
 \t\t<section class=\"container-user-infos\">
 \t\t\t<h5> Mon compte </h5>
-\t\t\t<img class=\"glowing-img\" src=\"/images/logos/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
+\t\t\t<img class=\"glowing-img shake\" src=\"/images/logos/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
 \t\t\t<h4> {{ app.user.nom }} </h4>
 \t\t\t<p> Inscrit depuis le : <span style=color:orange;> {{ app.user.date|date('d-m-Y') }} </span></p>
 \t\t\t<p> <span style=color:red;> {{ app.user.argent}} </span> Ruby </p>
@@ -345,13 +343,14 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
 <!-- OUVERTURE CONTAINER DES JEUX  -->
     <section class=\"container-games\">
 \t\t{# Si aucun jeu acheter #}
+\t\t<h5> Mes Jeux </h5>
 \t\t{% if (app.user.jeux.count == '0' ) %}
-\t\t\t<h5> Aucun jeux disponibles </h5>
+\t\t\t<p> Aucun jeux disponibles </p>
 \t\t\t<div class=\"animate-box\">
 \t\t\t\t<a href=\"{{ path('shop') }}\">  
 \t\t\t\t\t<div class=\"animate-box-hidden\">
-\t\t\t\t\t\t<p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/panda-sad.png\" width=\"100px\" height=\"100px\" alt=\"photo d'un panda triste, car aucun jeux n'est disponible !\"/> </span>  </p>
-\t\t\t\t\t\t<button>
+\t\t\t\t\t\t<p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/red-panda-sad.png\" width=\"100px\" height=\"100px\" alt=\"photo d'un panda triste, car aucun jeux n'est disponible !\"/> </span>  </p>
+\t\t\t\t\t\t<button >
 \t\t\t\t\t\t\t<span>
 \t\t\t\t\t\t\t\t<span>
 \t\t\t\t\t\t\t\t\t<span data-attr-span=\"Go boutique\"> Acheter des jeux 
@@ -363,8 +362,6 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
 \t\t\t\t\t</div>
 \t\t\t\t</a>
 \t\t\t</div>
-\t\t{% else %}
-\t\t\t<h5> Jeux disponibles </h5>
 \t\t{% endif %}
 <!-- LISTE DES JEUX -->
 \t  <div class=\"games-list\">
@@ -384,7 +381,7 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
 \t\t\t</ul>
 \t  </div>
 
-\t  {# Le main se ferme dans les jeux #}
+\t  {# Le main se ferme avec le footer #}
       {# </main> #}
 
 

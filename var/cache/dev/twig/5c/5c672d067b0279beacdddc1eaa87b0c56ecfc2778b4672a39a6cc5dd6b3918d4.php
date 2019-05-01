@@ -63,7 +63,7 @@ class __TwigTemplate_57ce6d9bbb87eb8b8b1c8a2c4a532dc0258ba30939bb5d9b3c95f74df2a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
         echo " 
-  ";
+    ";
         // line 4
         $this->displayParentBlock("title", $context, $blocks);
         echo " 
@@ -86,76 +86,73 @@ class __TwigTemplate_57ce6d9bbb87eb8b8b1c8a2c4a532dc0258ba30939bb5d9b3c95f74df2a
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 8
-        echo " 
-";
-        // line 9
+        echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-<h5> Pierre feuille ciseaux </h5>
+    <h5> Pierre feuille ciseaux </h5>
     <section class=\"container-body-PPC\">
         ";
-        // line 12
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 12, $this->source); })()), 'form_start');
+        // line 11
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 11, $this->source); })()), 'form_start');
         echo "
         <div class=\"container-row\">
             <div class=\"container-column\">   
                 <img src=\"/images/games/ppc/pierre.png\" alt=\"représente le signe de la pierre\" width=\"100px\" height=\"100px\" />
                 ";
-        // line 16
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 16, $this->source); })()), "choix", []), 0, [], "array"), 'label');
+        // line 15
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 15, $this->source); })()), "choix", []), 0, [], "array"), 'label');
         echo "
-                
                 ";
-        // line 18
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 18, $this->source); })()), "choix", []), 0, [], "array"), 'widget');
+        // line 16
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 16, $this->source); })()), "choix", []), 0, [], "array"), 'widget');
         echo "
             </div>
             <div class=\"container-column\">
                 <img src=\"/images/games/ppc/papier.png\" alt=\"représente le signe de la pierre\" width=\"100px\" height=\"100px\" />
                 ";
-        // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 22, $this->source); })()), "choix", []), 1, [], "array"), 'label');
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 20, $this->source); })()), "choix", []), 1, [], "array"), 'label');
         echo "
                 ";
-        // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 23, $this->source); })()), "choix", []), 1, [], "array"), 'widget');
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 21, $this->source); })()), "choix", []), 1, [], "array"), 'widget');
         echo "
             </div>
             <div class=\"container-column\">
                 <img src=\"/images/games/ppc/ciseaux.png\" alt=\"représente le signe de la pierre\" width=\"100px\" height=\"100px\" />
                 ";
-        // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 27, $this->source); })()), "choix", []), 2, [], "array"), 'label');
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 25, $this->source); })()), "choix", []), 2, [], "array"), 'label');
         echo "
                 ";
-        // line 28
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 28, $this->source); })()), "choix", []), 2, [], "array"), 'widget');
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 26, $this->source); })()), "choix", []), 2, [], "array"), 'widget');
         echo "
             </div>
             ";
-        // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 30, $this->source); })()), "choix", []), 'row');
+        // line 28
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 28, $this->source); })()), "choix", []), 'row');
         echo "
         </div>
         <button class=\"btn btn-lg btn-primary\" type=\"submit\"> Valider </button>
-      
         ";
-        // line 34
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 34, $this->source); })()), 'form_end');
+        // line 31
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["PPCform"]) || array_key_exists("PPCform", $context) ? $context["PPCform"] : (function () { throw new RuntimeError('Variable "PPCform" does not exist.', 31, $this->source); })()), 'form_end');
         echo "
     </section>
-    <button class=\"btn btn-error\"> <a href=\"";
-        // line 36
+    <div>
+        <button class=\"btn btn-error\"> <a href=\"";
+        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
-
+    </div>
 
 ";
-        // line 55
+        // line 53
         echo "       
 
         ";
-        // line 65
+        // line 63
         echo "    
 ";
         
@@ -178,7 +175,7 @@ class __TwigTemplate_57ce6d9bbb87eb8b8b1c8a2c4a532dc0258ba30939bb5d9b3c95f74df2a
 
     public function getDebugInfo()
     {
-        return array (  159 => 65,  155 => 55,  149 => 36,  144 => 34,  137 => 30,  132 => 28,  128 => 27,  121 => 23,  117 => 22,  110 => 18,  105 => 16,  98 => 12,  92 => 9,  89 => 8,  80 => 7,  68 => 4,  57 => 3,  27 => 1,);
+        return array (  156 => 63,  152 => 53,  146 => 34,  140 => 31,  134 => 28,  129 => 26,  125 => 25,  118 => 21,  114 => 20,  107 => 16,  103 => 15,  96 => 11,  89 => 8,  80 => 7,  68 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -186,20 +183,18 @@ class __TwigTemplate_57ce6d9bbb87eb8b8b1c8a2c4a532dc0258ba30939bb5d9b3c95f74df2a
         return new Source("{% extends 'private-space/games/layout.html.twig' %}
 
 {% block title %} 
-  {{parent()}} 
+    {{parent()}} 
 {% endblock %}
 
 {% block body %}
- 
-{{parent()}}
-<h5> Pierre feuille ciseaux </h5>
+    {{parent()}}
+    <h5> Pierre feuille ciseaux </h5>
     <section class=\"container-body-PPC\">
         {{ form_start(PPCform) }}
         <div class=\"container-row\">
             <div class=\"container-column\">   
                 <img src=\"/images/games/ppc/pierre.png\" alt=\"représente le signe de la pierre\" width=\"100px\" height=\"100px\" />
                 {{ form_label(PPCform.choix[0]) }}
-                
                 {{ form_widget(PPCform.choix[0]) }}
             </div>
             <div class=\"container-column\">
@@ -215,11 +210,11 @@ class __TwigTemplate_57ce6d9bbb87eb8b8b1c8a2c4a532dc0258ba30939bb5d9b3c95f74df2a
             {{ form_row(PPCform.choix) }}
         </div>
         <button class=\"btn btn-lg btn-primary\" type=\"submit\"> Valider </button>
-      
         {{ form_end(PPCform) }}
     </section>
-    <button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>
-
+    <div>
+        <button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>
+    </div>
 
 {# <div class=\"post_as\">
         {{ form_label(form.is_anonymous, 'Post as:') }}

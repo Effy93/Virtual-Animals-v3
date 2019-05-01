@@ -86,7 +86,7 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
         echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo " 
-    <div class=\"container-row\" >
+    <div class=\"container-row\">
         <h1 class=\"glowing\"> News </h1>
     </div>
 
@@ -121,7 +121,7 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
 
 {% block body %}
     {{parent()}} 
-    <div class=\"container-row\" >
+    <div class=\"container-row\">
         <h1 class=\"glowing\"> News </h1>
     </div>
 

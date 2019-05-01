@@ -59,7 +59,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         ";
         // line 17
         $this->displayBlock('body', $context, $blocks);
-        // line 62
+        // line 64
         echo "
     </main>
         <footer>
@@ -73,9 +73,9 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         </footer>
 
         ";
-        // line 74
-        $this->displayBlock('javascripts', $context, $blocks);
         // line 76
+        $this->displayBlock('javascripts', $context, $blocks);
+        // line 78
         echo "    </body>
 </html>
 ";
@@ -141,94 +141,96 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 18
-        echo "
+        echo "        
                 <nav id=\"menu\">
                     <ul>
+                        
                 
 <!-- ADMIN / DESIGNER  -->
                         ";
-        // line 23
+        // line 24
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 24
-            echo "                            ";
             // line 25
+            echo "                            ";
+            // line 26
             echo "                            <div class=\"dropdown\">
                                 <li class=\"dropdownbtn\"><a href =\"";
-            // line 26
+            // line 27
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
             echo "\"> Accueil &darr; </a></li>
                                     <ul class=\"dropdown-content\">
                                         <li><a href =\"";
-            // line 28
+            // line 29
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
             echo "\"> Admin </a></li>
                                         <li><a href =\"";
-            // line 29
+            // line 30
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_monster");
             echo "\"> Edition </a></li>
                                     </ul>
                             </div>
                         ";
         } else {
-            // line 33
+            // line 34
             echo "                            <li><a href =\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
             echo "\"> Accueil </a></li>
                         ";
         }
-        // line 35
+        // line 36
         echo "<!-- USER  -->
                         ";
-        // line 37
+        // line 38
         echo "                        ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 38
+            // line 39
             echo "                            <li><a href =\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop");
             echo "\"> Boutique </a></li>
                             
                             ";
-            // line 41
+            // line 42
             echo "                            <div class=\"dropdown\">
                                 <li class=\"dropdownbtn\"><a href =\"";
-            // line 42
+            // line 43
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
             echo "\"> Espace personnel &darr; </a></li>
                                     <ul class=\"dropdown-content\">
                                         <li><a href =\"";
-            // line 44
+            // line 45
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bestiary");
             echo "\"> Bestiaire </a></li>
                                         <li><a href =\"";
-            // line 45
+            // line 46
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inventory");
             echo "\"> Inventaire </a></li>
                                     </ul>
                             </div>
                             <li><a href =\"";
-            // line 48
+            // line 49
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
             echo "\"> Deconnexion  </a></li>
 
                         ";
-            // line 51
+            // line 52
             echo "                        ";
         } else {
-            // line 52
+            // line 53
             echo "                            <li><a href =\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\"> Inscription </a></li>
                             <li> <a href=\"";
-            // line 53
+            // line 54
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"> Connexion</a></li>
                         ";
         }
-        // line 55
+        // line 56
         echo "                    </ul>
                 </nav>
+            
             ";
-        // line 60
+        // line 62
         echo "           
         ";
         
@@ -239,7 +241,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
 
     }
 
-    // line 74
+    // line 76
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -248,7 +250,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 75
+        // line 77
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -265,7 +267,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
 
     public function getDebugInfo()
     {
-        return array (  252 => 75,  243 => 74,  232 => 60,  228 => 55,  223 => 53,  218 => 52,  215 => 51,  210 => 48,  204 => 45,  200 => 44,  195 => 42,  192 => 41,  186 => 38,  183 => 37,  180 => 35,  174 => 33,  167 => 29,  163 => 28,  158 => 26,  155 => 25,  153 => 24,  151 => 23,  144 => 18,  135 => 17,  118 => 7,  109 => 6,  91 => 5,  79 => 76,  77 => 74,  63 => 62,  61 => 17,  57 => 15,  55 => 6,  51 => 5,  45 => 1,);
+        return array (  254 => 77,  245 => 76,  234 => 62,  229 => 56,  224 => 54,  219 => 53,  216 => 52,  211 => 49,  205 => 46,  201 => 45,  196 => 43,  193 => 42,  187 => 39,  184 => 38,  181 => 36,  175 => 34,  168 => 30,  164 => 29,  159 => 27,  156 => 26,  154 => 25,  152 => 24,  144 => 18,  135 => 17,  118 => 7,  109 => 6,  91 => 5,  79 => 78,  77 => 76,  63 => 64,  61 => 17,  57 => 15,  55 => 6,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -287,9 +289,10 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
     </head>
     <body>
         {% block body %}
-
+        
                 <nav id=\"menu\">
                     <ul>
+                        
                 
 <!-- ADMIN / DESIGNER  -->
                         {% if (is_granted('ROLE_ADMIN')) %}
@@ -326,6 +329,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
                         {% endif %}
                     </ul>
                 </nav>
+            
             {# <header>
                 <h1> Bienvenue dans Virtual Animals </h1>
             </header> #}

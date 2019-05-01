@@ -88,8 +88,10 @@ class __TwigTemplate_e6ff2811993adedf6db02e28c4e9bee2e97cf38588d8a298541bcf7d433
         $this->displayParentBlock("body", $context, $blocks);
         echo "
 <header>
-    <h1> Boutique </h1>
-</header>
+    <h1> Bienvenue dans la Boutique </h1>
+    ";
+        // line 10
+        echo "</header>
 
 
 ";
@@ -113,7 +115,7 @@ class __TwigTemplate_e6ff2811993adedf6db02e28c4e9bee2e97cf38588d8a298541bcf7d433
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
+        return array (  94 => 10,  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -125,7 +127,8 @@ class __TwigTemplate_e6ff2811993adedf6db02e28c4e9bee2e97cf38588d8a298541bcf7d433
 {% block body %} 
 {{parent()}}
 <header>
-    <h1> Boutique </h1>
+    <h1> Bienvenue dans la Boutique </h1>
+    {# <img src=\"/images/logos/red-panda-shop.png\" width=\"100px\" height=\"100px\" alt=\"logo dessin d'un panda roux\"/> #}
 </header>
 
 

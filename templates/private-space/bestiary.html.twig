@@ -13,9 +13,6 @@
 {% block body %}
 {{parent()}} 
 
-
-
-
 <section class="container-bestiary">
     <h2> Bestiaire </h2>
     <div class="container-row-reverse">
@@ -33,7 +30,7 @@
                 </span></p>
             <img src={{ monstre.photo }} class="glowing-img" width="150px" height="150px" alt="image du monstre"/>
         </article>  
-    </main>  
+    {# </main>   #}
     {% endfor %}
 
     </div>

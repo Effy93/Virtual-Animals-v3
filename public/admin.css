@@ -1,11 +1,28 @@
+html {
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-content:space-between;
+  
+  width:100%;
+  height:100%;
+}
 body {
-    color:#FFF;
-    background-color: rgb(20, 14, 18);
-    /* background-image: url(../images/panda2.png); */
-    background-attachment: fixed;
-    background-position-y: center;
-    background-repeat: no-repeat;
-  }
+  color:#FFF;
+  background-color: rgb(20, 14, 18);
+  /* background-image: url(../../images/panda2.png); */
+  background-attachment: fixed;
+  background-position-y: center;
+  background-repeat: no-repeat;
+
+  display:flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-content:space-between;
+  
+  width:100%;
+  height:100%;
+}
   header {
     color:#3D2314;
     background-color: rgba(250, 154, 29, 0.4);

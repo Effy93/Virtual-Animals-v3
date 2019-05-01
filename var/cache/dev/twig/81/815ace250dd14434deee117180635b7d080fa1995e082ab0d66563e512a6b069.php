@@ -140,60 +140,66 @@ class __TwigTemplate_07682f78513491d13cd3c2b9004ada3a8af956d7b4f6d6dd69a35627b8a
         // line 31
         echo "
 <!-- ACHAT JEUX -->
-    <div class=\"container-row-reverse\">
-        <section class=\"container-games\">
+    <div class=\"container-bestiary\">
+        <h2> Mini-jeux </h2>
+        <section class=\"container-row-reverse\">
             ";
-        // line 35
+        // line 36
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["jeux"]) || array_key_exists("jeux", $context) ? $context["jeux"] : (function () { throw new RuntimeError('Variable "jeux" does not exist.', 35, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["jeux"]) || array_key_exists("jeux", $context) ? $context["jeux"] : (function () { throw new RuntimeError('Variable "jeux" does not exist.', 36, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["jeu"]) {
-            // line 36
+            // line 37
             echo "                ";
-            if (twig_in_filter($context["jeu"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", []), "jeux", []))) {
-                echo " 
-                    ";
-            } else {
-                // line 38
-                echo "                        <article >
-                            <h5> ";
+            // line 38
+            echo "                ";
+            if (twig_in_filter($context["jeu"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "user", []), "jeux", []))) {
                 // line 39
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeu"], "nom", []), "html", null, true);
-                echo "</h5> 
-                            <div class=\"animate-box\">
-                                <a href=\"";
+                echo "                    ";
+                // line 40
+                echo "                    ";
+            } else {
                 // line 41
+                echo "                        <article class=\"game-shop\">
+                            <h5> ";
+                // line 42
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeu"], "nom", []), "html", null, true);
+                echo " </h5> 
+                                <div class=\"animate-box\">
+                                    <a href=\"";
+                // line 44
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buy_game", ["id" => twig_get_attribute($this->env, $this->source, $context["jeu"], "id", [])]), "html", null, true);
                 echo "\">  
-                                    <div class=\"animate-box-hidden\">
-                                        ";
-                // line 43
+                                        <div class=\"animate-box-hidden\">
+                                            ";
+                // line 46
                 if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["jeu"], "tarif", []), "prix", []) == 0)) {
-                    // line 44
-                    echo "                                            <p class=\"glowing\">  GRATUIT  </p>
-                                        ";
+                    // line 47
+                    echo "                                                <p class=\"glowing\">  GRATUIT  </p>
+                                            ";
                 } else {
-                    // line 46
-                    echo "                                            <p style=color:orange;>  ";
+                    // line 49
+                    echo "                                                <p style=color:orange;>  ";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["jeu"], "tarif", []), "prix", []), "html", null, true);
                     echo " ruby </p>
-                                        ";
+                                            ";
                 }
-                // line 48
-                echo "                                        <button>
-                                            <span>
+                // line 51
+                echo "                                            <button>
                                                 <span>
-                                                    <span  data-attr-span=\"J'achete !\">  Acheter
+                                                    <span>
+                                                        <span  data-attr-span=\"J'achete !\">  Acheter
+                                                        </span>
                                                     </span>
                                                 </span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </div>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                           
                         </article>
                     ";
             }
-            // line 61
+            // line 65
             echo "                ";
         }
         $_parent = $context['_parent'];
@@ -206,75 +212,75 @@ class __TwigTemplate_07682f78513491d13cd3c2b9004ada3a8af956d7b4f6d6dd69a35627b8a
 
 <!-- ACHAT MONSTRES -->
     ";
-        // line 68
+        // line 72
         echo "    <section class=\"container-bestiary\">
-        <h2> Boutique </h2>
+        <h2> Élevage monstrueux </h2>
         <div class=\"container-row-reverse\">
             ";
-        // line 72
+        // line 76
         echo "            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["monstres"]) || array_key_exists("monstres", $context) ? $context["monstres"] : (function () { throw new RuntimeError('Variable "monstres" does not exist.', 72, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["monstres"]) || array_key_exists("monstres", $context) ? $context["monstres"] : (function () { throw new RuntimeError('Variable "monstres" does not exist.', 76, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["monstre"]) {
-            // line 73
+            // line 77
             echo "                ";
-            // line 74
+            // line 78
             echo "                ";
-            if (twig_in_filter($context["monstre"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 74, $this->source); })()), "user", []), "monstre", []))) {
+            if (twig_in_filter($context["monstre"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 78, $this->source); })()), "user", []), "monstre", []))) {
                 echo " 
                 ";
             } else {
-                // line 76
+                // line 80
                 echo "                    <article class=\"container-monster\">
                         <h5> ";
-                // line 77
+                // line 81
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "nom", []), "html", null, true);
                 echo "</h5> 
                         <p style=color:orange;> ";
-                // line 78
+                // line 82
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "description", []), "html", null, true);
                 echo " </p>
                         ";
-                // line 80
+                // line 84
                 echo "                        <p> Classe : ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "nom", []), "html", null, true);
                 echo " <span> 
                                 ";
-                // line 81
+                // line 85
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "pv", []), "html", null, true);
                 echo " PV </br>
                                 ";
-                // line 82
+                // line 86
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "mp", []), "html", null, true);
                 echo " MP </br> 
                             Force : ";
-                // line 83
+                // line 87
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "puissance", []), "html", null, true);
                 echo " </br> 
                             Defense : ";
-                // line 84
+                // line 88
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "defense", []), "html", null, true);
                 echo "</br> 
                             Vitesse : ";
-                // line 85
+                // line 89
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "vitesse", []), "html", null, true);
                 echo "
                             </span>
                         </p>
                         <img src=";
-                // line 88
+                // line 92
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "photo", []), "html", null, true);
                 echo " class=\"glowing-img\" width=\"150px\" height=\"150px\" alt=\"image du monstre\"/>
                         ";
-                // line 90
+                // line 94
                 echo "                        <div class=\"animate-box\">
                             <a href=\"";
-                // line 91
+                // line 95
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buy_monster", ["id" => twig_get_attribute($this->env, $this->source, $context["monstre"], "id", [])]), "html", null, true);
                 echo "\">  
                                 <div class=\"animate-box-hidden\">
                                     <p style=color:orange;>  ";
-                // line 93
+                // line 97
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "tarif", []), "prix", []), "html", null, true);
                 echo " ruby </p>
                                     <button>
@@ -291,13 +297,13 @@ class __TwigTemplate_07682f78513491d13cd3c2b9004ada3a8af956d7b4f6d6dd69a35627b8a
                     </article>
                 ";
             }
-            // line 107
+            // line 111
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['monstre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 108
+        // line 112
         echo "            </div>
         </section>
 
@@ -324,7 +330,7 @@ class __TwigTemplate_07682f78513491d13cd3c2b9004ada3a8af956d7b4f6d6dd69a35627b8a
 
     public function getDebugInfo()
     {
-        return array (  301 => 108,  295 => 107,  278 => 93,  273 => 91,  270 => 90,  266 => 88,  260 => 85,  256 => 84,  252 => 83,  248 => 82,  244 => 81,  239 => 80,  235 => 78,  231 => 77,  228 => 76,  222 => 74,  220 => 73,  215 => 72,  210 => 68,  197 => 61,  182 => 48,  176 => 46,  172 => 44,  170 => 43,  165 => 41,  160 => 39,  157 => 38,  151 => 36,  147 => 35,  141 => 31,  129 => 25,  124 => 22,  119 => 21,  117 => 20,  104 => 13,  99 => 10,  97 => 9,  92 => 8,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
+        return array (  307 => 112,  301 => 111,  284 => 97,  279 => 95,  276 => 94,  272 => 92,  266 => 89,  262 => 88,  258 => 87,  254 => 86,  250 => 85,  245 => 84,  241 => 82,  237 => 81,  234 => 80,  228 => 78,  226 => 77,  221 => 76,  216 => 72,  203 => 65,  187 => 51,  181 => 49,  177 => 47,  175 => 46,  170 => 44,  165 => 42,  162 => 41,  159 => 40,  157 => 39,  154 => 38,  152 => 37,  148 => 36,  141 => 31,  129 => 25,  124 => 22,  119 => 21,  117 => 20,  104 => 13,  99 => 10,  97 => 9,  92 => 8,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -361,32 +367,36 @@ class __TwigTemplate_07682f78513491d13cd3c2b9004ada3a8af956d7b4f6d6dd69a35627b8a
     {% endfor %}
 
 <!-- ACHAT JEUX -->
-    <div class=\"container-row-reverse\">
-        <section class=\"container-games\">
+    <div class=\"container-bestiary\">
+        <h2> Mini-jeux </h2>
+        <section class=\"container-row-reverse\">
             {% for jeu in jeux %}
-                {% if jeu in app.user.jeux %} 
+                {# Si l'utilisateur possede deja le jeu rien ne s'affiche, sinon#}
+                {% if jeu in app.user.jeux %}
+                    {# <p> Plus aucun jeux en réserve !</p>  #}
                     {% else %}
-                        <article >
-                            <h5> {{ jeu.nom }}</h5> 
-                            <div class=\"animate-box\">
-                                <a href=\"{{ path('buy_game', {'id':jeu.id}) }}\">  
-                                    <div class=\"animate-box-hidden\">
-                                        {% if jeu.tarif.prix == 0 %}
-                                            <p class=\"glowing\">  GRATUIT  </p>
-                                        {% else %}
-                                            <p style=color:orange;>  {{ jeu.tarif.prix }} ruby </p>
-                                        {% endif %}
-                                        <button>
-                                            <span>
+                        <article class=\"game-shop\">
+                            <h5> {{ jeu.nom }} </h5> 
+                                <div class=\"animate-box\">
+                                    <a href=\"{{ path('buy_game', {'id':jeu.id}) }}\">  
+                                        <div class=\"animate-box-hidden\">
+                                            {% if jeu.tarif.prix == 0 %}
+                                                <p class=\"glowing\">  GRATUIT  </p>
+                                            {% else %}
+                                                <p style=color:orange;>  {{ jeu.tarif.prix }} ruby </p>
+                                            {% endif %}
+                                            <button>
                                                 <span>
-                                                    <span  data-attr-span=\"J'achete !\">  Acheter
+                                                    <span>
+                                                        <span  data-attr-span=\"J'achete !\">  Acheter
+                                                        </span>
                                                     </span>
                                                 </span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </div>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                           
                         </article>
                     {% endif %}
                 {% endfor %}    
@@ -397,11 +407,11 @@ class __TwigTemplate_07682f78513491d13cd3c2b9004ada3a8af956d7b4f6d6dd69a35627b8a
 <!-- ACHAT MONSTRES -->
     {# Ouverture container #}
     <section class=\"container-bestiary\">
-        <h2> Boutique </h2>
+        <h2> Élevage monstrueux </h2>
         <div class=\"container-row-reverse\">
             {# Pour chaque monstre de l'entité Monstre, affiche #}
             {% for monstre in monstres %}
-                {# Si l'utilisateur ne possede pas le monstre #}
+                {# Si l'utilisateur possede deja le monstre rien ne s'affiche, sinon #}
                 {% if monstre in app.user.monstre %} 
                 {% else %}
                     <article class=\"container-monster\">

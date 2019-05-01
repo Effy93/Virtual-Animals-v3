@@ -30,32 +30,36 @@
     {% endfor %}
 
 <!-- ACHAT JEUX -->
-    <div class="container-row-reverse">
-        <section class="container-games">
+    <div class="container-bestiary">
+        <h2> Mini-jeux </h2>
+        <section class="container-row-reverse">
             {% for jeu in jeux %}
-                {% if jeu in app.user.jeux %} 
+                {# Si l'utilisateur possede deja le jeu rien ne s'affiche, sinon#}
+                {% if jeu in app.user.jeux %}
+                    {# <p> Plus aucun jeux en réserve !</p>  #}
                     {% else %}
-                        <article >
-                            <h5> {{ jeu.nom }}</h5> 
-                            <div class="animate-box">
-                                <a href="{{ path('buy_game', {'id':jeu.id}) }}">  
-                                    <div class="animate-box-hidden">
-                                        {% if jeu.tarif.prix == 0 %}
-                                            <p class="glowing">  GRATUIT  </p>
-                                        {% else %}
-                                            <p style=color:orange;>  {{ jeu.tarif.prix }} ruby </p>
-                                        {% endif %}
-                                        <button>
-                                            <span>
+                        <article class="game-shop">
+                            <h5> {{ jeu.nom }} </h5> 
+                                <div class="animate-box">
+                                    <a href="{{ path('buy_game', {'id':jeu.id}) }}">  
+                                        <div class="animate-box-hidden">
+                                            {% if jeu.tarif.prix == 0 %}
+                                                <p class="glowing">  GRATUIT  </p>
+                                            {% else %}
+                                                <p style=color:orange;>  {{ jeu.tarif.prix }} ruby </p>
+                                            {% endif %}
+                                            <button>
                                                 <span>
-                                                    <span  data-attr-span="J'achete !">  Acheter
+                                                    <span>
+                                                        <span  data-attr-span="J'achete !">  Acheter
+                                                        </span>
                                                     </span>
                                                 </span>
-                                            </span>
-                                        </button>
-                                    </div>
-                                </a>
-                            </div>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                           
                         </article>
                     {% endif %}
                 {% endfor %}    
@@ -66,11 +70,11 @@
 <!-- ACHAT MONSTRES -->
     {# Ouverture container #}
     <section class="container-bestiary">
-        <h2> Boutique </h2>
+        <h2> Élevage monstrueux </h2>
         <div class="container-row-reverse">
             {# Pour chaque monstre de l'entité Monstre, affiche #}
             {% for monstre in monstres %}
-                {# Si l'utilisateur ne possede pas le monstre #}
+                {# Si l'utilisateur possede deja le monstre rien ne s'affiche, sinon #}
                 {% if monstre in app.user.monstre %} 
                 {% else %}
                     <article class="container-monster">

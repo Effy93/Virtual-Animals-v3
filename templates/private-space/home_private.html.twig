@@ -13,7 +13,7 @@
 		{# OPEN user info section #}
 		<section class="container-user-infos">
 			<h5> Mon compte </h5>
-			<img class="glowing-img" src="/images/logos/panda-feroce2.png" width="100px" heigth="100px" alt="avatar utilisateur" />
+			<img class="glowing-img shake" src="/images/logos/panda-feroce2.png" width="100px" heigth="100px" alt="avatar utilisateur" />
 			<h4> {{ app.user.nom }} </h4>
 			<p> Inscrit depuis le : <span style=color:orange;> {{ app.user.date|date('d-m-Y') }} </span></p>
 			<p> <span style=color:red;> {{ app.user.argent}} </span> Ruby </p>
@@ -62,13 +62,14 @@
 <!-- OUVERTURE CONTAINER DES JEUX  -->
     <section class="container-games">
 		{# Si aucun jeu acheter #}
+		<h5> Mes Jeux </h5>
 		{% if (app.user.jeux.count == '0' ) %}
-			<h5> Aucun jeux disponibles </h5>
+			<p> Aucun jeux disponibles </p>
 			<div class="animate-box">
 				<a href="{{ path('shop') }}">  
 					<div class="animate-box-hidden">
-						<p> <span style=color:orange;> <img class="glowing-img" src="/images/logos/panda-sad.png" width="100px" height="100px" alt="photo d'un panda triste, car aucun jeux n'est disponible !"/> </span>  </p>
-						<button>
+						<p> <span style=color:orange;> <img class="glowing-img" src="/images/logos/red-panda-sad.png" width="100px" height="100px" alt="photo d'un panda triste, car aucun jeux n'est disponible !"/> </span>  </p>
+						<button >
 							<span>
 								<span>
 									<span data-attr-span="Go boutique"> Acheter des jeux 
@@ -80,8 +81,6 @@
 					</div>
 				</a>
 			</div>
-		{% else %}
-			<h5> Jeux disponibles </h5>
 		{% endif %}
 <!-- LISTE DES JEUX -->
 	  <div class="games-list">
@@ -101,7 +100,7 @@
 			</ul>
 	  </div>
 
-	  {# Le main se ferme dans les jeux #}
+	  {# Le main se ferme avec le footer #}
       {# </main> #}
 
 
