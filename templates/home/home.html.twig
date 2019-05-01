@@ -1,9 +1,13 @@
-{% extends 'base.html.twig' %}
+{% extends 'home/layout.html.twig' %}
 {% block title %} {{parent()}} {% endblock %}
 
 {% block body %}
-{{parent()}} 
-<h1> Accueil &hearts; </h1>
+    {{parent()}} 
+    <div class="container-row" >
+        <h1 class="glowing"> News </h1>
+    </div>
+
+{# <h1> Accueil  </h1> #}
 {% endblock %}
 
 

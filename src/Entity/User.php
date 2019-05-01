@@ -7,10 +7,11 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
- * @UniqueEntity(fields={"email"}, message="There is already an account with this email")
+ * @UniqueEntity(fields={"email"}, message="Cette adresse email existe déjà")
  */
 class User implements UserInterface
 {
@@ -23,6 +24,9 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\Length(min=6, max=180
+     * ,minMessage="Votre email doit contenir au moins 6 caractères"
+     * ,maxMessage="Votre email ne peut pas contenir plus de 180 caractères")
      */
     private $email;
 
@@ -59,14 +63,25 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=45)
+     * @Assert\Length(min=3, max=45 
+     * ,minMessage="Votre nom doit contenir au moins 3 caractères"
+     * ,maxMessage="Votre nom ne peut pas contenir plus de 45 caractères")
      */
     private $nom;
+
+    /**
+     * @ORM\Column(type="datetime")
+     */
+    private $date;
 
     public function __construct()
     {
         $this->monstre = new ArrayCollection();
         $this->jeux = new ArrayCollection();
         $this->Accessoire = new ArrayCollection();
+        // Ajoute de l'argent de base a la création d'un utilisateur
+        $this->argent = 10;
+        $this->date = new \DateTime();
     }
 
     public function getId(): ?int
@@ -245,6 +260,18 @@ class User implements UserInterface
     public function setNom(string $nom): self
     {
         $this->nom = $nom;
+
+        return $this;
+    }
+
+    public function getDate(): ?\DateTimeInterface
+    {
+        return $this->date;
+    }
+
+    public function setDate(\DateTimeInterface $date): self
+    {
+        $this->date = $date;
 
         return $this;
     }

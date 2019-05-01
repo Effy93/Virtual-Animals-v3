@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{parent()}} {% endblock %}
+
+{% block body %}
+    {{parent()}} 
+    <h1> Accueil &hearts; </h1>
+    <div class="modal active" id="modal-id">
+        <a href="#close" class="modal-overlay" aria-label="Close"></a>
+        <div class="modal-container">
+            <div class="modal-header">
+                <a href="{{ path('app_register') }}" class="btn btn-clear float-right" aria-label="Close"></a>
+                <div class="modal-title h5">Les Conditions d'utilisation</div>
+                <p> On revend vos données aux Ghul pour acheter des marshmallow &hearts; </p>
+                <p> En réalité aucunes données n'est revendue, elles sont utilisés uniquement aux besoins des fonctionnalitées de cette application.</p>
+            </div>
+            <div class="modal-body">
+                <div class="content">
+                </div>
+            </div>
+            <div class="modal-footer"> 
+
+                    <a href="{{ path('home') }}" class="btn btn-error float-right" > Je refuse </a>
+                    <a href="{{ path('app_register') }}" class="btn btn-success float-right" aria-label="Close"> J'accepte </a>
+                    
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

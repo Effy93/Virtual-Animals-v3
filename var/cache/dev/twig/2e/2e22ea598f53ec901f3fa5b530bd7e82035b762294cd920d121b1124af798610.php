@@ -24,7 +24,7 @@ class __TwigTemplate_b2ecd6ef9da1a3b21aeda9e49a04f5f936f62d31722b94d438596bff3d9
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "security/login.html.twig", 1);
+        $this->parent = $this->loadTemplate("security/layout.html.twig", "security/login.html.twig", 1);
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
@@ -33,7 +33,7 @@ class __TwigTemplate_b2ecd6ef9da1a3b21aeda9e49a04f5f936f62d31722b94d438596bff3d9
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "security/layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -160,7 +160,7 @@ class __TwigTemplate_b2ecd6ef9da1a3b21aeda9e49a04f5f936f62d31722b94d438596bff3d9
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'security/layout.html.twig' %}
 
 {% block title %}Log in!{% endblock %}
 {% block body %}

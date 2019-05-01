@@ -1,0 +1,63 @@
+{% extends 'private-space/games/layout.html.twig' %}
+
+{% block title %} 
+  {{parent()}} 
+{% endblock %}
+
+{% block javascripts %}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="/assets/js/ttt.js" />
+
+{% endblock %}
+
+{% block body %}
+ 
+{{parent()}}
+<h5> Tic Tac Toe </h5>
+
+    <div class="container-fluid" id="content">
+
+        <div id="parent" class="">
+            {# <h1 class="text-primary text-center">Tic Tac Toe</h1> #}
+
+            <h1 id="input" class=""></h1>
+
+            <div id = "bt">
+
+            <div id="selector" class="">choose your game
+                <button id="p1" class="first">1 player</button>
+                <button id="p2" class="first">2 players</button>
+            </div>
+
+            <div id = "start" class=""> choisi ton camp
+                <button id="x" class="first">X</button>
+                <button id="o" class="first">O</button>
+            </div>
+            </div>
+
+            <div class="game">
+            <div class="row text-center">
+                <button id="1" class="img"></button>
+                <button id="2" class="img"></button>
+                <button id="3" class="img"></button>
+            </div>
+            <div class="row text-center">
+                <button id="4" class="img"></button>
+                <button id="5" class="img"></button>
+                <button id="6" class="img"></button>
+            </div>
+            <div class="row text-center">
+                <button id="7" class="img"></button>
+                <button id="8" class="img"></button>
+                <button id="9" class="img"></button>
+            </div>
+            </div>
+
+        </div>
+    </div>
+    <hr class="hr">
+
+    <button class="btn btn-error"> <a href="{{ path('home-private') }}"> Retour </a> </button>
+
+{% endblock %}

@@ -24,7 +24,7 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "home/home.html.twig", 1);
+        $this->parent = $this->loadTemplate("home/layout.html.twig", "home/home.html.twig", 1);
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
@@ -33,7 +33,7 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "home/layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -83,9 +83,13 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 5
+        echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo " 
-<h1> Accueil &hearts; </h1>
+    <div class=\"container-row\" >
+        <h1 class=\"glowing\"> News </h1>
+    </div>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -112,17 +116,21 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'home/layout.html.twig' %}
 {% block title %} {{parent()}} {% endblock %}
 
 {% block body %}
-{{parent()}} 
-<h1> Accueil &hearts; </h1>
+    {{parent()}} 
+    <div class=\"container-row\" >
+        <h1 class=\"glowing\"> News </h1>
+    </div>
+
+{# <h1> Accueil  </h1> #}
 {% endblock %}
 
 
 
 
-", "home/home.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/Virtual-Animals/templates/home/home.html.twig");
+", "home/home.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/home/home.html.twig");
     }
 }

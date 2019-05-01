@@ -53,28 +53,29 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 14
+        // line 15
         echo "    </head>
     <body>
         ";
-        // line 16
+        // line 17
         $this->displayBlock('body', $context, $blocks);
-        // line 45
+        // line 62
         echo "
+    </main>
         <footer>
             <nav>
                 <ul>
-                    <li><a href=\"https://github.com/Effy93\"> <img src=\"/images/logo-github.svg\" width=\"50px\" height=\"50px\" alt=\"logo GitHub représente un chat avec des tentacule\"  /> </a></li>
-                    <li><a href=\"https://www.linkedin.com/in/eva-philippo-7264b7161/\"> <img src=\"/images/logo-linkedin.png\" width=\"50px\" height=\"50px\" alt=\"logo Linkedin \"  /> </a></li> 
+                    <li><a href=\"https://github.com/Effy93\"> <img src=\"/images/logos/logo-github.svg\" width=\"50px\" height=\"50px\" alt=\"logo GitHub représente un chat avec des tentacule\"  /> </a></li>
+                    <li><a href=\"https://www.linkedin.com/in/eva-philippo-7264b7161/\"> <img src=\"/images/logos/logo-linkedin.png\" width=\"50px\" height=\"50px\" alt=\"logo Linkedin \"  /> </a></li> 
                     <li><p> ©2019-Eva Philippo </p></li>
                 </ul>
             </nav>
         </footer>
 
         ";
-        // line 56
+        // line 74
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 58
+        // line 76
         echo "    </body>
 </html>
 ";
@@ -118,7 +119,8 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre.min.css\">
         <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre-exp.min.css\">
         <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre-icons.min.css\">
-        <link rel=\"stylesheet\" href=\"/style.css\">
+        <link rel=\"stylesheet\" href=\"/assets/css/style.css\">
+        <link rel=\"icon\" type=\"image/png\" href=\"/images/logos/logo-red-panda.png\"> 
        
         ";
         
@@ -129,7 +131,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
 
     }
 
-    // line 16
+    // line 17
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -138,65 +140,96 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 17
-        echo "           
+        // line 18
+        echo "
                 <nav id=\"menu\">
                     <ul>
-                        <li><a href =\"";
-        // line 20
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
-        echo "\"> Accueil </a></li>
-                        <li><a href =\"";
-        // line 21
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop");
-        echo "\"> Boutique </a></li>
-
+                
+<!-- ADMIN / DESIGNER  -->
                         ";
         // line 23
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
             // line 24
+            echo "                            ";
+            // line 25
             echo "                            <div class=\"dropdown\">
                                 <li class=\"dropdownbtn\"><a href =\"";
-            // line 25
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
-            echo "\"> Espace perso  </a></li>
-                                ";
-            // line 27
-            echo "                                    <ul class=\"dropdown-content\">
+            // line 26
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+            echo "\"> Accueil &darr; </a></li>
+                                    <ul class=\"dropdown-content\">
                                         <li><a href =\"";
             // line 28
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
+            echo "\"> Admin </a></li>
+                                        <li><a href =\"";
+            // line 29
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_monster");
+            echo "\"> Edition </a></li>
+                                    </ul>
+                            </div>
+                        ";
+        } else {
+            // line 33
+            echo "                            <li><a href =\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
+            echo "\"> Accueil </a></li>
+                        ";
+        }
+        // line 35
+        echo "<!-- USER  -->
+                        ";
+        // line 37
+        echo "                        ";
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
+            // line 38
+            echo "                            <li><a href =\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop");
+            echo "\"> Boutique </a></li>
+                            
+                            ";
+            // line 41
+            echo "                            <div class=\"dropdown\">
+                                <li class=\"dropdownbtn\"><a href =\"";
+            // line 42
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
+            echo "\"> Espace personnel &darr; </a></li>
+                                    <ul class=\"dropdown-content\">
+                                        <li><a href =\"";
+            // line 44
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bestiary");
             echo "\"> Bestiaire </a></li>
                                         <li><a href =\"";
-            // line 29
+            // line 45
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inventory");
             echo "\"> Inventaire </a></li>
                                     </ul>
                             </div>
-
                             <li><a href =\"";
-            // line 33
+            // line 48
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
             echo "\"> Deconnexion  </a></li>
+
                         ";
+            // line 51
+            echo "                        ";
         } else {
-            // line 35
-            echo "                            <li> <a href=\"";
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\"> Connexion</a></li>
-                            <li><a href =\"";
-            // line 36
+            // line 52
+            echo "                            <li><a href =\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\"> Inscription </a></li>
+                            <li> <a href=\"";
+            // line 53
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+            echo "\"> Connexion</a></li>
                         ";
         }
-        // line 38
+        // line 55
         echo "                    </ul>
                 </nav>
-            <header>
-                <h1> Bienvenue dans Virtual Animals </h1>
-            </header>
-           
+            ";
+        // line 60
+        echo "           
         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -206,7 +239,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
 
     }
 
-    // line 56
+    // line 74
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -215,7 +248,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 57
+        // line 75
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -232,7 +265,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
 
     public function getDebugInfo()
     {
-        return array (  219 => 57,  210 => 56,  194 => 38,  189 => 36,  184 => 35,  179 => 33,  172 => 29,  168 => 28,  165 => 27,  161 => 25,  158 => 24,  156 => 23,  151 => 21,  147 => 20,  142 => 17,  133 => 16,  117 => 7,  108 => 6,  90 => 5,  78 => 58,  76 => 56,  63 => 45,  61 => 16,  57 => 14,  55 => 6,  51 => 5,  45 => 1,);
+        return array (  252 => 75,  243 => 74,  232 => 60,  228 => 55,  223 => 53,  218 => 52,  215 => 51,  210 => 48,  204 => 45,  200 => 44,  195 => 42,  192 => 41,  186 => 38,  183 => 37,  180 => 35,  174 => 33,  167 => 29,  163 => 28,  158 => 26,  155 => 25,  153 => 24,  151 => 23,  144 => 18,  135 => 17,  118 => 7,  109 => 6,  91 => 5,  79 => 76,  77 => 74,  63 => 62,  61 => 17,  57 => 15,  55 => 6,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -247,46 +280,64 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre.min.css\">
         <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre-exp.min.css\">
         <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre-icons.min.css\">
-        <link rel=\"stylesheet\" href=\"/style.css\">
+        <link rel=\"stylesheet\" href=\"/assets/css/style.css\">
+        <link rel=\"icon\" type=\"image/png\" href=\"/images/logos/logo-red-panda.png\"> 
        
         {% endblock %}
     </head>
     <body>
         {% block body %}
-           
+
                 <nav id=\"menu\">
                     <ul>
-                        <li><a href =\"{{path('home')}}\"> Accueil </a></li>
-                        <li><a href =\"{{path('shop')}}\"> Boutique </a></li>
-
-                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                
+<!-- ADMIN / DESIGNER  -->
+                        {% if (is_granted('ROLE_ADMIN')) %}
+                            {# Sous menu ADMIN #}
                             <div class=\"dropdown\">
-                                <li class=\"dropdownbtn\"><a href =\"{{path('home-private')}}\"> Espace perso  </a></li>
-                                {# <li class=\"dropdownbtn\"><a href =\"{{path('home-private', {'id':user.id}) }}\"> Espace perso  </a></li> #}
+                                <li class=\"dropdownbtn\"><a href =\"{{path('home')}}\"> Accueil &darr; </a></li>
+                                    <ul class=\"dropdown-content\">
+                                        <li><a href =\"{{path('home_admin')}}\"> Admin </a></li>
+                                        <li><a href =\"{{path('edit_monster')}}\"> Edition </a></li>
+                                    </ul>
+                            </div>
+                        {% else %}
+                            <li><a href =\"{{path('home')}}\"> Accueil </a></li>
+                        {% endif %}
+<!-- USER  -->
+                        {# Si l'utilisateur est connecté de nouveau menu apparaissent #}
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <li><a href =\"{{path('shop')}}\"> Boutique </a></li>
+                            
+                            {# Sous menu espace privé #}
+                            <div class=\"dropdown\">
+                                <li class=\"dropdownbtn\"><a href =\"{{path('home-private')}}\"> Espace personnel &darr; </a></li>
                                     <ul class=\"dropdown-content\">
                                         <li><a href =\"{{path('bestiary')}}\"> Bestiaire </a></li>
                                         <li><a href =\"{{path('inventory')}}\"> Inventaire </a></li>
                                     </ul>
                             </div>
-
                             <li><a href =\"{{path('logout')}}\"> Deconnexion  </a></li>
+
+                        {# Sinon #}
                         {% else %}
-                            <li> <a href=\"{{path('app_login')}}\"> Connexion</a></li>
                             <li><a href =\"{{path('app_register')}}\"> Inscription </a></li>
+                            <li> <a href=\"{{path('app_login')}}\"> Connexion</a></li>
                         {% endif %}
                     </ul>
                 </nav>
-            <header>
+            {# <header>
                 <h1> Bienvenue dans Virtual Animals </h1>
-            </header>
+            </header> #}
            
         {% endblock %}
 
+    </main>
         <footer>
             <nav>
                 <ul>
-                    <li><a href=\"https://github.com/Effy93\"> <img src=\"/images/logo-github.svg\" width=\"50px\" height=\"50px\" alt=\"logo GitHub représente un chat avec des tentacule\"  /> </a></li>
-                    <li><a href=\"https://www.linkedin.com/in/eva-philippo-7264b7161/\"> <img src=\"/images/logo-linkedin.png\" width=\"50px\" height=\"50px\" alt=\"logo Linkedin \"  /> </a></li> 
+                    <li><a href=\"https://github.com/Effy93\"> <img src=\"/images/logos/logo-github.svg\" width=\"50px\" height=\"50px\" alt=\"logo GitHub représente un chat avec des tentacule\"  /> </a></li>
+                    <li><a href=\"https://www.linkedin.com/in/eva-philippo-7264b7161/\"> <img src=\"/images/logos/logo-linkedin.png\" width=\"50px\" height=\"50px\" alt=\"logo Linkedin \"  /> </a></li> 
                     <li><p> ©2019-Eva Philippo </p></li>
                 </ul>
             </nav>
@@ -296,6 +347,6 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         {% endblock %}
     </body>
 </html>
-", "base.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/Virtual-Animals/templates/base.html.twig");
+", "base.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/base.html.twig");
     }
 }

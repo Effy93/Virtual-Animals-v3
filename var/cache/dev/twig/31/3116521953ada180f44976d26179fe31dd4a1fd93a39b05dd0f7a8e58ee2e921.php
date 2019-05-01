@@ -73,7 +73,7 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
 
     }
 
-    // line 5
+    // line 13
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -82,7 +82,7 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 14
         $this->displayParentBlock("body", $context, $blocks);
         echo " 
 
@@ -94,53 +94,54 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
     <div class=\"container-row-reverse\">
 
     ";
-        // line 15
+        // line 23
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", []), "monstre", []));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", []), "monstre", []));
         foreach ($context['_seq'] as $context["_key"] => $context["monstre"]) {
             echo " 
         <article class=\"container-monster\">
             <h5> ";
-            // line 17
+            // line 25
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "nom", []), "html", null, true);
             echo "</h5> 
              ";
-            // line 19
+            // line 27
             echo "             <p> Classe : ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "nom", []), "html", null, true);
             echo " <span> 
                     ";
-            // line 20
+            // line 28
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "pv", []), "html", null, true);
             echo " PV </br>
                     ";
-            // line 21
+            // line 29
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "mp", []), "html", null, true);
             echo " MP </br> 
                 Force : ";
-            // line 22
+            // line 30
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "puissance", []), "html", null, true);
             echo " </br> 
                 Defense : ";
-            // line 23
+            // line 31
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "defense", []), "html", null, true);
             echo "</br> 
                 Vitesse : ";
-            // line 24
+            // line 32
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "vitesse", []), "html", null, true);
             echo "
                 </span></p>
             <img src=";
-            // line 26
+            // line 34
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "photo", []), "html", null, true);
             echo " class=\"glowing-img\" width=\"150px\" height=\"150px\" alt=\"image du monstre\"/>
-        </article>    
+        </article>  
+    </main>  
     ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['monstre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 38
         echo "
     </div>
 </section>
@@ -165,7 +166,7 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
 
     public function getDebugInfo()
     {
-        return array (  144 => 29,  135 => 26,  130 => 24,  126 => 23,  122 => 22,  118 => 21,  114 => 20,  109 => 19,  105 => 17,  98 => 15,  86 => 6,  77 => 5,  57 => 3,  27 => 1,);
+        return array (  145 => 38,  135 => 34,  130 => 32,  126 => 31,  122 => 30,  118 => 29,  114 => 28,  109 => 27,  105 => 25,  98 => 23,  86 => 14,  77 => 13,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -173,6 +174,14 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
         return new Source("{% extends 'private-space/layout.html.twig' %}
 
 {% block title %} {{parent()}} {% endblock %}
+
+{# {% block stylesheets %}
+    <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre.min.css\">
+    <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre-exp.min.css\">
+    <link rel=\"stylesheet\" href=\"https://unpkg.com/spectre.css/dist/spectre-icons.min.css\">
+    <link rel=\"stylesheet\" href=\"/style.css\">
+    <link rel=\"icon\" type=\"image/png\" href=\"/images/panda-feroce2.png\"> 
+{% endblock %} #}
 
 {% block body %}
 {{parent()}} 
@@ -196,7 +205,8 @@ class __TwigTemplate_6d10b0ca5420de562d0fb2239f8d4daf18be29378b0f68b1d71c074748b
                 Vitesse : {{ monstre.classe.vitesse }}
                 </span></p>
             <img src={{ monstre.photo }} class=\"glowing-img\" width=\"150px\" height=\"150px\" alt=\"image du monstre\"/>
-        </article>    
+        </article>  
+    </main>  
     {% endfor %}
 
     </div>

@@ -1,0 +1,46 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block title %} {{parent()}} {% endblock %}
+
+{% block body %}
+{{parent()}}
+<header>
+    <h1> Créer votre propre monstre ! </h1>
+</header>
+
+<div class="container-row">
+    {{ form_start(monsterForm) }}
+
+    {{ form_label(monsterForm.nom) }}
+    {{ form_widget(monsterForm.nom) }}
+
+    {{ form_label(monsterForm.description) }}
+    {{ form_widget(monsterForm.description) }}
+
+    {{ form_label(monsterForm.race) }}
+    {{ form_widget(monsterForm.race) }}
+
+    {{ form_label(monsterForm.classe) }}
+    {{ form_widget(monsterForm.classe) }}
+
+    {{ form_label(monsterForm.element) }}
+    {{ form_widget(monsterForm.element) }}
+
+    {{ form_label(monsterForm.habitat) }}
+    {{ form_widget(monsterForm.habitat) }}
+
+    {{ form_label(monsterForm.photo) }}
+    {{ form_widget(monsterForm.photo) }}
+
+    {{ form_widget(monsterForm.termsAccepted) }} <a href="{{ path('ml') }}"> Mentions légales </a>
+
+    <button class="btn btn-lg btn-primary"> Envoyez </button>
+
+    {{ form_end(monsterForm) }}
+</div>
+
+
+
+
+
+{% endblock %}

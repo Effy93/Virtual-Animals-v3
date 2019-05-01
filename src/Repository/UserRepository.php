@@ -47,4 +47,18 @@ class UserRepository extends ServiceEntityRepository
         ;
     }
     */
+
+    public function getMonstreNb() {
+  
+        $rawSql = "SELECT COUNT(*) AS monstre from user_monstre WHERE user_id =1";
+
+        $stmt = $this->getEntityManager()->getConnection()->prepare($rawSql);
+        // $stmt->bindValue(":id",$id);
+        // $stmt->bindParam(1, $name);
+        $stmt->execute([]);
+    
+        return $stmt->fetchAll();
+  
+    }
+    // SELECT COUNT(*) from user_monstre WHERE user_id = 1"
 }

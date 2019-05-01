@@ -24,7 +24,7 @@ class __TwigTemplate_02434efb35ded485139a4099f61ad280a00c90daafe01905958253e8f0d
         $this->source = $this->getSourceContext();
 
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "registration/register.html.twig", 1);
+        $this->parent = $this->loadTemplate("registration/layout.html.twig", "registration/register.html.twig", 1);
         $this->blocks = [
             'title' => [$this, 'block_title'],
             'body' => [$this, 'block_body'],
@@ -33,7 +33,7 @@ class __TwigTemplate_02434efb35ded485139a4099f61ad280a00c90daafe01905958253e8f0d
 
     protected function doGetParent(array $context)
     {
-        return "base.html.twig";
+        return "registration/layout.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = [])
@@ -124,7 +124,9 @@ class __TwigTemplate_02434efb35ded485139a4099f61ad280a00c90daafe01905958253e8f0d
             ";
         // line 23
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 23, $this->source); })()), "termsAccepted", []), 'widget');
-        echo " J'accepte les conditions d'utilisation.
+        echo " <a href=\"";
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ml");
+        echo "\"> J'accepte les conditions d'utilisation. </a>
             <button class=\"btn btn-lg btn-primary\"> S'inscrire </button>
           
         ";
@@ -154,12 +156,12 @@ class __TwigTemplate_02434efb35ded485139a4099f61ad280a00c90daafe01905958253e8f0d
 
     public function getDebugInfo()
     {
-        return array (  132 => 26,  126 => 23,  121 => 21,  116 => 20,  111 => 17,  106 => 16,  101 => 13,  96 => 12,  91 => 9,  84 => 6,  75 => 5,  57 => 3,  27 => 1,);
+        return array (  134 => 26,  126 => 23,  121 => 21,  116 => 20,  111 => 17,  106 => 16,  101 => 13,  96 => 12,  91 => 9,  84 => 6,  75 => 5,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("{% extends 'base.html.twig' %}
+        return new Source("{% extends 'registration/layout.html.twig' %}
 
 {% block title %} Inscription {% endblock %}
 
@@ -181,7 +183,7 @@ class __TwigTemplate_02434efb35ded485139a4099f61ad280a00c90daafe01905958253e8f0d
             {{ form_widget(registrationForm.password, {'attr': {'placeholder': 'mot de passe'}} ) }}
             {{ form_errors(registrationForm.password) }}
 
-            {{ form_widget(registrationForm.termsAccepted) }} J'accepte les conditions d'utilisation.
+            {{ form_widget(registrationForm.termsAccepted) }} <a href=\"{{path('ml')}}\"> J'accepte les conditions d'utilisation. </a>
             <button class=\"btn btn-lg btn-primary\"> S'inscrire </button>
           
         {{ form_end(registrationForm) }}

@@ -38,6 +38,12 @@ class Jeux
      */
     private $users;
 
+    /**
+     * @ORM\Column(type="string", length=20, nullable=true)
+     */
+    private $path;
+
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -108,6 +114,18 @@ class Jeux
             $this->users->removeElement($user);
             $user->removeJeux($this);
         }
+
+        return $this;
+    }
+
+    public function getPath(): ?string
+    {
+        return $this->path;
+    }
+
+    public function setPath(?string $path): self
+    {
+        $this->path = $path;
 
         return $this;
     }

@@ -1,0 +1,113 @@
+{% extends 'shop/layout.html.twig' %}
+{% block title %} {{parent()}} {% endblock %}
+
+{% block body %}
+    {{parent()}} 
+<!-- POP UP ACHAT -->
+    {# Messages flash #}
+    {% for message in app.session.flashBag.get('success') %}
+        {# Modal pop-up confirmation d'achat #}
+        <div class="modal active modal-sm" id="modal-id">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a href="{{path('shop')}}" class="btn btn-clear float-right" aria-label="Close"></a>
+                    <div class="modal-title h5"> Merci pour votre achat !</div>
+                    <p> Cet article a bien été ajouté a votre bestiaire </p>
+                </div>
+            </div>
+          </div>
+    {% endfor %}
+    {# FAIL #}
+    {% for message in app.session.flashBag.get('fail') %}
+        <div class="modal active modal-sm" id="modal-id">
+            <div class="modal-container">
+                <div class="modal-header">
+                    <a href="{{path('shop')}}" class="btn btn-clear float-right" aria-label="Close"></a>
+                    <div class="modal-title h5"> Pas assez de thunes boloss !</div>
+                </div>
+            </div>
+          </div>
+    {% endfor %}
+
+<!-- ACHAT JEUX -->
+    <div class="container-row-reverse">
+        <section class="container-games">
+            {% for jeu in jeux %}
+                {% if jeu in app.user.jeux %} 
+                    {% else %}
+                        <article >
+                            <h5> {{ jeu.nom }}</h5> 
+                            <div class="animate-box">
+                                <a href="{{ path('buy_game', {'id':jeu.id}) }}">  
+                                    <div class="animate-box-hidden">
+                                        {% if jeu.tarif.prix == 0 %}
+                                            <p class="glowing">  GRATUIT  </p>
+                                        {% else %}
+                                            <p style=color:orange;>  {{ jeu.tarif.prix }} ruby </p>
+                                        {% endif %}
+                                        <button>
+                                            <span>
+                                                <span>
+                                                    <span  data-attr-span="J'achete !">  Acheter
+                                                    </span>
+                                                </span>
+                                            </span>
+                                        </button>
+                                    </div>
+                                </a>
+                            </div>
+                        </article>
+                    {% endif %}
+                {% endfor %}    
+            </section>
+    </div>
+    
+
+<!-- ACHAT MONSTRES -->
+    {# Ouverture container #}
+    <section class="container-bestiary">
+        <h2> Boutique </h2>
+        <div class="container-row-reverse">
+            {# Pour chaque monstre de l'entité Monstre, affiche #}
+            {% for monstre in monstres %}
+                {# Si l'utilisateur ne possede pas le monstre #}
+                {% if monstre in app.user.monstre %} 
+                {% else %}
+                    <article class="container-monster">
+                        <h5> {{ monstre.nom }}</h5> 
+                        <p style=color:orange;> {{monstre.description}} </p>
+                        {# Pop-up stats des monstres #}
+                        <p> Classe : {{ monstre.classe.nom }} <span> 
+                                {{ monstre.classe.pv }} PV </br>
+                                {{ monstre.classe.mp }} MP </br> 
+                            Force : {{ monstre.classe.puissance }} </br> 
+                            Defense : {{ monstre.classe.defense }}</br> 
+                            Vitesse : {{ monstre.classe.vitesse }}
+                            </span>
+                        </p>
+                        <img src={{ monstre.photo }} class="glowing-img" width="150px" height="150px" alt="image du monstre"/>
+                        {#  ACHAT  => ANIMATE BORDER BOX #}
+                        <div class="animate-box">
+                            <a href="{{ path('buy_monster', {'id':monstre.id}) }}">  
+                                <div class="animate-box-hidden">
+                                    <p style=color:orange;>  {{ monstre.tarif.prix }} ruby </p>
+                                    <button>
+                                        <span>
+                                            <span>
+                                                <span  data-attr-span="J'achete !">  Acheter
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </button>
+                                </div>
+                            </a>
+                        </div>
+                    </article>
+                {% endif %}
+            {% endfor %}
+            </div>
+        </section>
+
+
+
+{% endblock %}

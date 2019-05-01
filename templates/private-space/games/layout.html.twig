@@ -1,0 +1,68 @@
+{% extends 'private-space/layout.html.twig' %}
+
+{% block title %} 
+  {{parent()}} 
+{% endblock %}
+
+{% block body %}
+ 
+{{parent()}}
+
+<main class="container-main">
+
+        {# Container flex pour les infos et les jeux #}
+        <div class="container-row-reverse">
+          {# OPEN user info section #}
+          <section class="container-user-infos">
+              <h5> Mon compte </h5>
+              <img class="glowing-img" src="/images/logos/panda-feroce2.png" width="100px" heigth="100px" alt="avatar utilisateur" />
+                <h4> {{ app.user.nom }} </h4>
+                <p> Inscrit depuis le : <span style=color:orange;> {{ app.user.date|date('d-m-Y') }} </span></p>
+              <p> <span style=color:red;> {{ app.user.argent}} </span> Ruby </p>
+            
+              <div class="container-row">
+                  {# ANIMATE BORDER BOX CONTAINER #}
+              <div class="animate-box">
+                      {# ANIMATE BORDER BOX => display Bestiary button #}
+                      <a href="{{path('bestiary')}}">
+                      <div class="animate-box-hidden">
+                          {# {% for nb in nbMonstre %}
+                              <p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
+                              {% endfor %} #}
+                          <p> <span style=color:orange;> {{ app.user.monstre.count }} </span> monstres </p>
+                          <button>
+                          <span>
+                              <span>
+                              <span data-attr-span="Bestiaire"> Bestiaire
+                              </span>
+                              </span>
+                          </span>
+                          </button>
+                      </div>
+                      </a>
+                  </div>
+                  {# ANIMATE BORDER BOX => display Inventory button #}
+                  <div class="animate-box">
+                      <a href="{{path('inventory')}}">
+                      <div class="animate-box-hidden">
+                          <p> <span style=color:orange;> {{ app.user.accessoire.count }} </span> accessoires </p>
+                          <button>
+                          <span>
+                              <span>
+                              <span data-attr-span="Inventaire"> Inventaire
+                              </span>
+                              </span>
+                          </span>
+                          </button>
+                      </div>
+                      </a>
+                  </div>
+              </div>
+              
+            {# CLOSE user info section #}
+          </section>
+      
+          {# OUVERTURE CONTAINER DES JEUX #}
+          <section class="container-games">
+
+{% endblock %}

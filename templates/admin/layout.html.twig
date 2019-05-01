@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{parent()}} {% endblock %}
+
+{% block stylesheets %}
+        
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+<link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+<link rel="stylesheet" href="/admin.css">
+<link rel="icon" type="image/png" href="/images/logos/logo-red-panda.png"> 
+
+{% endblock %}
+
+{% block body %} 
+{{parent()}}
+
+{% endblock %}
+

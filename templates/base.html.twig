@@ -8,46 +8,64 @@
         <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
         <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
         <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="icon" type="image/png" href="/images/logos/logo-red-panda.png"> 
        
         {% endblock %}
     </head>
     <body>
         {% block body %}
-           
+
                 <nav id="menu">
                     <ul>
-                        <li><a href ="{{path('home')}}"> Accueil </a></li>
-                        <li><a href ="{{path('shop')}}"> Boutique </a></li>
-
-                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                
+<!-- ADMIN / DESIGNER  -->
+                        {% if (is_granted('ROLE_ADMIN')) %}
+                            {# Sous menu ADMIN #}
                             <div class="dropdown">
-                                <li class="dropdownbtn"><a href ="{{path('home-private')}}"> Espace perso  </a></li>
-                                {# <li class="dropdownbtn"><a href ="{{path('home-private', {'id':user.id}) }}"> Espace perso  </a></li> #}
+                                <li class="dropdownbtn"><a href ="{{path('home')}}"> Accueil &darr; </a></li>
+                                    <ul class="dropdown-content">
+                                        <li><a href ="{{path('home_admin')}}"> Admin </a></li>
+                                        <li><a href ="{{path('edit_monster')}}"> Edition </a></li>
+                                    </ul>
+                            </div>
+                        {% else %}
+                            <li><a href ="{{path('home')}}"> Accueil </a></li>
+                        {% endif %}
+<!-- USER  -->
+                        {# Si l'utilisateur est connecté de nouveau menu apparaissent #}
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <li><a href ="{{path('shop')}}"> Boutique </a></li>
+                            
+                            {# Sous menu espace privé #}
+                            <div class="dropdown">
+                                <li class="dropdownbtn"><a href ="{{path('home-private')}}"> Espace personnel &darr; </a></li>
                                     <ul class="dropdown-content">
                                         <li><a href ="{{path('bestiary')}}"> Bestiaire </a></li>
                                         <li><a href ="{{path('inventory')}}"> Inventaire </a></li>
                                     </ul>
                             </div>
-
                             <li><a href ="{{path('logout')}}"> Deconnexion  </a></li>
+
+                        {# Sinon #}
                         {% else %}
-                            <li> <a href="{{path('app_login')}}"> Connexion</a></li>
                             <li><a href ="{{path('app_register')}}"> Inscription </a></li>
+                            <li> <a href="{{path('app_login')}}"> Connexion</a></li>
                         {% endif %}
                     </ul>
                 </nav>
-            <header>
+            {# <header>
                 <h1> Bienvenue dans Virtual Animals </h1>
-            </header>
+            </header> #}
            
         {% endblock %}
 
+    </main>
         <footer>
             <nav>
                 <ul>
-                    <li><a href="https://github.com/Effy93"> <img src="/images/logo-github.svg" width="50px" height="50px" alt="logo GitHub représente un chat avec des tentacule"  /> </a></li>
-                    <li><a href="https://www.linkedin.com/in/eva-philippo-7264b7161/"> <img src="/images/logo-linkedin.png" width="50px" height="50px" alt="logo Linkedin "  /> </a></li> 
+                    <li><a href="https://github.com/Effy93"> <img src="/images/logos/logo-github.svg" width="50px" height="50px" alt="logo GitHub représente un chat avec des tentacule"  /> </a></li>
+                    <li><a href="https://www.linkedin.com/in/eva-philippo-7264b7161/"> <img src="/images/logos/logo-linkedin.png" width="50px" height="50px" alt="logo Linkedin "  /> </a></li> 
                     <li><p> ©2019-Eva Philippo </p></li>
                 </ul>
             </nav>

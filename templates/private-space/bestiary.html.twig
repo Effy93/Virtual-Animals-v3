@@ -2,6 +2,14 @@
 
 {% block title %} {{parent()}} {% endblock %}
 
+{# {% block stylesheets %}
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/png" href="/images/panda-feroce2.png"> 
+{% endblock %} #}
+
 {% block body %}
 {{parent()}} 
 
@@ -24,7 +32,8 @@
                 Vitesse : {{ monstre.classe.vitesse }}
                 </span></p>
             <img src={{ monstre.photo }} class="glowing-img" width="150px" height="150px" alt="image du monstre"/>
-        </article>    
+        </article>  
+    </main>  
     {% endfor %}
 
     </div>

@@ -27,12 +27,21 @@ class PrivateSpaceController extends AbstractController
     {
         $userDepot = $this->getDoctrine()->getRepository(User::class);
         $userData = $userDepot->findAll() ;
+     
+
+        // $em = $this->getDoctrine()->getManager();
+        // $locationRepo = $em->getRepository(User::class);
+        // $nb = $locationRepo->getMonstreNb();
+        // $nbArray[0] = $nb;
+        // dd($nb[0]);
+    
         
         return $this->render("private-space/home_private.html.twig");
     }
 
     /**
      * @Route("/bestiary", name="bestiary")
+     * @IsGranted("ROLE_USER")
      */
     public function displayBestiary()
     {

@@ -12,7 +12,7 @@
                     'App\\Repository\\UserRepository',
                 ],
                 'message' => [
-                    1 => 'There is already an account with this email',
+                    1 => 'Cette adresse email existe déjà',
                 ],
                 'fields' => [
                     1 => [

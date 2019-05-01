@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'registration/layout.html.twig' %}
 
 {% block title %} Inscription {% endblock %}
 
@@ -20,7 +20,7 @@
             {{ form_widget(registrationForm.password, {'attr': {'placeholder': 'mot de passe'}} ) }}
             {{ form_errors(registrationForm.password) }}
 
-            {{ form_widget(registrationForm.termsAccepted) }} J'accepte les conditions d'utilisation.
+            {{ form_widget(registrationForm.termsAccepted) }} <a href="{{path('ml')}}"> J'accepte les conditions d'utilisation. </a>
             <button class="btn btn-lg btn-primary"> S'inscrire </button>
           
         {{ form_end(registrationForm) }}

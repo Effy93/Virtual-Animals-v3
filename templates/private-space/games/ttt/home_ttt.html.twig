@@ -1,0 +1,41 @@
+{% extends 'private-space/games/layout.html.twig' %}
+
+{% block title %} 
+  {{parent()}} 
+{% endblock %}
+
+
+{% block body %}
+
+{{parent()}}
+
+{% for jeux in app.user.jeux %}
+	{% if (jeux.id == '2') %}
+        <h5> {{ jeux.nom }} </h5>
+        <p> {{ jeux.description }} </p>
+    {% endif %}
+{% endfor %}
+              
+<div class="animate-box">
+    {# ANIMATE BORDER BOX => display Bestiary button #}
+    <a href="{{path('ttt')}}">
+    <div class="animate-box-hidden">
+      {# {% for nb in nbMonstre %}
+        <p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
+        {% endfor %} #}
+      <p> <span style=color:orange;> <img class="glowing-img" src="/images/logos/logo-red-panda.png" width="100px" height="100px"/> </span>  </p>
+      <button>
+      <span>
+        <span>
+        <span data-attr-span="Jouer"> Tic Tac Toe
+        </span>
+        </span>
+      </span>
+      </button>
+    </div>
+    </a>
+  </div>
+<button class="btn btn-error"> <a href="{{ path('home-private') }}"> Retour </a> </button>
+
+
+{% endblock %}

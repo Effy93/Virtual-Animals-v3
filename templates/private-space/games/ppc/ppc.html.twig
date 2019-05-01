@@ -1,0 +1,66 @@
+{% extends 'private-space/games/layout.html.twig' %}
+
+{% block title %} 
+  {{parent()}} 
+{% endblock %}
+
+{% block body %}
+ 
+{{parent()}}
+<h5> Pierre feuille ciseaux </h5>
+    <section class="container-body-PPC">
+        {{ form_start(PPCform) }}
+        <div class="container-row">
+            <div class="container-column">   
+                <img src="/images/games/ppc/pierre.png" alt="représente le signe de la pierre" width="100px" height="100px" />
+                {{ form_label(PPCform.choix[0]) }}
+                
+                {{ form_widget(PPCform.choix[0]) }}
+            </div>
+            <div class="container-column">
+                <img src="/images/games/ppc/papier.png" alt="représente le signe de la pierre" width="100px" height="100px" />
+                {{ form_label(PPCform.choix[1]) }}
+                {{ form_widget(PPCform.choix[1]) }}
+            </div>
+            <div class="container-column">
+                <img src="/images/games/ppc/ciseaux.png" alt="représente le signe de la pierre" width="100px" height="100px" />
+                {{ form_label(PPCform.choix[2]) }}
+                {{ form_widget(PPCform.choix[2]) }}
+            </div>
+            {{ form_row(PPCform.choix) }}
+        </div>
+        <button class="btn btn-lg btn-primary" type="submit"> Valider </button>
+      
+        {{ form_end(PPCform) }}
+    </section>
+    <button class="btn btn-error"> <a href="{{ path('home-private') }}"> Retour </a> </button>
+
+
+{# <div class="post_as">
+        {{ form_label(form.is_anonymous, 'Post as:') }}
+        {{ form_errors(form.is_anonymous) }}
+    
+        {% form_theme form _self %}
+        {% block _factor_is_anonymous_0_label %}
+            <img src="/images/anonymous-32.png"/>
+            {{ block ('form_label') }}
+        {% endblock %}
+        {% block _factor_is_anonymous_1_label %}
+            <img src="/images/user-32.png"/>
+            {{ block ('form_label') }}
+        {% endblock %}
+    
+        {{ form_widget(form.is_anonymous) }}
+    </div> #}
+       
+
+        {# {% block _factor_is_anonymous_0_label %}
+    <img src="/images/anonymous-32.png"/>
+    {{ block ('form_label') }}
+{% endblock %}
+{% block _factor_is_anonymous_1_label %}
+    <img src="/images/user-32.png"/>
+    {{ block ('form_label') }}
+{% endblock %} #}
+    
+{% endblock %}

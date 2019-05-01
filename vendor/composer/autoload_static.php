@@ -111,6 +111,7 @@ class ComposerStaticInit3dfe86f9345a511d496ffab349a6ceb5
         array (
             'Fig\\Link\\' => 9,
             'Facebook\\WebDriver\\' => 19,
+            'FOS\\JsRoutingBundle\\' => 20,
         ),
         'E' => 
         array (
@@ -124,11 +125,13 @@ class ComposerStaticInit3dfe86f9345a511d496ffab349a6ceb5
             'Doctrine\\Instantiator\\' => 22,
             'Doctrine\\DBAL\\' => 14,
             'Doctrine\\Common\\Inflector\\' => 26,
+            'Doctrine\\Common\\DataFixtures\\' => 29,
             'Doctrine\\Common\\Collections\\' => 28,
             'Doctrine\\Common\\Cache\\' => 22,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
             'Doctrine\\Bundle\\MigrationsBundle\\' => 33,
+            'Doctrine\\Bundle\\FixturesBundle\\' => 31,
             'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 36,
             'Doctrine\\Bundle\\DoctrineBundle\\' => 31,
         ),
@@ -426,6 +429,10 @@ class ComposerStaticInit3dfe86f9345a511d496ffab349a6ceb5
         array (
             0 => __DIR__ . '/..' . '/facebook/webdriver/lib',
         ),
+        'FOS\\JsRoutingBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/friendsofsymfony/jsrouting-bundle',
+        ),
         'Egulias\\EmailValidator\\' => 
         array (
             0 => __DIR__ . '/..' . '/egulias/email-validator/EmailValidator',
@@ -454,6 +461,10 @@ class ComposerStaticInit3dfe86f9345a511d496ffab349a6ceb5
         array (
             0 => __DIR__ . '/..' . '/doctrine/inflector/lib/Doctrine/Common/Inflector',
         ),
+        'Doctrine\\Common\\DataFixtures\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/data-fixtures/lib/Doctrine/Common/DataFixtures',
+        ),
         'Doctrine\\Common\\Collections\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/collections/lib/Doctrine/Common/Collections',
@@ -476,6 +487,10 @@ class ComposerStaticInit3dfe86f9345a511d496ffab349a6ceb5
         'Doctrine\\Bundle\\MigrationsBundle\\' => 
         array (
             0 => __DIR__ . '/..' . '/doctrine/doctrine-migrations-bundle',
+        ),
+        'Doctrine\\Bundle\\FixturesBundle\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/doctrine-fixtures-bundle',
         ),
         'Doctrine\\Bundle\\DoctrineCacheBundle\\' => 
         array (
@@ -508,6 +523,13 @@ class ComposerStaticInit3dfe86f9345a511d496ffab349a6ceb5
             'ProxyManager\\' => 
             array (
                 0 => __DIR__ . '/..' . '/ocramius/proxy-manager/src',
+            ),
+        ),
+        'J' => 
+        array (
+            'JsonpCallbackValidator' => 
+            array (
+                0 => __DIR__ . '/..' . '/willdurand/jsonp-callback-validator/src',
             ),
         ),
         'D' => 

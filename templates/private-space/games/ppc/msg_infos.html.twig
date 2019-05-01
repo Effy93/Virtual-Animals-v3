@@ -1,0 +1,24 @@
+{% extends 'private-space/games/ppc/home_ppc.html.twig' %}
+
+{% block title %} 
+  {{parent()}} 
+{% endblock %}
+
+{% block body %} 
+{{parent()}}
+
+{# /* AFFICHAGE DES CHOIX */ #}
+{% for message in app.session.flashBag.get('msgInfos') %}
+
+<script> 
+    alert('{{message}}');
+    document.location.href="{{ path('home_ppc') }}"
+</script>
+
+{% endfor %}
+    
+{% endblock %}
+
+
+
+{# msg_infos.html.twig #}

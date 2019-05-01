@@ -62,11 +62,9 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo " 
-  ";
         // line 4
         $this->displayParentBlock("title", $context, $blocks);
-        echo " 
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -85,143 +83,177 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        echo " 
-";
         // line 8
         $this->displayParentBlock("body", $context, $blocks);
         echo "
 <main class=\"container-main\">
-
-    ";
+<!-- INFOS USER -->
+\t";
         // line 12
-        echo "       <div class=\"container-row-reverse\">
-        ";
+        echo "\t<div class=\"container-row-reverse\">
+\t\t";
         // line 14
-        echo "            <section class=\"container-user-infos\">
-              <h1> Bienvenue ";
-        // line 15
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "user", []), "nom", []), "html", null, true);
-        echo " </h1>
-              <img class=\"glowing-img\" src=\"/images/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
-              <p> <span style=color:red;> ";
+        echo "\t\t<section class=\"container-user-infos\">
+\t\t\t<h5> Mon compte </h5>
+\t\t\t<img class=\"glowing-img\" src=\"/images/logos/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
+\t\t\t<h4> ";
         // line 17
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", []), "argent", []), "html", null, true);
-        echo " </span> Ruby </p>
-              ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", []), "nom", []), "html", null, true);
+        echo " </h4>
+\t\t\t<p> Inscrit depuis le : <span style=color:orange;> ";
+        // line 18
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", []), "date", []), "d-m-Y"), "html", null, true);
+        echo " </span></p>
+\t\t\t<p> <span style=color:red;> ";
         // line 19
-        echo "              ";
-        // line 20
-        echo "              <div class=\"animate-box\">
-              ";
-        // line 22
-        echo "                <a href=\"";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", []), "argent", []), "html", null, true);
+        echo " </span> Ruby </p>
+\t\t
+\t\t\t<div class=\"container-row\">
+\t\t\t\t";
+        // line 23
+        echo "\t\t\t<div class=\"animate-box\">
+\t\t\t\t\t";
+        // line 25
+        echo "\t\t\t\t\t<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bestiary");
-        echo "\" >
-                  <div class=\"animate-box-hidden\">
-                  <p> <span style=color:orange;> [nb] </span> monstres </p>
-                  <button>
-                    <span>
-                    <span>
-                    <span data-attr-span=\"Bestiaire\"> Bestiaire
-                    </span>
-                    </span>
-                    </span>
-                  </button>
-                  </div>
-                </a>
-                </div>
-                ";
-        // line 37
-        echo "                <div class=\"animate-box\">
-                  <a href=\"";
-        // line 38
+        echo "\">
+\t\t\t\t\t<div class=\"animate-box-hidden\">
+\t\t\t\t\t\t";
+        // line 30
+        echo "\t\t\t\t\t\t<p> <span style=color:orange;> ";
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 30, $this->source); })()), "user", []), "monstre", []), "count", []), "html", null, true);
+        echo " </span> monstres </p>
+\t\t\t\t\t\t<button>
+\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t<span data-attr-span=\"Bestiaire\"> Bestiaire
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t\t";
+        // line 43
+        echo "\t\t\t\t<div class=\"animate-box\">
+\t\t\t\t\t<a href=\"";
+        // line 44
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inventory");
-        echo "\" >
-                    <div class=\"animate-box-hidden\">
-                      <p> <span style=color:orange;> [nb] </span> accessoires </p>
-                      <button>
-                        <span>
-                        <span>
-                        <span data-attr-span=\"Inventaire\"> Inventaire
-                        </span>
-                        </span>
-                        </span>
-                      </button>
-                    </div>
-                    </a>
-                  </div>
-            ";
-        // line 53
-        echo "            </section>
+        echo "\">
+\t\t\t\t\t<div class=\"animate-box-hidden\">
+\t\t\t\t\t\t<p> <span style=color:orange;> ";
+        // line 46
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 46, $this->source); })()), "user", []), "accessoire", []), "count", []), "html", null, true);
+        echo " </span> accessoires </p>
+\t\t\t\t\t\t<button>
+\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t<span data-attr-span=\"Inventaire\"> Inventaire
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t";
+        // line 60
+        echo "\t\t</section>
 
-            ";
-        // line 56
-        echo "            <section class=\"container-games\">
-    
-            ";
-        // line 59
-        echo "            <h1 id=\"'.self::TO_CLICK.'\"> Jouer à Pierre-Papier-Ciseaux ?</h1>
-            <section class=\"container-head-PPC\">
-            ";
-        // line 62
-        echo "            ";
-        // line 63
-        echo "            <article id=\"'.self::TO_HIDDEN.'\">
-            <div id=\"'.self::TO_RESTORE.'\" class=\"head-PPC\">
-            <h2>Les règles sont simple, choisissez entre Pierre Papier et Ciseaux.</h2>
-            <h4>Pour chaque partie gagnée, vous obtenez un ruby!</h4>
-            <p><b>Bonne chance :D</b></p>
-            </div>
-            ";
-        // line 70
-        echo "            <form method=\"post\" action=\"\">
-            <div class=\"container-body-PPC\">
-            ";
-        // line 73
-        echo "            <div>
-            <label id=\"choixUser\" for=\"pierre\"><img src=\"/images/pierre.png\" alt=\"représente le signe de la pierre\" width=\"100px\" height=\"100px\" /></label>
-            <input type=\"radio\" name=\"choix\" id=\"pierre\" value=\"1\" required />
-            </div>
-            ";
-        // line 78
-        echo "            <div>
-            <label id=\"choixUser\" for=\"papier\"><img src=\"/images/papier.png\" alt=\"représente le signe de la feuille\" width=\"100px\" height=\"100px\" /></label>
-            <input type=\"radio\" name=\"choix\" id=\"papier\" value=\"2\" required />
-            </div>
-            ";
-        // line 83
-        echo "            <div>
-            <label id=\"choixUser\" for=\"ciseaux\"><img src=\"/images/ciseaux.png\" alt=\"représente le signe ciseaux\" width=\"100px\" height=\"100px\" /></label>
-            <input type=\"radio\" name=\"choix\" id=\"ciseaux\" value=\"3\" required />
-            </div>
-            ";
-        // line 88
-        echo "            </div>
-            ";
-        // line 90
-        echo "            <input type=\"submit\" name=\"submit_choix\" value=\"Valider le Choix\" />
-            ";
-        // line 92
-        echo "            </form>
-            </article>
-            </section>
-    
-            ";
-        // line 97
-        echo "          </section>
-            ";
-        // line 99
-        echo "            </div>
-    
-     
+<!-- OUVERTURE CONTAINER DES JEUX  -->
+    <section class=\"container-games\">
+\t\t";
+        // line 65
+        echo "\t\t";
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "user", []), "jeux", []), "count", []) == "0")) {
+            // line 66
+            echo "\t\t\t<h5> Aucun jeux disponibles </h5>
+\t\t\t<div class=\"animate-box\">
+\t\t\t\t<a href=\"";
+            // line 68
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop");
+            echo "\">  
+\t\t\t\t\t<div class=\"animate-box-hidden\">
+\t\t\t\t\t\t<p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/panda-sad.png\" width=\"100px\" height=\"100px\" alt=\"photo d'un panda triste, car aucun jeux n'est disponible !\"/> </span>  </p>
+\t\t\t\t\t\t<button>
+\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t\t\t<span data-attr-span=\"Go boutique\"> Acheter des jeux 
+\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t</a>
+\t\t\t</div>
+\t\t";
+        } else {
+            // line 84
+            echo "\t\t\t<h5> Jeux disponibles </h5>
+\t\t";
+        }
+        // line 86
+        echo "<!-- LISTE DES JEUX -->
+\t  <div class=\"games-list\">
+\t\t\t<ul>
+\t\t\t\t";
+        // line 89
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 89, $this->source); })()), "user", []), "jeux", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["jeux"]) {
+            // line 90
+            echo "\t\t\t\t\t";
+            if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "1")) {
+                // line 91
+                echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_ppc");
+                echo "\"> ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
+                echo "</a> </button> </li>
+\t\t\t\t\t";
+            }
+            // line 93
+            echo "\t\t\t\t\t";
+            if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "2")) {
+                // line 94
+                echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_ttt");
+                echo "\"> ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
+                echo "</a> </button> </li>
+\t\t\t\t\t";
+            }
+            // line 96
+            echo "\t\t\t\t\t";
+            if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "3")) {
+                // line 97
+                echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
+                echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_bb");
+                echo "\"> ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
+                echo "</a> </button> </li>
+\t\t\t\t\t";
+            }
+            // line 99
+            echo "\t\t\t\t";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 100
+        echo "\t\t\t\t\t
+\t\t\t</ul>
+\t  </div>
 
-        </main>
-
-
-
-
-
-
+\t  ";
+        // line 105
+        echo "      ";
+        // line 106
+        echo "
 
 ";
         
@@ -244,121 +276,118 @@ class __TwigTemplate_3dcf798500ae3812a7b89f3c7d3f4b70dda0e4e6ad437d7bf723f1faf06
 
     public function getDebugInfo()
     {
-        return array (  214 => 99,  211 => 97,  205 => 92,  202 => 90,  199 => 88,  193 => 83,  187 => 78,  181 => 73,  177 => 70,  169 => 63,  167 => 62,  163 => 59,  159 => 56,  155 => 53,  138 => 38,  135 => 37,  117 => 22,  114 => 20,  112 => 19,  108 => 17,  103 => 15,  100 => 14,  97 => 12,  91 => 8,  80 => 7,  68 => 4,  57 => 3,  27 => 1,);
+        return array (  256 => 106,  254 => 105,  248 => 100,  242 => 99,  234 => 97,  231 => 96,  223 => 94,  220 => 93,  212 => 91,  209 => 90,  205 => 89,  200 => 86,  196 => 84,  177 => 68,  173 => 66,  170 => 65,  164 => 60,  148 => 46,  143 => 44,  140 => 43,  124 => 30,  118 => 25,  115 => 23,  109 => 19,  105 => 18,  101 => 17,  96 => 14,  93 => 12,  87 => 8,  78 => 7,  66 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'private-space/layout.html.twig' %}
 
-{% block title %} 
-  {{parent()}} 
+{% block title %}
+{{parent()}}
 {% endblock %}
 
-{% block body %} 
+{% block body %}
 {{parent()}}
 <main class=\"container-main\">
+<!-- INFOS USER -->
+\t{# Container flex pour les infos et les jeux #}
+\t<div class=\"container-row-reverse\">
+\t\t{# OPEN user info section #}
+\t\t<section class=\"container-user-infos\">
+\t\t\t<h5> Mon compte </h5>
+\t\t\t<img class=\"glowing-img\" src=\"/images/logos/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
+\t\t\t<h4> {{ app.user.nom }} </h4>
+\t\t\t<p> Inscrit depuis le : <span style=color:orange;> {{ app.user.date|date('d-m-Y') }} </span></p>
+\t\t\t<p> <span style=color:red;> {{ app.user.argent}} </span> Ruby </p>
+\t\t
+\t\t\t<div class=\"container-row\">
+\t\t\t\t{# ANIMATE BORDER BOX CONTAINER #}
+\t\t\t<div class=\"animate-box\">
+\t\t\t\t\t{# ANIMATE BORDER BOX => display Bestiary button #}
+\t\t\t\t\t<a href=\"{{path('bestiary')}}\">
+\t\t\t\t\t<div class=\"animate-box-hidden\">
+\t\t\t\t\t\t{# {% for nb in nbMonstre %}
+\t\t\t\t\t\t\t<p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
+\t\t\t\t\t\t\t{% endfor %} #}
+\t\t\t\t\t\t<p> <span style=color:orange;> {{ app.user.monstre.count }} </span> monstres </p>
+\t\t\t\t\t\t<button>
+\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t<span data-attr-span=\"Bestiaire\"> Bestiaire
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t\t{# ANIMATE BORDER BOX => display Inventory button #}
+\t\t\t\t<div class=\"animate-box\">
+\t\t\t\t\t<a href=\"{{path('inventory')}}\">
+\t\t\t\t\t<div class=\"animate-box-hidden\">
+\t\t\t\t\t\t<p> <span style=color:orange;> {{ app.user.accessoire.count }} </span> accessoires </p>
+\t\t\t\t\t\t<button>
+\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t<span data-attr-span=\"Inventaire\"> Inventaire
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t\t</a>
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t{# CLOSE user info section #}
+\t\t</section>
 
-    {# Container flex pour les infos et les jeux #}
-       <div class=\"container-row-reverse\">
-        {# OPEN user info section #}
-            <section class=\"container-user-infos\">
-              <h1> Bienvenue {{ app.user.nom }} </h1>
-              <img class=\"glowing-img\" src=\"/images/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
-              <p> <span style=color:red;> {{ app.user.argent}} </span> Ruby </p>
-              {# <a href=\"{{path('delete_comment', {'id_article':article.id,'id_comment':comment.id} ) }}\"></a> #}
-              {# ANIMATE BORDER BOX CONTAINER #}
-              <div class=\"animate-box\">
-              {# ANIMATE BORDER BOX => display Bestiary button #}
-                <a href=\"{{path('bestiary')}}\" >
-                  <div class=\"animate-box-hidden\">
-                  <p> <span style=color:orange;> [nb] </span> monstres </p>
-                  <button>
-                    <span>
-                    <span>
-                    <span data-attr-span=\"Bestiaire\"> Bestiaire
-                    </span>
-                    </span>
-                    </span>
-                  </button>
-                  </div>
-                </a>
-                </div>
-                {# ANIMATE BORDER BOX => display Inventory button #}
-                <div class=\"animate-box\">
-                  <a href=\"{{path('inventory')}}\" >
-                    <div class=\"animate-box-hidden\">
-                      <p> <span style=color:orange;> [nb] </span> accessoires </p>
-                      <button>
-                        <span>
-                        <span>
-                        <span data-attr-span=\"Inventaire\"> Inventaire
-                        </span>
-                        </span>
-                        </span>
-                      </button>
-                    </div>
-                    </a>
-                  </div>
-            {# CLOSE user info section #}
-            </section>
+<!-- OUVERTURE CONTAINER DES JEUX  -->
+    <section class=\"container-games\">
+\t\t{# Si aucun jeu acheter #}
+\t\t{% if (app.user.jeux.count == '0' ) %}
+\t\t\t<h5> Aucun jeux disponibles </h5>
+\t\t\t<div class=\"animate-box\">
+\t\t\t\t<a href=\"{{ path('shop') }}\">  
+\t\t\t\t\t<div class=\"animate-box-hidden\">
+\t\t\t\t\t\t<p> <span style=color:orange;> <img class=\"glowing-img\" src=\"/images/logos/panda-sad.png\" width=\"100px\" height=\"100px\" alt=\"photo d'un panda triste, car aucun jeux n'est disponible !\"/> </span>  </p>
+\t\t\t\t\t\t<button>
+\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t\t<span>
+\t\t\t\t\t\t\t\t\t<span data-attr-span=\"Go boutique\"> Acheter des jeux 
+\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t\t</span>
+\t\t\t\t\t\t</button>
+\t\t\t\t\t</div>
+\t\t\t\t</a>
+\t\t\t</div>
+\t\t{% else %}
+\t\t\t<h5> Jeux disponibles </h5>
+\t\t{% endif %}
+<!-- LISTE DES JEUX -->
+\t  <div class=\"games-list\">
+\t\t\t<ul>
+\t\t\t\t{% for jeux in app.user.jeux %}
+\t\t\t\t\t{% if (jeux.id == '1') %}
+\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_ppc')}}\"> {{ jeux.nom }}</a> </button> </li>
+\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% if (jeux.id == '2') %}
+\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_ttt')}}\"> {{ jeux.nom }}</a> </button> </li>
+\t\t\t\t\t{% endif %}
+\t\t\t\t\t{% if (jeux.id == '3') %}
+\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_bb')}}\"> {{ jeux.nom }}</a> </button> </li>
+\t\t\t\t\t{% endif %}
+\t\t\t\t{% endfor %}
+\t\t\t\t\t
+\t\t\t</ul>
+\t  </div>
 
-            {# OUVERTURE CONTAINER DES JEUX #}
-            <section class=\"container-games\">
-    
-            {# HEAD SECTION JS: cliquable pour afficher le 1er jeux  #}
-            <h1 id=\"'.self::TO_CLICK.'\"> Jouer à Pierre-Papier-Ciseaux ?</h1>
-            <section class=\"container-head-PPC\">
-            {# ARTICLE hidden jeuPPC pour JS #}
-            {# hidden a remettre si event click #}
-            <article id=\"'.self::TO_HIDDEN.'\">
-            <div id=\"'.self::TO_RESTORE.'\" class=\"head-PPC\">
-            <h2>Les règles sont simple, choisissez entre Pierre Papier et Ciseaux.</h2>
-            <h4>Pour chaque partie gagnée, vous obtenez un ruby!</h4>
-            <p><b>Bonne chance :D</b></p>
-            </div>
-            {# FORMULAIRE : corp du jeux => choix  #}
-            <form method=\"post\" action=\"\">
-            <div class=\"container-body-PPC\">
-            {# Div pour choix 1 #}
-            <div>
-            <label id=\"choixUser\" for=\"pierre\"><img src=\"/images/pierre.png\" alt=\"représente le signe de la pierre\" width=\"100px\" height=\"100px\" /></label>
-            <input type=\"radio\" name=\"choix\" id=\"pierre\" value=\"1\" required />
-            </div>
-            {# Div pour choix 2 #}
-            <div>
-            <label id=\"choixUser\" for=\"papier\"><img src=\"/images/papier.png\" alt=\"représente le signe de la feuille\" width=\"100px\" height=\"100px\" /></label>
-            <input type=\"radio\" name=\"choix\" id=\"papier\" value=\"2\" required />
-            </div>
-            {# Div pour choix 3 #}
-            <div>
-            <label id=\"choixUser\" for=\"ciseaux\"><img src=\"/images/ciseaux.png\" alt=\"représente le signe ciseaux\" width=\"100px\" height=\"100px\" /></label>
-            <input type=\"radio\" name=\"choix\" id=\"ciseaux\" value=\"3\" required />
-            </div>
-            {# CLOSE container-body du jeux #}
-            </div>
-            {# submit choix #}
-            <input type=\"submit\" name=\"submit_choix\" value=\"Valider le Choix\" />
-            {# CLOSE formulaire / article caché (container-body du jeux) / section (header cliquable) #}
-            </form>
-            </article>
-            </section>
-    
-            {# CLOSE CONTAINER DES JEUX  #}
-          </section>
-            {# CLOSE CONTAINER-ROW #}
-            </div>
-    
-     
-
-        </main>
-
-
-
-
+\t  {# Le main se ferme dans les jeux #}
+      {# </main> #}
 
 
-
-{% endblock %}", "private-space/home_private.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/Virtual-Animals/templates/private-space/home_private.html.twig");
+{% endblock %}", "private-space/home_private.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/home_private.html.twig");
     }
 }

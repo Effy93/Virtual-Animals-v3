@@ -9,6 +9,9 @@ use App\Entity\User;
 use App\Entity\Monstre;
 use App\Entity\Tarif;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+
+
 /**
  * @Route("/home")
  */
@@ -23,49 +26,12 @@ class HomeController extends AbstractController
     }
 
     /**
-     * @Route("/shop", name="shop")
+     * @Route("/conditions" , name="ml")
      */
-    public function displayShop()
+    public function displayTermsConditions()
     {
-        $monstres = $this->getDoctrine()->getRepository(Monstre::class)->findAll();
-        return $this->render("home/shop.html.twig", ['monstres' => $monstres]);
+        return $this->render("home/ml.html.twig");
     }
-
-    /**
-     * @Route("/shop/buy/{id}", name="buy_monster", requirements={"id" : "\d+"})
-     */
-    public function buyMonster(int $id)
-    {
-        // Contient les données de l'entité user connecté actuellement
-        $user = $this->getUser();
-        // Va recupérer les données du monstre avec l'id donné
-        $monstre = $this->getDoctrine()->getRepository(Monstre::class)->find($id);
-        // Ajoute un monstre, en ManyToMany, l'ajout doit ce faire des 2 côtés
-        $user->addMonstre($monstre);
-        $monstre->addUser($user);
-
-        // dd($monstre_tarif);
-         
-
-        if($user.argent >= $monstre.tarif) {
-            // dd($monstre);
-            $this->addFlash("success", "Cet article a bien été acheter");
-
-            $gestionnaire = $this->getDoctrine()->getManager();
-            $gestionnaire->persist($user);
-            $gestionnaire->persist($monstre);
-            $gestionnaire->flush();
-
-            $user->setArgent();
-        } else {
-            $this->addFlash("success", "Pas assez de thunes boloss");
-        }
-      
-       
-       
-        
-
-        return $this->redirectToRoute("shop");
-    }
+   
 
 }
