@@ -1,0 +1,35 @@
+{% extends 'admin/layout.html.twig' %}
+
+{% block title %} {{parent()}} {% endblock %}
+
+{% block body %}
+{{parent()}}
+<header>
+    <h1> Ajouter un article </h1>
+</header>
+
+<div class="container-row">
+    {{ form_start(newsForm) }}
+
+    {{ form_label(newsForm.nom) }}
+    {{ form_widget(newsForm.nom) }}
+    {{ form_errors(newsForm.nom) }}
+
+    {{ form_label(newsForm.contenu) }}
+    {{ form_widget(newsForm.contenu) }}
+    {{ form_errors(newsForm.contenu) }}
+
+    {{ form_label(newsForm.auteur) }}
+    {{ form_widget(newsForm.auteur) }}
+    {{ form_errors(newsForm.auteur) }}
+
+    <button class="btn btn-lg btn-primary"> Envoyez </button>
+
+    {{ form_end(newsForm) }}
+</div>
+
+
+
+
+
+{% endblock %}

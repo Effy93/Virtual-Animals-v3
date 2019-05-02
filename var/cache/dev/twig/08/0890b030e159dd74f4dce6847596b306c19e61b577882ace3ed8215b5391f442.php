@@ -90,6 +90,18 @@ class __TwigTemplate_6b4206a4b718b38100238cc05803ac64eeaf62fda514a8f35a3911c1061
 <header>
     <h1> Administration </h1>
 </header>
+<main>
+    <div class=\"container-row-reverse\">
+        <div class=\"container-monster\"> 
+            <h5> Publier un nouvel évènement </h5>
+        </div>
+        <div class=\"container-monster\">
+            <h5> Gérer les rôles admin  </h5>
+        </div> 
+        <div class=\"container-monster\">
+            <h5> Proposer un nouveau monstre </h5>
+        </div> 
+    </div>
 
 
 ";
@@ -127,6 +139,18 @@ class __TwigTemplate_6b4206a4b718b38100238cc05803ac64eeaf62fda514a8f35a3911c1061
 <header>
     <h1> Administration </h1>
 </header>
+<main>
+    <div class=\"container-row-reverse\">
+        <div class=\"container-monster\"> 
+            <h5> Publier un nouvel évènement </h5>
+        </div>
+        <div class=\"container-monster\">
+            <h5> Gérer les rôles admin  </h5>
+        </div> 
+        <div class=\"container-monster\">
+            <h5> Proposer un nouveau monstre </h5>
+        </div> 
+    </div>
 
 
 {% endblock %}", "admin/home_admin.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/admin/home_admin.html.twig");

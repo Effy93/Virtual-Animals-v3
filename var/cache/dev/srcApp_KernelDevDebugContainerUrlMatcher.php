@@ -22,6 +22,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
             '/admin' => [[['_route' => 'home_admin', '_controller' => 'App\\Controller\\AdminController::displayHome'], null, null, null, true, false, null]],
             '/admin/edit' => [[['_route' => 'edit_monster', '_controller' => 'App\\Controller\\AdminController::editNewMonstre'], null, null, null, false, false, null]],
+            '/admin/add' => [[['_route' => 'add_news', '_controller' => 'App\\Controller\\AdminController::addNews'], null, null, null, false, false, null]],
             '/games' => [[['_route' => 'games', '_controller' => 'App\\Controller\\GamesController::homeGames'], null, null, null, false, false, null]],
             '/games/home/ttt' => [[['_route' => 'home_ttt', '_controller' => 'App\\Controller\\GamesController::displayHomeTTT'], null, null, null, false, false, null]],
             '/games/ttt' => [[['_route' => 'ttt', '_controller' => 'App\\Controller\\GamesController::displayTTT'], null, null, null, false, false, null]],

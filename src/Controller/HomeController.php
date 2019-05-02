@@ -12,6 +12,8 @@ use App\Entity\Article;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
+use Knp\Component\Pager\PaginatorInterface;
+
 
 /**
  * @Route("/home")

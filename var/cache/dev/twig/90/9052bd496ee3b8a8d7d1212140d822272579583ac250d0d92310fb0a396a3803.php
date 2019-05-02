@@ -59,7 +59,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         ";
         // line 17
         $this->displayBlock('body', $context, $blocks);
-        // line 64
+        // line 65
         echo "
     </main>
         <footer>
@@ -73,9 +73,9 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         </footer>
 
         ";
-        // line 76
+        // line 77
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 78
+        // line 79
         echo "    </body>
 </html>
 ";
@@ -167,70 +167,74 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
             // line 30
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_monster");
             echo "\"> Edition </a></li>
+                                        <li><a href =\"";
+            // line 31
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_news");
+            echo "\"> New </a></li>
                                     </ul>
                             </div>
                         ";
         } else {
-            // line 34
+            // line 35
             echo "                            <li><a href =\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
             echo "\"> Accueil </a></li>
                         ";
         }
-        // line 36
+        // line 37
         echo "<!-- USER  -->
                         ";
-        // line 38
+        // line 39
         echo "                        ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 39
+            // line 40
             echo "                            <li><a href =\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop");
             echo "\"> Boutique </a></li>
                             
                             ";
-            // line 42
+            // line 43
             echo "                            <div class=\"dropdown\">
                                 <li class=\"dropdownbtn\"><a href =\"";
-            // line 43
+            // line 44
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
             echo "\"> Espace personnel &darr; </a></li>
                                     <ul class=\"dropdown-content\">
                                         <li><a href =\"";
-            // line 45
+            // line 46
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bestiary");
             echo "\"> Bestiaire </a></li>
                                         <li><a href =\"";
-            // line 46
+            // line 47
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inventory");
             echo "\"> Inventaire </a></li>
                                     </ul>
                             </div>
                             <li><a href =\"";
-            // line 49
+            // line 50
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
             echo "\"> Deconnexion  </a></li>
 
                         ";
-            // line 52
+            // line 53
             echo "                        ";
         } else {
-            // line 53
+            // line 54
             echo "                            <li><a href =\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\"> Inscription </a></li>
                             <li> <a href=\"";
-            // line 54
+            // line 55
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\"> Connexion</a></li>
                         ";
         }
-        // line 56
+        // line 57
         echo "                    </ul>
                 </nav>
             
             ";
-        // line 62
+        // line 63
         echo "           
         ";
         
@@ -241,7 +245,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
 
     }
 
-    // line 76
+    // line 77
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -250,7 +254,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 77
+        // line 78
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -267,7 +271,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
 
     public function getDebugInfo()
     {
-        return array (  254 => 77,  245 => 76,  234 => 62,  229 => 56,  224 => 54,  219 => 53,  216 => 52,  211 => 49,  205 => 46,  201 => 45,  196 => 43,  193 => 42,  187 => 39,  184 => 38,  181 => 36,  175 => 34,  168 => 30,  164 => 29,  159 => 27,  156 => 26,  154 => 25,  152 => 24,  144 => 18,  135 => 17,  118 => 7,  109 => 6,  91 => 5,  79 => 78,  77 => 76,  63 => 64,  61 => 17,  57 => 15,  55 => 6,  51 => 5,  45 => 1,);
+        return array (  258 => 78,  249 => 77,  238 => 63,  233 => 57,  228 => 55,  223 => 54,  220 => 53,  215 => 50,  209 => 47,  205 => 46,  200 => 44,  197 => 43,  191 => 40,  188 => 39,  185 => 37,  179 => 35,  172 => 31,  168 => 30,  164 => 29,  159 => 27,  156 => 26,  154 => 25,  152 => 24,  144 => 18,  135 => 17,  118 => 7,  109 => 6,  91 => 5,  79 => 79,  77 => 77,  63 => 65,  61 => 17,  57 => 15,  55 => 6,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -302,6 +306,7 @@ class __TwigTemplate_58ec710bcb0fc267842ce84322cfd56b5847fafd88428f20b1a52fb3c16
                                     <ul class=\"dropdown-content\">
                                         <li><a href =\"{{path('home_admin')}}\"> Admin </a></li>
                                         <li><a href =\"{{path('edit_monster')}}\"> Edition </a></li>
+                                        <li><a href =\"{{path('add_news')}}\"> New </a></li>
                                     </ul>
                             </div>
                         {% else %}

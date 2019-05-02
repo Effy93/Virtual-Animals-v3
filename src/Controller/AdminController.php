@@ -10,9 +10,11 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use App\Form\AddMonstreType;
+use App\Form\ArticleType;
 
 use App\Entity\User;
 use App\Entity\Monstre;
+use App\Entity\Article;
 
 /**
  * @Route("/admin")
@@ -36,7 +38,7 @@ class AdminController extends AbstractController
     public function editNewMonstre(Request $requete)
     {
         $monstre = new Monstre();
-        $formMonster = $this->createForm(AddMonstreType::class);
+        $formMonster = $this->createForm(AddMonstreType::class, $monstre);
         // Recupère les données d'un POST
         $monsterDepot = $this->getDoctrine()->getRepository(Monstre::class);
         $formMonster->handleRequest($requete);
@@ -57,24 +59,31 @@ class AdminController extends AbstractController
     
     }
 
-    // public function addArticle(Request $requete)
-    // {
-    //     // Création de l'article(objet) avec des attributs
-    //     $article = new Article();
-    //     $formulaire = $this->createForm(ArticleType::class, $article);
-    //     // Verification du formulaire
-    //     $formulaire->handleRequest($requete);
-    //     if ($formulaire->isSubmitted() && $formulaire->isValid() ) 
-    //     {
-    //         // Sauvegarder dans la base de donnée
-    //         $gestionnaire = $this->getDoctrine()->getManager();
-    //         $gestionnaire->persist($article);
-    //         $gestionnaire->flush();
-    //         return $this->redirectToRoute('blog_article', array('id'=>$id));
-    //     } else{
-    //         return $this->render("blog/add_article.html.twig", array('formulaire' => $formulaire->createView() ));
-    //     } 
-    // }
-   
+    /**
+     * @Route("/add" , name="add_news")
+     * @IsGranted("ROLE_ADMIN") 
+     */
+    public function addNews(Request $requete)
+    {
+        // Appel de l'entité article
+        $article = new Article();
+        // Definit le formulaire (type + entité)
+        $newsForm = $this->createForm(ArticleType::class, $article);
+        // Recupérer les données du post
+        $newsForm->handleRequest($requete);
+        // Verifie si données envoyées et valide
+        if ($newsForm->isSubmitted() && $newsForm->isValid() ) 
+        {
+            // Sauvegarder dans la base de donnée
+            $gestionnaire = $this->getDoctrine()->getManager();
+            // Sauvegarde et met a jouer l'entité
+            $gestionnaire->persist($article);
+            $gestionnaire->flush();
+            return $this->redirectToRoute("home_admin");
+        } else{
+            return $this->render("admin/add_article.html.twig", array('newsForm' => $newsForm->createView() ));
+        } 
+    }
+
 
 }

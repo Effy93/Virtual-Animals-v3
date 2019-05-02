@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ArticleRepository")
@@ -18,16 +19,23 @@ class Article
 
     /**
      * @ORM\Column(type="string", length=50)
+     * @Assert\Length(min=6, max=50
+     * ,minMessage="Le titre doit contenir au moins {{ limit }}  caractères"
+     * ,maxMessage="Le titre ne peut pas contenir plus de {{ limit }} caractères")
      */
     private $nom;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=6, max=255
+     * ,minMessage="L'article doit contenir au moins {{ limit }}  caractères"
+     * ,maxMessage="L'article ne peut pas contenir plus de {{ limit }} caractères")
      */
     private $contenu;
 
     /**
      * @ORM\Column(type="string", length=40)
+     * 
      */
     private $auteur;
 
@@ -35,6 +43,12 @@ class Article
      * @ORM\Column(type="datetime")
      */
     private $date;
+
+    public function __construct()
+    {
+        $this->date = new \DateTime();
+    }
+    
 
     public function getId(): ?int
     {
@@ -88,4 +102,5 @@ class Article
 
         return $this;
     }
+    
 }

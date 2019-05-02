@@ -34,6 +34,7 @@ class srcApp_KernelDevDebugContainerUrlGenerator extends Symfony\Component\Routi
         '_profiler_exception_css' => [['token'], ['_controller' => 'web_profiler.controller.exception::cssAction'], [], [['text', '/exception.css'], ['variable', '/', '[^/]++', 'token', true], ['text', '/_profiler']], [], []],
         'home_admin' => [[], ['_controller' => 'App\\Controller\\AdminController::displayHome'], [], [['text', '/admin/']], [], []],
         'edit_monster' => [[], ['_controller' => 'App\\Controller\\AdminController::editNewMonstre'], [], [['text', '/admin/edit']], [], []],
+        'add_news' => [[], ['_controller' => 'App\\Controller\\AdminController::addNews'], [], [['text', '/admin/add']], [], []],
         'games' => [[], ['_controller' => 'App\\Controller\\GamesController::homeGames'], [], [['text', '/games']], [], []],
         'home_ttt' => [[], ['_controller' => 'App\\Controller\\GamesController::displayHomeTTT'], [], [['text', '/games/home/ttt']], [], []],
         'ttt' => [[], ['_controller' => 'App\\Controller\\GamesController::displayTTT'], [], [['text', '/games/ttt']], [], []],

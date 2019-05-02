@@ -87,27 +87,41 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
         $this->displayParentBlock("body", $context, $blocks);
         echo " 
         <main class=\"container-main\">
-            <div class=\"container-row-reverse\">
+            <div class=\"container-row-reverse\"> 
                 <div class=\"container-news\">
                     ";
-        // line 9
+        // line 10
+        echo "                    ";
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 11
+            echo "                        <div>
+                            <a href=\"";
+            // line 12
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_news");
+            echo "\"> Publier une news <i class=\"icon icon-edit\"></i> </a>
+                            <hr width=\"100%\">
+                        </div>
+                    ";
+        }
+        // line 16
+        echo "                    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_reverse_filter($this->env, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 9, $this->source); })())));
+        $context['_seq'] = twig_ensure_traversable(twig_reverse_filter($this->env, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 16, $this->source); })())));
         foreach ($context['_seq'] as $context["_key"] => $context["news"]) {
-            // line 10
+            // line 17
             echo "                        <h4 class=\"glowing\"> ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "nom", []), "html", null, true);
             echo " </h4>
                         <p> ";
-            // line 11
+            // line 18
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "contenu", []), "html", null, true);
             echo " </p>
                         <p><i> ";
-            // line 12
+            // line 19
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "auteur", []), "html", null, true);
             echo " 
                             </br> ";
-            // line 13
+            // line 20
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "date", []), "d-m-Y"), "html", null, true);
             echo " 
                         </i></p>
@@ -117,7 +131,7 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['news'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 17
+        // line 24
         echo "                </div>
                 <div class=\"container-home\">
                     <h1> Présentation </h1>
@@ -147,7 +161,7 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
 
     public function getDebugInfo()
     {
-        return array (  121 => 17,  111 => 13,  107 => 12,  103 => 11,  98 => 10,  94 => 9,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
+        return array (  135 => 24,  125 => 20,  121 => 19,  117 => 18,  112 => 17,  107 => 16,  100 => 12,  97 => 11,  94 => 10,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -158,8 +172,15 @@ class __TwigTemplate_d48986fa8811d9d3b67f952265c66318440ed5ead51e4c4854b19fc7abf
 {% block body %}
     {{parent()}} 
         <main class=\"container-main\">
-            <div class=\"container-row-reverse\">
+            <div class=\"container-row-reverse\"> 
                 <div class=\"container-news\">
+                    {# Bouton de publication pour admin #}
+                    {% if (is_granted('ROLE_ADMIN')) %}
+                        <div>
+                            <a href=\"{{ path('add_news') }}\"> Publier une news <i class=\"icon icon-edit\"></i> </a>
+                            <hr width=\"100%\">
+                        </div>
+                    {% endif %}
                     {% for news in article|reverse %}
                         <h4 class=\"glowing\"> {{ news.nom }} </h4>
                         <p> {{ news.contenu }} </p>
