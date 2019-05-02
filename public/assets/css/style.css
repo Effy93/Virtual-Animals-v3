@@ -170,7 +170,6 @@ footer nav ul li a img {
   justify-content: center;
   align-content: flex-end;
   margin: 2% 4%;
-  
 }
 .container-row-reverse {
   display: flex;
@@ -182,7 +181,7 @@ footer nav ul li a img {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* align-content: flex-end; */
+  align-content: flex-end;
 }
 .container-column {
   display: flex;
@@ -198,12 +197,26 @@ form {
   min-width: 40%;
 }
 /********************************************************************************************/
-/*                                       PRIVATE PAGE                                      **/
+/*                                       HOME / NEWS                                     **/
 /********************************************************************************************/
 .page-private-container {
 display: flex;
 flex-direction: column;
 align-content: flex-end;
+}
+.container-home {
+  max-width: 40%;
+  text-align: justify;
+  margin : 2%;
+  padding: 2%;
+}
+.container-news {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+.container-home h1 {
+  text-align: center;
 }
 /*************************************** MESSAGES INFOS ***************************************/
 .msg-infos-container {
@@ -215,7 +228,7 @@ background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%
 margin : 2% 30%;
 }
 /***************************************** USER INFOS ******************************************/
-.container-user-infos, .container-games, .container-accessory, .container-bestiary, .container-monster, .game-shop {
+.container-user-infos, .container-games, .container-accessory, .container-bestiary, .container-monster, .game-shop, .container-news {
   background-color:rgba(61,35,20, 0.4);
   text-align: center;
   border: solid 2px #FF9900;
@@ -326,7 +339,7 @@ marquee {
   border-bottom: 1px solid #F17105;
   text-align: center;
 }
-.container-monster {
+.container-monster, .container-news {
   min-width: 20%;
   max-width: 20%
 }

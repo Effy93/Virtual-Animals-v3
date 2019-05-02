@@ -8,6 +8,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Entity\User;
 use App\Entity\Monstre;
 use App\Entity\Tarif;
+use App\Entity\Article;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
@@ -19,10 +20,13 @@ class HomeController extends AbstractController
 {
     /**
      * @Route("/" , name="home")
+     * 
      */
     public function displayHome()
     {
-        return $this->render("home/home.html.twig");
+        $articleDepot = $this->getDoctrine()->getRepository(Article::class);
+        $article = $articleDepot->findAll() ;
+        return $this->render("home/home.html.twig", array('article' =>$article));
     }
 
     /**
