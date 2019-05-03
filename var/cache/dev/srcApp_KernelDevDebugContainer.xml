@@ -319,9 +319,9 @@
     </parameter>
     <parameter key="knp_paginator.class">Knp\Component\Pager\Paginator</parameter>
     <parameter key="knp_paginator.helper.processor.class">Knp\Bundle\PaginatorBundle\Helper\Processor</parameter>
-    <parameter key="knp_paginator.template.pagination">@KnpPaginator/Pagination/sliding.html.twig</parameter>
+    <parameter key="knp_paginator.template.pagination">@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig</parameter>
     <parameter key="knp_paginator.template.filtration">@KnpPaginator/Pagination/filtration.html.twig</parameter>
-    <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/sortable_link.html.twig</parameter>
+    <parameter key="knp_paginator.template.sortable">@KnpPaginator/Pagination/twitter_bootstrap_v3_sortable_link.html.twig</parameter>
     <parameter key="knp_paginator.page_range">5</parameter>
     <parameter key="data_collector.templates" type="collection">
       <parameter key="data_collector.request" type="collection">
@@ -1317,6 +1317,7 @@
             <argument>/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/vendor/symfony/form/Resources/translations/validators.en.xlf</argument>
             <argument>/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/vendor/symfony/security-core/Resources/translations/security.en.xlf</argument>
             <argument>/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/vendor/knplabs/knp-paginator-bundle/Resources/translations/KnpPaginatorBundle.en.xliff</argument>
+            <argument>/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/translations/KnpPaginatorBundle.en.yml</argument>
           </argument>
           <argument key="es" type="collection">
             <argument>/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/vendor/symfony/validator/Resources/translations/validators.es.xlf</argument>
@@ -4683,8 +4684,8 @@
       <tag name="kernel.event_listener" event="kernel.request" method="onKernelRequest"/>
       <tag name="container.hot_path"/>
       <argument type="collection">
-        <argument key="defaultPaginationTemplate">@KnpPaginator/Pagination/sliding.html.twig</argument>
-        <argument key="defaultSortableTemplate">@KnpPaginator/Pagination/sortable_link.html.twig</argument>
+        <argument key="defaultPaginationTemplate">@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig</argument>
+        <argument key="defaultSortableTemplate">@KnpPaginator/Pagination/twitter_bootstrap_v3_sortable_link.html.twig</argument>
         <argument key="defaultFiltrationTemplate">@KnpPaginator/Pagination/filtration.html.twig</argument>
         <argument key="defaultPageRange">5</argument>
       </argument>

@@ -36,14 +36,15 @@ class HomeController extends AbstractController
             // ->from('Article', 'articles')
             ->addOrderBy('articles.id', 'DESC')
             ->getQuery();
+            
         $pagination = $paginator->paginate(
             $query,
             $request->query->getInt('page', 1),
             4
         );
         $articles = $this->getDoctrine()
-        ->getRepository(Article::class)
-        ->findAll();
+            ->getRepository(Article::class)
+            ->findAll();
         if (!$articles) {
             throw $this->createNotFoundException(
                 'No articles found'

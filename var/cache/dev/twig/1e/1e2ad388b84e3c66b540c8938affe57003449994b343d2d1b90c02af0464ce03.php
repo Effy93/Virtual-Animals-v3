@@ -137,22 +137,21 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
         // line 26
         echo "                    ";
         // line 27
-        echo "                    ";
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 27, $this->source); })()));
+        echo "                    <div class=\"menu-paginator\">
+                        ";
+        // line 28
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 28, $this->source); })()));
         echo "
+                    </div>
+                
 
                 </div>
                 <div class=\"container-home\">
                     <h1> Présentation </h1>
                     <p> Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du \"De Finibus Bonorum et Malorum\" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", proviennent de la section 1.10.32. </p>   
 
-                    <h1> [En construction] </h1>
-                    <ul>
-                        <li> Pagination </li>
-                        <li> Requete Ajax (transmission variable pour gain ruby TTT et BB) </li>
-                    </ul>
                     ";
-        // line 43
+        // line 41
         echo "                </div>
             </div>
         </main>
@@ -178,7 +177,7 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
 
     public function getDebugInfo()
     {
-        return array (  156 => 43,  140 => 27,  138 => 26,  128 => 22,  124 => 21,  120 => 20,  115 => 19,  110 => 18,  107 => 16,  100 => 12,  97 => 11,  94 => 10,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
+        return array (  155 => 41,  143 => 28,  140 => 27,  138 => 26,  128 => 22,  124 => 21,  120 => 20,  115 => 19,  110 => 18,  107 => 16,  100 => 12,  97 => 11,  94 => 10,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -209,18 +208,16 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
                         <hr width=\"100%\">
                     {% endfor %}
                     {# menu pagination #}
-                    {{ knp_pagination_render(pagination) }}
+                    <div class=\"menu-paginator\">
+                        {{ knp_pagination_render(pagination) }}
+                    </div>
+                
 
                 </div>
                 <div class=\"container-home\">
                     <h1> Présentation </h1>
                     <p> Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du \"De Finibus Bonorum et Malorum\" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", proviennent de la section 1.10.32. </p>   
 
-                    <h1> [En construction] </h1>
-                    <ul>
-                        <li> Pagination </li>
-                        <li> Requete Ajax (transmission variable pour gain ruby TTT et BB) </li>
-                    </ul>
                     {#                 
                     {% for value in app.session %}
                         <p> {{ value}}</p>

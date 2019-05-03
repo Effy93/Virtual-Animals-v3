@@ -117,6 +117,11 @@ $catalogue = new MessageCatalogue('en', array (
     'Account is disabled.' => 'Account is disabled.',
     'Account is locked.' => 'Account is locked.',
   ),
+  'KnpPaginatorBundle' => 
+  array (
+    'label_previous' => 'préc',
+    'label_next' => 'suiv',
+  ),
 ));
 
 
