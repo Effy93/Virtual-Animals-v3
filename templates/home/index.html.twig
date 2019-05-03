@@ -1,0 +1,24 @@
+{% extends 'home/layout.html.twig' %}
+
+{# {{ parent() }} #}
+{% block body %}
+{{ parent() }}
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Manage Comments ({{ pagination.getTotalItemCount }})</h1>
+            <table class="table table-striped">
+                <tbody>
+                {% for article in pagination %}
+                <h4 class="glowing"> {{ article.nom }} </h4>
+                <p> {{ article.contenu }} </p>
+                <p><i> {{ article.auteur }} 
+                    </br> {{ article.date|date('d-m-Y') }} 
+                </i></p>
+                <hr width="100%">
+                {% endfor %}
+                </tbody>
+            </table>
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+    {% endblock %}

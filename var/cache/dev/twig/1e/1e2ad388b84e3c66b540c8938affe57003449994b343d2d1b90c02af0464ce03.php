@@ -105,48 +105,54 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
         }
         // line 16
         echo "
-
                     ";
         // line 18
+        echo "                    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_reverse_filter($this->env, (isset($context["article"]) || array_key_exists("article", $context) ? $context["article"] : (function () { throw new RuntimeError('Variable "article" does not exist.', 18, $this->source); })())));
-        foreach ($context['_seq'] as $context["_key"] => $context["news"]) {
+        $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 18, $this->source); })()));
+        foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
             // line 19
             echo "                        <h4 class=\"glowing\"> ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "nom", []), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "nom", []), "html", null, true);
             echo " </h4>
                         <p> ";
             // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "contenu", []), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "contenu", []), "html", null, true);
             echo " </p>
                         <p><i> ";
             // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "auteur", []), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "auteur", []), "html", null, true);
             echo " 
                             </br> ";
             // line 22
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "date", []), "d-m-Y"), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "date", []), "d-m-Y"), "html", null, true);
             echo " 
                         </i></p>
                         <hr width=\"100%\">
                     ";
         }
         $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['news'], $context['_parent'], $context['loop']);
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 26
-        echo "                </div>
+        echo "                    ";
+        // line 27
+        echo "                    ";
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 27, $this->source); })()));
+        echo "
+
+                </div>
                 <div class=\"container-home\">
                     <h1> Présentation </h1>
                     <p> Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du \"De Finibus Bonorum et Malorum\" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", proviennent de la section 1.10.32. </p>   
 
-                    <h1> A faire </h1>
+                    <h1> [En construction] </h1>
                     <ul>
                         <li> Pagination </li>
                         <li> Requete Ajax (transmission variable pour gain ruby TTT et BB) </li>
                     </ul>
                     ";
-        // line 40
+        // line 43
         echo "                </div>
             </div>
         </main>
@@ -172,7 +178,7 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
 
     public function getDebugInfo()
     {
-        return array (  150 => 40,  138 => 26,  128 => 22,  124 => 21,  120 => 20,  115 => 19,  111 => 18,  107 => 16,  100 => 12,  97 => 11,  94 => 10,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
+        return array (  156 => 43,  140 => 27,  138 => 26,  128 => 22,  124 => 21,  120 => 20,  115 => 19,  110 => 18,  107 => 16,  100 => 12,  97 => 11,  94 => 10,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -193,21 +199,24 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
                         </div>
                     {% endif %}
 
-
-                    {% for news in article|reverse %}
-                        <h4 class=\"glowing\"> {{ news.nom }} </h4>
-                        <p> {{ news.contenu }} </p>
-                        <p><i> {{ news.auteur }} 
-                            </br> {{ news.date|date('d-m-Y') }} 
+                    {# Affichage des article paginé par 4 #}
+                    {% for article in pagination %}
+                        <h4 class=\"glowing\"> {{ article.nom }} </h4>
+                        <p> {{ article.contenu }} </p>
+                        <p><i> {{ article.auteur }} 
+                            </br> {{ article.date|date('d-m-Y') }} 
                         </i></p>
                         <hr width=\"100%\">
                     {% endfor %}
+                    {# menu pagination #}
+                    {{ knp_pagination_render(pagination) }}
+
                 </div>
                 <div class=\"container-home\">
                     <h1> Présentation </h1>
                     <p> Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du \"De Finibus Bonorum et Malorum\" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", proviennent de la section 1.10.32. </p>   
 
-                    <h1> A faire </h1>
+                    <h1> [En construction] </h1>
                     <ul>
                         <li> Pagination </li>
                         <li> Requete Ajax (transmission variable pour gain ruby TTT et BB) </li>

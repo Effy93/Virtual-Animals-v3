@@ -222,35 +222,37 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_ttt");
                 echo "\"> ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
-                echo "</a> </button> </li>
+                echo "</a> </button>  
+\t\t\t\t\t\t</br>[Manque gain ruby]</li>
 \t\t\t\t\t";
             }
-            // line 95
+            // line 96
             echo "\t\t\t\t\t";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "3")) {
-                // line 96
+                // line 97
                 echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_bb");
                 echo "\"> ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
-                echo "</a> </button> </li>
+                echo "</a> </button> 
+\t\t\t\t\t\t</br>[Manque gain ruby]</li>
 \t\t\t\t\t";
             }
-            // line 98
+            // line 100
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 99
+        // line 101
         echo "\t\t\t\t\t
 \t\t\t</ul>
 \t  </div>
 
 \t  ";
-        // line 104
+        // line 106
         echo "      ";
-        // line 105
+        // line 107
         echo "
 
 ";
@@ -274,7 +276,7 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 
     public function getDebugInfo()
     {
-        return array (  254 => 105,  252 => 104,  246 => 99,  240 => 98,  232 => 96,  229 => 95,  221 => 93,  218 => 92,  210 => 90,  207 => 89,  203 => 88,  198 => 85,  179 => 69,  175 => 67,  173 => 66,  170 => 65,  164 => 60,  148 => 46,  143 => 44,  140 => 43,  124 => 30,  118 => 25,  115 => 23,  109 => 19,  105 => 18,  101 => 17,  96 => 14,  93 => 12,  87 => 8,  78 => 7,  66 => 4,  57 => 3,  27 => 1,);
+        return array (  256 => 107,  254 => 106,  248 => 101,  242 => 100,  233 => 97,  230 => 96,  221 => 93,  218 => 92,  210 => 90,  207 => 89,  203 => 88,  198 => 85,  179 => 69,  175 => 67,  173 => 66,  170 => 65,  164 => 60,  148 => 46,  143 => 44,  140 => 43,  124 => 30,  118 => 25,  115 => 23,  109 => 19,  105 => 18,  101 => 17,  96 => 14,  93 => 12,  87 => 8,  78 => 7,  66 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -371,10 +373,12 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 \t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_ppc')}}\"> {{ jeux.nom }}</a> </button> </li>
 \t\t\t\t\t{% endif %}
 \t\t\t\t\t{% if (jeux.id == '2') %}
-\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_ttt')}}\"> {{ jeux.nom }}</a> </button> </li>
+\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_ttt')}}\"> {{ jeux.nom }}</a> </button>  
+\t\t\t\t\t\t</br>[Manque gain ruby]</li>
 \t\t\t\t\t{% endif %}
 \t\t\t\t\t{% if (jeux.id == '3') %}
-\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_bb')}}\"> {{ jeux.nom }}</a> </button> </li>
+\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_bb')}}\"> {{ jeux.nom }}</a> </button> 
+\t\t\t\t\t\t</br>[Manque gain ruby]</li>
 \t\t\t\t\t{% endif %}
 \t\t\t\t{% endfor %}
 \t\t\t\t\t

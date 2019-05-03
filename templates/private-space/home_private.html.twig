@@ -90,10 +90,12 @@
 						<li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_ppc')}}"> {{ jeux.nom }}</a> </button> </li>
 					{% endif %}
 					{% if (jeux.id == '2') %}
-						<li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_ttt')}}"> {{ jeux.nom }}</a> </button> </li>
+						<li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_ttt')}}"> {{ jeux.nom }}</a> </button>  
+						</br>[Manque gain ruby]</li>
 					{% endif %}
 					{% if (jeux.id == '3') %}
-						<li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_bb')}}"> {{ jeux.nom }}</a> </button> </li>
+						<li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_bb')}}"> {{ jeux.nom }}</a> </button> 
+						</br>[Manque gain ruby]</li>
 					{% endif %}
 				{% endfor %}
 					

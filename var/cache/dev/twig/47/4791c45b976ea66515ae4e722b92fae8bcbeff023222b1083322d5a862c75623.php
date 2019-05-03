@@ -90,16 +90,20 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
 <header>
     <h1> Administration </h1>
 </header>
+
 <main>
     <div class=\"container-row-reverse\">
         <div class=\"container-monster\"> 
             <h5> Publier un nouvel évènement </h5>
+            [En construction]
         </div>
         <div class=\"container-monster\">
             <h5> Gérer les rôles admin  </h5>
+            [ Bientot ]
         </div> 
         <div class=\"container-monster\">
             <h5> Proposer un nouveau monstre </h5>
+            [En construction]
         </div> 
     </div>
 
@@ -139,16 +143,20 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
 <header>
     <h1> Administration </h1>
 </header>
+
 <main>
     <div class=\"container-row-reverse\">
         <div class=\"container-monster\"> 
             <h5> Publier un nouvel évènement </h5>
+            [En construction]
         </div>
         <div class=\"container-monster\">
             <h5> Gérer les rôles admin  </h5>
+            [ Bientot ]
         </div> 
         <div class=\"container-monster\">
             <h5> Proposer un nouveau monstre </h5>
+            [En construction]
         </div> 
     </div>
 
