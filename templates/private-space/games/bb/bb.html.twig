@@ -11,6 +11,9 @@
 {% block body %}
     {{parent()}}
     <h5> Broken Brick </h5>
+    {# {% if (win  is defined) %}
+    <p> {{ message }} </p>
+    {% endif %} #}
     <canvas id="bb" width="460" height="320"></canvas>
     <div>
         <button class="btn btn-error"> <a href="{{ path('home-private') }}"> Retour </a> </button>

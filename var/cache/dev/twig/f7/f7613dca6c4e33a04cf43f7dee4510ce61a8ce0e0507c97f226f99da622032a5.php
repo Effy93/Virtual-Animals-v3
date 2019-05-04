@@ -89,6 +89,20 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         // line 8
         echo "    <script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\" crossorigin=\"anonymous\"></script>
     <script src=\"/assets/js/ttt.js\" />
+    <script> var url = '";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("win-ttt");
+        echo "';
+    </script>
+
+<script src=\"";
+        // line 13
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/fosjsrouting/js/router.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 14
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_js_routing_js", ["callback" => "fos.Router.setData"]);
+        echo "\"></script>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -98,7 +112,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 
     }
 
-    // line 12
+    // line 17
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -107,7 +121,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 13
+        // line 18
         echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
@@ -115,7 +129,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
     <div class=\"container-fluid\" id=\"content\">
         <div id=\"parent\" class=\"\">
             ";
-        // line 18
+        // line 23
         echo "            <h1 id=\"input\" class=\"\"></h1>
             <div id = \"bt\">
             <div id=\"selector\" class=\"\">choose your game
@@ -147,10 +161,11 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         </div>
     </div>
     <hr class=\"hr\">
+   
 
     <div>
         <button class=\"btn btn-error\"> <a href=\"";
-        // line 51
+        // line 57
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
     </div>
@@ -175,7 +190,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 
     public function getDebugInfo()
     {
-        return array (  154 => 51,  119 => 18,  111 => 13,  102 => 12,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
+        return array (  169 => 57,  133 => 23,  125 => 18,  116 => 17,  104 => 14,  100 => 13,  94 => 10,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -189,6 +204,11 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 {% block javascripts %}
     <script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\" crossorigin=\"anonymous\"></script>
     <script src=\"/assets/js/ttt.js\" />
+    <script> var url = '{{ path(\"win-ttt\") }}';
+    </script>
+
+<script src=\"{{ asset('bundles/fosjsrouting/js/router.js') }}\"></script>
+<script src=\"{{ path('fos_js_routing_js', {\"callback\": \"fos.Router.setData\"}) }}\"></script>
 {% endblock %}
 
 {% block body %}
@@ -228,6 +248,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         </div>
     </div>
     <hr class=\"hr\">
+   
 
     <div>
         <button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>

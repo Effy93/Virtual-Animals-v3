@@ -2,6 +2,7 @@
 
 namespace App\Controller ;
 
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -37,6 +38,44 @@ class GamesController extends AbstractController
     }
 
     /**
+     * @Route("/games/ttt/win", options={"expose"=true}, name="win-ttt")
+     * 
+     */
+    public function ajaxActionTTT(Request $request)
+    {
+        // if(isset($win))
+        // {
+           
+            $gain = $request->request->get('request');
+            $gain = json_decode($request->getContent());
+            // dd($_POST['gain']);
+            // dd($gain);
+            if($request->isXmlHttpRequest()){
+                $gain = $request->request->all(); // tableau des champs POST
+             
+
+                /* GAIN AJOUTER A LA BDD  */
+                if ($gain >= 12) {
+                // Va chercher l'argent actuel de l'utilisateur
+                $user = $this->getUser();
+                $userArgent = $user->getArgent();
+                $user->setArgent($userArgent +5);
+                // Ajoute et enregistre dans la bdd le gain
+                $gestionnaire = $this->getDoctrine()->getManager();
+                $gestionnaire->persist($user);
+                $gestionnaire->flush();
+            }
+              // exit;
+     
+                return new \Symfony\Component\HttpFoundation\JsonResponse($gain);
+            }
+            exit;
+            return $this->redirectToRoute('win-ttt', [
+                'gain' => $gain]);
+        // }
+    }
+
+    /**
      * @Route("/games/home/bb", name="home_bb")
      */
     public function displayHomeBB()
@@ -45,13 +84,26 @@ class GamesController extends AbstractController
     }
 
     /**
-     * @Route("/games/bb", name="bb")
+     * @Route("/games/bb", options={"expose"=true}, name="bb")
      */
     public function displayBB()
     {
         return $this->render('private-space/games/bb/bb.html.twig');
     }
 
+    /**
+     * @Route("/games/bb/win", options={"expose"=true}, name="win-bb")
+     */
+    public function ajaxActionBB(Request $request)
+    {
+        // if(isset($win))
+        // {
+            $this->addFlash("win", "gg");
+            $request = $this->container->get('request');
+            $data = json_decode($request->getContent());
+            dd($win);
+        // }
+    }
 
     /**
      * @Route("/games/home/ppc", name="home_ppc")

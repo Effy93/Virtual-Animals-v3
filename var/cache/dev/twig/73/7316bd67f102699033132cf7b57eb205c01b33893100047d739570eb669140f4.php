@@ -111,10 +111,12 @@ class __TwigTemplate_86f29853b1bcedfa249325bf09c893c5050c873202a094eaa400531496a
         $this->displayParentBlock("body", $context, $blocks);
         echo "
     <h5> Broken Brick </h5>
-    <canvas id=\"bb\" width=\"460\" height=\"320\"></canvas>
+    ";
+        // line 17
+        echo "    <canvas id=\"bb\" width=\"460\" height=\"320\"></canvas>
     <div>
         <button class=\"btn btn-error\"> <a href=\"";
-        // line 16
+        // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
     </div>
@@ -140,7 +142,7 @@ class __TwigTemplate_86f29853b1bcedfa249325bf09c893c5050c873202a094eaa400531496a
 
     public function getDebugInfo()
     {
-        return array (  118 => 16,  110 => 12,  101 => 11,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
+        return array (  120 => 19,  116 => 17,  110 => 12,  101 => 11,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -158,6 +160,9 @@ class __TwigTemplate_86f29853b1bcedfa249325bf09c893c5050c873202a094eaa400531496a
 {% block body %}
     {{parent()}}
     <h5> Broken Brick </h5>
+    {# {% if (win  is defined) %}
+    <p> {{ message }} </p>
+    {% endif %} #}
     <canvas id=\"bb\" width=\"460\" height=\"320\"></canvas>
     <div>
         <button class=\"btn btn-error\"> <a href=\"{{ path('home-private') }}\"> Retour </a> </button>

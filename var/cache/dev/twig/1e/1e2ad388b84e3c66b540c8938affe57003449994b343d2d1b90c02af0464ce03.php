@@ -149,9 +149,11 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
                 <div class=\"container-home\">
                     <h1> Présentation </h1>
                     <p> Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du \"De Finibus Bonorum et Malorum\" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", proviennent de la section 1.10.32. </p>   
-
+                    
                     ";
-        // line 41
+        // line 40
+        echo "                    ";
+        // line 44
         echo "                </div>
             </div>
         </main>
@@ -177,7 +179,7 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
 
     public function getDebugInfo()
     {
-        return array (  155 => 41,  143 => 28,  140 => 27,  138 => 26,  128 => 22,  124 => 21,  120 => 20,  115 => 19,  110 => 18,  107 => 16,  100 => 12,  97 => 11,  94 => 10,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
+        return array (  157 => 44,  155 => 40,  143 => 28,  140 => 27,  138 => 26,  128 => 22,  124 => 21,  120 => 20,  115 => 19,  110 => 18,  107 => 16,  100 => 12,  97 => 11,  94 => 10,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -217,7 +219,10 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
                 <div class=\"container-home\">
                     <h1> Présentation </h1>
                     <p> Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du \"De Finibus Bonorum et Malorum\" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", proviennent de la section 1.10.32. </p>   
-
+                    
+                    {# {% if gain is defined %}
+                        <p> {{ gain }}</p>
+                    {% endif %} #}
                     {#                 
                     {% for value in app.session %}
                         <p> {{ value}}</p>

@@ -2,6 +2,10 @@
 var canvas = document.getElementById("bb");
 var ctx = canvas.getContext("2d");
 
+/**
+ * @Routing.generate('win-bb', $win)
+ */
+
 // SPRITE 1 = balle
 // definit les positions initiales du sprite
 var x = canvas.width/2;
@@ -48,6 +52,7 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 
 // Win et score
 var score = 0;
+var win;
 
 // Fonction qui définit le sprite 1 (taille position de départ, couleurs, plein ou non, forme)
 function drawBall() {
@@ -171,9 +176,17 @@ function collisionDetection() {
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
                         alert("Gagné ! Bravo ! ");
-                        // $_SESSION['win'] = 1
-                        document.location.reload();
-                        var win = Routing.generate('home', {'param' : score});
+                        win = 1;
+                        $.ajax({
+                            data: win,
+                            url: "{{ path('win-bb') }}",
+                            method: 'POST', 
+                            success: function(msg) {
+                                alert('win post bb');
+                            }})
+                            console.log(data)
+                        // document.location.reload();
+                        // win = Routing.generate('home', {'param' : score});
                         clearInterval(interval); // Needed for Chrome to end game
                     }
                 }

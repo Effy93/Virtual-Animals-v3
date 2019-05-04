@@ -223,7 +223,7 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
                 echo "\"> ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
                 echo "</a> </button>  
-\t\t\t\t\t\t</br>[Manque gain ruby]</li>
+\t\t\t\t\t\t</br>[Bug a gerer]</li>
 \t\t\t\t\t";
             }
             // line 96
@@ -374,7 +374,7 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 \t\t\t\t\t{% endif %}
 \t\t\t\t\t{% if (jeux.id == '2') %}
 \t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_ttt')}}\"> {{ jeux.nom }}</a> </button>  
-\t\t\t\t\t\t</br>[Manque gain ruby]</li>
+\t\t\t\t\t\t</br>[Bug a gerer]</li>
 \t\t\t\t\t{% endif %}
 \t\t\t\t\t{% if (jeux.id == '3') %}
 \t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"{{path('home_bb')}}\"> {{ jeux.nom }}</a> </button> 

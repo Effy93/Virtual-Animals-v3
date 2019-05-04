@@ -7,6 +7,11 @@
 {% block javascripts %}
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="/assets/js/ttt.js" />
+    <script> var url = '{{ path("win-ttt") }}';
+    </script>
+
+<script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
 {% endblock %}
 
 {% block body %}
@@ -46,6 +51,7 @@
         </div>
     </div>
     <hr class="hr">
+   
 
     <div>
         <button class="btn btn-error"> <a href="{{ path('home-private') }}"> Retour </a> </button>

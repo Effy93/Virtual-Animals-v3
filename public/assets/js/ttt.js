@@ -2,7 +2,8 @@
 // import Routing from '../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
 
 // Routing.setRoutingData(routes);
-// Routing.generate('rep_log_list');
+// Routing.generate('win-ttt');
+
 
 
 
@@ -69,6 +70,9 @@ var checkingT6;
 var checkingT7;
 var checkingT8;
 var checkingT9;
+
+var gain;
+var data;
 
 $(document).ready(function() {
    $('.game').hide();
@@ -527,7 +531,7 @@ $('#p1').on('click', function() {
             }, win1);
             if (checking1.length == 0) {
                 winMessage();
-                $_POST['win1']=1; 
+                // $_POST['win1']=1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -538,7 +542,7 @@ $('#p1').on('click', function() {
 
             if (checking2.length == 0) {
                 winMessage();
-                $_POST['win2'] = 1; 
+                // $_POST['win2'] = 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -548,7 +552,7 @@ $('#p1').on('click', function() {
             }, win3);
             if (checking3.length == 0) {
                 winMessage();
-                $_POST['win3'] = 1; 
+                // $_POST['win3'] = 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -558,7 +562,7 @@ $('#p1').on('click', function() {
             }, win4);
             if (checking4.length == 0) {
                 winMessage();
-                $_POST['win4']= 1; 
+                // $_POST['win4']= 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -568,7 +572,7 @@ $('#p1').on('click', function() {
             }, win5);
             if (checking5.length == 0) {
                 winMessage();
-                $_POST['win5']= 1; 
+                // $_POST['win5']= 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -579,7 +583,7 @@ $('#p1').on('click', function() {
 
             if (checking6.length == 0) {
                 winMessage();
-                $_POST['win6'] =1; 
+                // $_POST['win6'] =1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -589,7 +593,7 @@ $('#p1').on('click', function() {
             }, win7);
             if (checking7.length == 0) {
                 winMessage();
-                $_POST['win7'] =1; 
+                // $_POST['win7'] =1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -599,7 +603,7 @@ $('#p1').on('click', function() {
             }, win8);
             if (checking8.length == 0) {
                 winMessage();
-                $_POST['win8']= 1; 
+                // $_POST['win8']= 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -609,7 +613,7 @@ $('#p1').on('click', function() {
             }, win9);
             if (checking9.length == 0) {
                 winMessage();
-                $_POST['win9']= 1; 
+                // $_POST['win9']= 1; 
             }
         }
     }
@@ -714,14 +718,29 @@ function restart() {
 function winMessage() {
     setTimeout(function () {
         alert('Gagné !');
+        gain = 12;
         clearInterval(x);
-        $_SESSION['win'] = 1
+       
+        $.ajax({
+            // callback inutile ....
+            url: Routing.generate('win-ttt', 'callback'),
+            type:'POST',
+            data: {'gain':gain},
+            statusCode: {
+                404: function () { $("#messege").text("Page not found"); },
+                500: function () { $("#messege").text("internal server error"); }
+            },
+            success: function(msg) {
+                // alert('post success');
+                console.log(gain)
+            }})
     }, 500);
     restart();
+    
 }
 // function winMessage2() {
 //     setTimeout(function () {
-//         alert('Gangé (j2 ou IA)!');
+//         alert('Gagné (j2 ou IA)!');
 //     }, 500);
 //     restart();
 // }
