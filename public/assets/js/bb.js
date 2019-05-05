@@ -54,6 +54,8 @@ var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 var score = 0;
 var win;
 
+// const URL =  Routing.generate('win-bb', 'callback')
+
 // Fonction qui définit le sprite 1 (taille position de départ, couleurs, plein ou non, forme)
 function drawBall() {
     ctx.beginPath();
@@ -110,7 +112,6 @@ function draw() {
     if(x + dx > canvas.width-ballRadius || x + dx < ballRadius) {
     dx = -dx;
     }
-
 
     // declenche un game over si la balle touche le bas de l'écran 
     if(y + dy < ballRadius) {
@@ -175,18 +176,27 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
-                        alert("Gagné ! Bravo ! ");
-                        win = 1;
-                        $.ajax({
-                            data: win,
-                            url: "{{ path('win-bb') }}",
-                            method: 'POST', 
-                            success: function(msg) {
-                                alert('win post bb');
-                            }})
-                            console.log(data)
-                        // document.location.reload();
-                        // win = Routing.generate('home', {'param' : score});
+                        alert("Gagné !");
+                        win = 10;
+                        var gain = encodeURIComponent(win);
+
+                        URL =  Routing.generate('win-bb')
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', URL);
+                        xhr.onload = function() {
+                            if (xhr.status === 200) {
+                                // alert('xhr content win:' + xhr.responseText);
+                            }
+                            else {
+                                alert('Request failed.  Returned status of ' + xhr.status);
+                            }
+                        };
+                        
+                        xhr.send(gain);
+                        // console.log(gain);
+                        // console.log(win)
+                       
+                        document.location.reload();
                         clearInterval(interval); // Needed for Chrome to end game
                     }
                 }

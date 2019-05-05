@@ -160,8 +160,9 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
             </div>
         </div>
     </div>
-    <hr class=\"hr\">
-   
+    ";
+        // line 54
+        echo "   
 
     <div>
         <button class=\"btn btn-error\"> <a href=\"";
@@ -190,7 +191,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 
     public function getDebugInfo()
     {
-        return array (  169 => 57,  133 => 23,  125 => 18,  116 => 17,  104 => 14,  100 => 13,  94 => 10,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
+        return array (  170 => 57,  165 => 54,  133 => 23,  125 => 18,  116 => 17,  104 => 14,  100 => 13,  94 => 10,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -247,7 +248,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
             </div>
         </div>
     </div>
-    <hr class=\"hr\">
+    {# <hr class=\"hr\"> #}
    
 
     <div>

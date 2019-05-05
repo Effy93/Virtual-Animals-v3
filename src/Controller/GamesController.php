@@ -28,7 +28,6 @@ class GamesController extends AbstractController
     {
         return $this->render('private-space/games/ttt/home_ttt.html.twig');
     }
-
     /**
      * @Route("/games/ttt", name="ttt")
      */
@@ -36,7 +35,6 @@ class GamesController extends AbstractController
     {
         return $this->render('private-space/games/ttt/ttt.html.twig');
     }
-
     /**
      * @Route("/games/ttt/win", options={"expose"=true}, name="win-ttt")
      * 
@@ -82,7 +80,6 @@ class GamesController extends AbstractController
     {
         return $this->render('private-space/games/bb/home_bb.html.twig');
     }
-
     /**
      * @Route("/games/bb", options={"expose"=true}, name="bb")
      */
@@ -90,18 +87,31 @@ class GamesController extends AbstractController
     {
         return $this->render('private-space/games/bb/bb.html.twig');
     }
-
     /**
      * @Route("/games/bb/win", options={"expose"=true}, name="win-bb")
      */
     public function ajaxActionBB(Request $request)
     {
-        // if(isset($win))
-        // {
-            $this->addFlash("win", "gg");
-            $request = $this->container->get('request');
-            $data = json_decode($request->getContent());
-            dd($win);
+            // recupère la requête
+            $win = $request->request->get('request');
+            // recupère le contenu du corp de la requete
+            $win = json_decode($request->getContent());
+
+            // gain ruby
+            if ($win >= 10) {
+                // Va chercher l'argent actuel de l'utilisateur
+                $user = $this->getUser();
+                $userArgent = $user->getArgent();
+                $user->setArgent($userArgent +10);
+                // Ajoute et enregistre dans la bdd le gain
+                $gestionnaire = $this->getDoctrine()->getManager();
+                $gestionnaire->persist($user);
+                $gestionnaire->flush();
+            }
+            return new \Symfony\Component\HttpFoundation\JsonResponse($win);
+            exit;
+            return $this->redirectToRoute('win-bb', [
+                'win' => $win]);
         // }
     }
 
@@ -112,7 +122,6 @@ class GamesController extends AbstractController
     {
         return $this->render('private-space/games/ppc/home_ppc.html.twig');
     }
-
      /**
      * @Route("/games/ppc", name="ppc")
      */
@@ -245,7 +254,6 @@ class GamesController extends AbstractController
         }
 
     }
-
     /**
      * @Route("/games/ppc/infos", name="msg-infos")
      */

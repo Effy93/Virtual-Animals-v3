@@ -531,7 +531,6 @@ $('#p1').on('click', function() {
             }, win1);
             if (checking1.length == 0) {
                 winMessage();
-                // $_POST['win1']=1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -539,10 +538,8 @@ $('#p1').on('click', function() {
             checking2 = winSub2.filter(function (element) {
                 return this.indexOf(element) < 0;
             }, win2);
-
             if (checking2.length == 0) {
                 winMessage();
-                // $_POST['win2'] = 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -551,8 +548,7 @@ $('#p1').on('click', function() {
                 return this.indexOf(element) < 0;
             }, win3);
             if (checking3.length == 0) {
-                winMessage();
-                // $_POST['win3'] = 1; 
+                winMessage(); 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -562,7 +558,6 @@ $('#p1').on('click', function() {
             }, win4);
             if (checking4.length == 0) {
                 winMessage();
-                // $_POST['win4']= 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -572,7 +567,6 @@ $('#p1').on('click', function() {
             }, win5);
             if (checking5.length == 0) {
                 winMessage();
-                // $_POST['win5']= 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -583,7 +577,6 @@ $('#p1').on('click', function() {
 
             if (checking6.length == 0) {
                 winMessage();
-                // $_POST['win6'] =1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -593,7 +586,6 @@ $('#p1').on('click', function() {
             }, win7);
             if (checking7.length == 0) {
                 winMessage();
-                // $_POST['win7'] =1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -603,7 +595,6 @@ $('#p1').on('click', function() {
             }, win8);
             if (checking8.length == 0) {
                 winMessage();
-                // $_POST['win8']= 1; 
             }
         }
         for (i = 0; i < win.length; i++) {
@@ -613,7 +604,6 @@ $('#p1').on('click', function() {
             }, win9);
             if (checking9.length == 0) {
                 winMessage();
-                // $_POST['win9']= 1; 
             }
         }
     }
@@ -718,7 +708,7 @@ function restart() {
 function winMessage() {
     setTimeout(function () {
         alert('Gagné !');
-        gain = 12;
+        gain = 5;
         clearInterval(x);
        
         $.ajax({
