@@ -7,53 +7,6 @@
 {% block body %}
 {{parent()}}
 <main class="container-main">
-	{# Container flex #}
-
-	{% if (is_granted('ROLE_ADMIN')) %}
-
-	<div class="container-absolute">
-			<div class="popover popover-bottom">
-					<button class="btn s-circle btn-primary"> Admin </button>
-					<div class="popover-container">
-						<div class="card container-task">
-							<div class="card-header">
-							</div>
-							<div class="card-body">
-
-									{# <div class="container-column"> #}
-											<div class="container-task">
-													<h5> <a href="{{ path('home_admin') }}"> Publier un nouvel évènement </a>   </h5>
-													<a href="{{ path('add_news') }}"> <button class="btn btn-primary"> News </button> </a>
-													<p> [ liste déroulante de mes événements ]</p>
-											</div> 
-											<div class="container-task">
-													<h5> <a href="{{ path('home_admin') }}"> Proposer un nouveau monstre </a></h5>
-													<a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> Edit </button> </a> 
-													<p> [ liste d'affichage des monstres ]</p>
-													{# <a href="{{ path('edit_monster') }}"> <button class="btn btn-primary"> Edit </button> </a> 
-													<a href="{{ path('edit_monster') }}"> <button class="btn btn-error"> Supprimer </button> </a>  #}
-											</div> 
-											<div class="container-task">
-													<h5> Gestion des rôles  </h5>
-													<p> [ Bientot ]</p>
-													<p> [ formulaire ]</p>
-													<p> [ liste déroulante ]</p>
-											</div>
-									</div>
-								{# </div> #}
-
-							</div>
-							<div class="card-footer">
-						
-							</div>
-						</div>
-					</div>
-				</div>
-	{% endif %}
-{# </div> #}
-
-
-
 	<div class="container-row-reverse">
 <!-- INFOS USER -->
 		{# OPEN user info section #}

@@ -17,18 +17,64 @@
     <h2> Bestiaire </h2>
     <div class="container-row-reverse">
 
-    {% for monstre in app.user.monstre %} 
+         
+
+            {# <div class="container-absolute"> #}
+
+
+    {% for monstre in app.user.monstre %}
+    
+    
         <article class="container-monster">
             <h5> {{ monstre.nom }}</h5> 
              {# ECHO STATS DES MONSTRES dans le pop-up #}
-             <p> Classe : {{ monstre.classe.nom }} <span> 
+            <div class="container-column" width="100%">
+                <div class="popover popover-bottom">
+                    <button class="btn-hover">  {{ monstre.race.nom}} </button>
+                    {# PAS de <p> bug de pop up #}
+                    {{ monstre.description }}
+                    <div class="popover-container">
+                        <div class="card container-pop-up">
+                            <div class="card-header"></div>
+                            <div class="card-body">
+                                <h2> {{ monstre.classe.nom }}  </h2>
+                                <ul>
+                                    <li>  {{ monstre.classe.pv }} PV </li>
+                                    <li> {{ monstre.classe.mp }} MP  </li>
+                                    <li> Force : {{ monstre.classe.puissance }} </li>
+                                    <li>  </li>
+                                    <li> Defense : {{ monstre.classe.defense }} </li>
+                                    <li>  Vitesse : {{ monstre.classe.vitesse }} </li>
+                                    <li>  </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <img src={{ monstre.photo }} class="glowing-img" width="200px" height="200px" alt="image du monstre"/>
+                </div> 
+                <div class="container-row">
+                    {% for element in monstre.element %}
+                        {# <div class=""> #}
+                            {# <p> {{ element.nom }}</p> #}
+                            <img src={{ element.image }} class="glowing-img" width="40px" height="40px" alt="image de l'element"/>
+                        {# </div> #}
+                        
+                    {% endfor %}
+                </div> 
+               
+            </div>
+
+             {# <p> Classe : {{ monstre.classe.nom }} <span> 
                     {{ monstre.classe.pv }} PV </br>
                     {{ monstre.classe.mp }} MP </br> 
                 Force : {{ monstre.classe.puissance }} </br> 
                 Defense : {{ monstre.classe.defense }}</br> 
                 Vitesse : {{ monstre.classe.vitesse }}
                 </span></p>
-            <img src={{ monstre.photo }} class="glowing-img" width="150px" height="150px" alt="image du monstre"/>
+            <img src={{ monstre.photo }} class="glowing-img" width="150px" height="150px" alt="image du monstre"/> #}
         </article>  
     {# </main>   #}
     {% endfor %}

@@ -87,106 +87,40 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
         $this->displayParentBlock("body", $context, $blocks);
         echo "
 <main class=\"container-main\">
-\t";
-        // line 11
-        echo "
-\t";
-        // line 12
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 13
-            echo "
-\t<div class=\"container-absolute\">
-\t\t\t<div class=\"popover popover-bottom\">
-\t\t\t\t\t<button class=\"btn s-circle btn-primary\"> Admin </button>
-\t\t\t\t\t<div class=\"popover-container\">
-\t\t\t\t\t\t<div class=\"card container-task\">
-\t\t\t\t\t\t\t<div class=\"card-header\">
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"card-body\">
-
-\t\t\t\t\t\t\t\t\t";
-            // line 24
-            echo "\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> <a href=\"";
-            // line 25
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
-            echo "\"> Publier un nouvel évènement </a>   </h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 26
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_news");
-            echo "\"> <button class=\"btn btn-primary\"> News </button> </a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ liste déroulante de mes événements ]</p>
-\t\t\t\t\t\t\t\t\t\t\t</div> 
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> <a href=\"";
-            // line 30
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
-            echo "\"> Proposer un nouveau monstre </a></h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 31
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_monster");
-            echo "\"> <button class=\"btn btn-success\"> Edit </button> </a> 
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ liste d'affichage des monstres ]</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t";
-            // line 35
-            echo "\t\t\t\t\t\t\t\t\t\t\t</div> 
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> Gestion des rôles  </h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ Bientot ]</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ formulaire ]</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ liste déroulante ]</p>
-\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t";
-            // line 44
-            echo "
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"card-footer\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t";
-        }
-        // line 54
-        echo "
-
-
 \t<div class=\"container-row-reverse\">
 <!-- INFOS USER -->
 \t\t";
-        // line 60
+        // line 13
         echo "\t\t<section class=\"container-user-infos\">
 \t\t\t<h5> Mon compte </h5>
 \t\t\t<img class=\"glowing-img shake\" src=\"/images/logos/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
 \t\t\t<h4> ";
-        // line 63
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 63, $this->source); })()), "user", []), "nom", []), "html", null, true);
+        // line 16
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", []), "nom", []), "html", null, true);
         echo " </h4>
 \t\t\t<p> Inscrit depuis le : <span style=color:orange;> ";
-        // line 64
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 64, $this->source); })()), "user", []), "date", []), "d-m-Y"), "html", null, true);
+        // line 17
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", []), "date", []), "d-m-Y"), "html", null, true);
         echo " </span></p>
 \t\t\t<p> <span style=color:red;> ";
-        // line 65
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "user", []), "argent", []), "html", null, true);
+        // line 18
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", []), "argent", []), "html", null, true);
         echo " </span> Ruby </p>
 
 \t\t\t<div class=\"container-row\">
 \t\t\t\t";
-        // line 69
+        // line 22
         echo "\t\t\t<div class=\"animate-box\">
 \t\t\t\t\t";
-        // line 71
+        // line 24
         echo "\t\t\t\t\t<a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bestiary");
         echo "\">
 \t\t\t\t\t<div class=\"animate-box-hidden\">
 \t\t\t\t\t\t";
-        // line 76
+        // line 29
         echo "\t\t\t\t\t\t<p> <span style=color:orange;> ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 76, $this->source); })()), "user", []), "monstre", []), "count", []), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", []), "monstre", []), "count", []), "html", null, true);
         echo " </span> monstres </p>
 \t\t\t\t\t\t<button>
 \t\t\t\t\t\t<span>
@@ -200,16 +134,16 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 \t\t\t\t\t</a>
 \t\t\t\t</div>
 \t\t\t\t";
-        // line 89
+        // line 42
         echo "\t\t\t\t<div class=\"animate-box\">
 \t\t\t\t\t<a href=\"";
-        // line 90
+        // line 43
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inventory");
         echo "\">
 \t\t\t\t\t<div class=\"animate-box-hidden\">
 \t\t\t\t\t\t<p> <span style=color:orange;> ";
-        // line 92
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 92, $this->source); })()), "user", []), "accessoire", []), "count", []), "html", null, true);
+        // line 45
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 45, $this->source); })()), "user", []), "accessoire", []), "count", []), "html", null, true);
         echo " </span> accessoires </p>
 \t\t\t\t\t\t<button>
 \t\t\t\t\t\t<span>
@@ -224,22 +158,22 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t";
-        // line 106
+        // line 59
         echo "\t\t</section>
 
 <!-- OUVERTURE CONTAINER DES JEUX  -->
     <section class=\"container-games\">
 \t\t";
-        // line 111
+        // line 64
         echo "\t\t<h5> Mes Jeux </h5>
 \t\t";
-        // line 112
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 112, $this->source); })()), "user", []), "jeux", []), "count", []) == "0")) {
-            // line 113
+        // line 65
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 65, $this->source); })()), "user", []), "jeux", []), "count", []) == "0")) {
+            // line 66
             echo "\t\t\t<p> Aucun jeux disponibles </p>
 \t\t\t<div class=\"animate-box\">
 \t\t\t\t<a href=\"";
-            // line 115
+            // line 68
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop");
             echo "\">  
 \t\t\t\t\t<div class=\"animate-box-hidden\">
@@ -258,19 +192,19 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 \t\t\t</div>
 \t\t";
         }
-        // line 131
+        // line 84
         echo "<!-- LISTE DES JEUX -->
 \t  <div class=\"games-list\">
 \t\t\t<ul>
 \t\t\t\t";
-        // line 134
+        // line 87
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 134, $this->source); })()), "user", []), "jeux", []));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 87, $this->source); })()), "user", []), "jeux", []));
         foreach ($context['_seq'] as $context["_key"] => $context["jeux"]) {
-            // line 135
+            // line 88
             echo "\t\t\t\t\t";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "1")) {
-                // line 136
+                // line 89
                 echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_ppc");
                 echo "\"> ";
@@ -278,10 +212,10 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
                 echo "</a> </button> </li>
 \t\t\t\t\t";
             }
-            // line 138
+            // line 91
             echo "\t\t\t\t\t";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "2")) {
-                // line 139
+                // line 92
                 echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_ttt");
                 echo "\"> ";
@@ -290,10 +224,10 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 \t\t\t\t\t\t</br>[Bug a gerer]</li>
 \t\t\t\t\t";
             }
-            // line 142
+            // line 95
             echo "\t\t\t\t\t";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "3")) {
-                // line 143
+                // line 96
                 echo "\t\t\t\t\t\t<li> <button class=\"btn btn-primary btn-lg\"> <a href=\"";
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_bb");
                 echo "\"> ";
@@ -301,21 +235,21 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
                 echo "</a> </button> 
 \t\t\t\t\t";
             }
-            // line 145
+            // line 98
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 146
+        // line 99
         echo "\t\t\t\t\t
 \t\t\t</ul>
 \t  </div>
 
 \t  ";
-        // line 151
+        // line 104
         echo "\t\t\t";
-        // line 152
+        // line 105
         echo "\t\t\t
 
 
@@ -340,7 +274,7 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 
     public function getDebugInfo()
     {
-        return array (  319 => 152,  317 => 151,  311 => 146,  305 => 145,  297 => 143,  294 => 142,  285 => 139,  282 => 138,  274 => 136,  271 => 135,  267 => 134,  262 => 131,  243 => 115,  239 => 113,  237 => 112,  234 => 111,  228 => 106,  212 => 92,  207 => 90,  204 => 89,  188 => 76,  182 => 71,  179 => 69,  173 => 65,  169 => 64,  165 => 63,  160 => 60,  153 => 54,  142 => 44,  132 => 35,  127 => 31,  123 => 30,  116 => 26,  112 => 25,  109 => 24,  97 => 13,  95 => 12,  92 => 11,  87 => 8,  78 => 7,  66 => 4,  57 => 3,  27 => 1,);
+        return array (  253 => 105,  251 => 104,  245 => 99,  239 => 98,  231 => 96,  228 => 95,  219 => 92,  216 => 91,  208 => 89,  205 => 88,  201 => 87,  196 => 84,  177 => 68,  173 => 66,  171 => 65,  168 => 64,  162 => 59,  146 => 45,  141 => 43,  138 => 42,  122 => 29,  116 => 24,  113 => 22,  107 => 18,  103 => 17,  99 => 16,  94 => 13,  87 => 8,  78 => 7,  66 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -354,53 +288,6 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 {% block body %}
 {{parent()}}
 <main class=\"container-main\">
-\t{# Container flex #}
-
-\t{% if (is_granted('ROLE_ADMIN')) %}
-
-\t<div class=\"container-absolute\">
-\t\t\t<div class=\"popover popover-bottom\">
-\t\t\t\t\t<button class=\"btn s-circle btn-primary\"> Admin </button>
-\t\t\t\t\t<div class=\"popover-container\">
-\t\t\t\t\t\t<div class=\"card container-task\">
-\t\t\t\t\t\t\t<div class=\"card-header\">
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"card-body\">
-
-\t\t\t\t\t\t\t\t\t{# <div class=\"container-column\"> #}
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> <a href=\"{{ path('home_admin') }}\"> Publier un nouvel évènement </a>   </h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('add_news') }}\"> <button class=\"btn btn-primary\"> News </button> </a>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ liste déroulante de mes événements ]</p>
-\t\t\t\t\t\t\t\t\t\t\t</div> 
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> <a href=\"{{ path('home_admin') }}\"> Proposer un nouveau monstre </a></h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('edit_monster') }}\"> <button class=\"btn btn-success\"> Edit </button> </a> 
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ liste d'affichage des monstres ]</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t{# <a href=\"{{ path('edit_monster') }}\"> <button class=\"btn btn-primary\"> Edit </button> </a> 
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('edit_monster') }}\"> <button class=\"btn btn-error\"> Supprimer </button> </a>  #}
-\t\t\t\t\t\t\t\t\t\t\t</div> 
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> Gestion des rôles  </h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ Bientot ]</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ formulaire ]</p>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<p> [ liste déroulante ]</p>
-\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t{# </div> #}
-
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"card-footer\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t{% endif %}
-{# </div> #}
-
-
-
 \t<div class=\"container-row-reverse\">
 <!-- INFOS USER -->
 \t\t{# OPEN user info section #}
