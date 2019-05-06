@@ -202,7 +202,7 @@ form {
   /* min-width: 40%; */
 }
 /***************************************** ADMIN ******************************************/
-.container-main, .container-task, .container-form {
+.container-admin, .container-task, .container-form {
   background-color:rgba(27, 20, 61, 0.4);
   text-align: center;
   border: solid 2px rgb(0, 204, 255);
@@ -226,7 +226,7 @@ form {
 } */
 
 /* items */
-.container-task h5, .container-main h5 {
+.container-task h5, .container-admin h5 {
   font-family: Helvetica, Consolas, monospace;
   letter-spacing: 0.2rem;
   border-bottom: 1px solid rgb(0, 204, 255);

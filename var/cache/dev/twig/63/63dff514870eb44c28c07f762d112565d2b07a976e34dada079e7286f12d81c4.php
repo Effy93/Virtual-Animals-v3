@@ -95,6 +95,7 @@ class __TwigTemplate_87a80753b781cf20c82d4cf832e6063040f503f645de941323d3bc951de
 </header>
 
 
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -130,6 +131,7 @@ class __TwigTemplate_87a80753b781cf20c82d4cf832e6063040f503f645de941323d3bc951de
 <header>
     <h1> Bienvenue {{ app.user.nom }} </h1>
 </header>
+
 
 
 {% endblock %}", "private-space/layout.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/layout.html.twig");

@@ -60,8 +60,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
         // line 17
         $this->displayBlock('body', $context, $blocks);
         // line 65
-        echo "
-    </main>
+        echo "    </main>
         <footer>
             <nav>
                 <ul>
@@ -73,9 +72,9 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
         </footer>
 
         ";
-        // line 77
+        // line 76
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 79
+        // line 78
         echo "    </body>
 </html>
 ";
@@ -141,7 +140,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 18
-        echo "        
+        echo "
                 <nav id=\"menu\">
                     <ul>
                         
@@ -245,7 +244,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
 
     }
 
-    // line 77
+    // line 76
     public function block_javascripts($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -254,7 +253,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 78
+        // line 77
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -271,7 +270,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
 
     public function getDebugInfo()
     {
-        return array (  258 => 78,  249 => 77,  238 => 63,  233 => 57,  228 => 55,  223 => 54,  220 => 53,  215 => 50,  209 => 47,  205 => 46,  200 => 44,  197 => 43,  191 => 40,  188 => 39,  185 => 37,  179 => 35,  172 => 31,  168 => 30,  164 => 29,  159 => 27,  156 => 26,  154 => 25,  152 => 24,  144 => 18,  135 => 17,  118 => 7,  109 => 6,  91 => 5,  79 => 79,  77 => 77,  63 => 65,  61 => 17,  57 => 15,  55 => 6,  51 => 5,  45 => 1,);
+        return array (  257 => 77,  248 => 76,  237 => 63,  232 => 57,  227 => 55,  222 => 54,  219 => 53,  214 => 50,  208 => 47,  204 => 46,  199 => 44,  196 => 43,  190 => 40,  187 => 39,  184 => 37,  178 => 35,  171 => 31,  167 => 30,  163 => 29,  158 => 27,  155 => 26,  153 => 25,  151 => 24,  143 => 18,  134 => 17,  117 => 7,  108 => 6,  90 => 5,  78 => 78,  76 => 76,  63 => 65,  61 => 17,  57 => 15,  55 => 6,  51 => 5,  45 => 1,);
     }
 
     public function getSourceContext()
@@ -293,7 +292,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
     </head>
     <body>
         {% block body %}
-        
+
                 <nav id=\"menu\">
                     <ul>
                         
@@ -340,7 +339,6 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
             </header> #}
            
         {% endblock %}
-
     </main>
         <footer>
             <nav>

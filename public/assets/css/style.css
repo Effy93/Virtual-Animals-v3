@@ -739,3 +739,43 @@ box-sizing: border-box;
 
 
 
+
+
+
+
+
+/***************************************** ADMIN ******************************************/
+.container-admin, .container-task, .container-form {
+  background-color:rgba(27, 20, 61, 0.4);
+  text-align: center;
+  border: solid 2px rgb(0, 204, 255);
+  border-radius: 4px;
+  margin : 2%;
+  /* padding: 2%; */
+/* GLOWING BOX A TESTER DANS LA BOUTIQUE */
+/* box-shadow:0 0 20px #FF9900, -10px 0 40px #Fff, 10px 0 20px #fff; */
+}
+.container-task a {
+  color: white;
+}
+.container-task a:hover {
+  color: rgba(50, 39, 212, 0.534);
+}
+/* items */
+.container-task h5, .container-admin h5 {
+  font-family: Helvetica, Consolas, monospace;
+  letter-spacing: 0.2rem;
+  border-bottom: 1px solid rgb(0, 204, 255);
+  text-align: center;
+}
+.container-form {
+  margin: 2%;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.13);
+  /* width: 80%; */
+}
+.container-absolute {
+  position:absolute;
+  left: 450px;
+  top: 120px;
+}
