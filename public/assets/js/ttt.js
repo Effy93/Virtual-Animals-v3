@@ -1,12 +1,4 @@
-// const routes = require('../../public/js/fos_js_routes.json');
-// import Routing from '../../vendor/friendsofsymfony/jsrouting-bundle/Resources/public/js/router.min.js';
-
-// Routing.setRoutingData(routes);
-// Routing.generate('win-ttt');
-
-
-
-
+/************  Tic Tac Toe *************/
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var pickedImage;
 var pcImage;
@@ -39,19 +31,23 @@ var plWin2;
 var plWin3;
 var plWin4;
 var plWin5;
+// IA mouv = f=>random
 var ram;
 var ram2;
 var ram3;
 var i;
+// Emplacement déjà attribué (IA ou pl ?)
 var taken = [];
 var taken2 = [];
 var taken3 = [];
 var x;
+// win case
 var win1=[];
 var win2=[];
 var win3=[];
 var win4=[];
 var win5=[];
+// case
 var checking1;
 var checking2;
 var checking3;
@@ -82,20 +78,21 @@ $(document).ready(function() {
 $('#p1').on('click', function() {
     $('#selector').hide();
     $('#start').show();
-    //user to select image
+    // select X
     $('#x').on('click', function () {
         $('#bt').empty();
         $('.game').show();
         pickedImage = '<img class="bt" src="/images/games/ttt/croix.png" width="70px" height="70px" alt="croix">';
         pcImage = '<img class="bt" src="/images/games/ttt/rond.png" width="70px" height="70px" alt="rond">';
     });
+    // select O 
     $('#o').on('click', function () {
         $('#bt').empty();
         $('.game').show();
         pickedImage = '<img class="bt" src="/images/games/ttt/rond.png" width="50px" height="50px" alt="rond">';
         pcImage = '<img class="bt" src="/images/games/ttt/croix.png" width="50px" height="50px" alt="croix">';
     });
-    //user to play
+    // User 1 play round 1 for each case (9)
     $('#1').one('click', function () {
         $('#1').append(pickedImage);
         player1.push(1);
@@ -303,8 +300,8 @@ $('#p1').on('click', function() {
             $('#' + c3).append(pcImage);
             $('#' + c4).append(pcImage);
         }, 500);
-        //1st move
-        //pick random number between 1 to 9
+        // 1st move IA algorithm
+        // pick random number between 1 to 9
         ram = 1 + Math.floor((Math.random() * 9));
         ram2 = ram + 1;
         ram3 = ram - 1;
@@ -746,6 +743,8 @@ function lose() {
         }, 1500);
     }
 }
+// Fonction qui fait le rechargement de la page 
+// player 1 length == 5 ?
 function over(){
     if (player1.length == 5) {
             clearInterval(x);

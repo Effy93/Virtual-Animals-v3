@@ -2,9 +2,6 @@
 var canvas = document.getElementById("bb");
 var ctx = canvas.getContext("2d");
 
-/**
- * @Routing.generate('win-bb', $win)
- */
 
 // SPRITE 1 = balle
 // definit les positions initiales du sprite
@@ -21,6 +18,7 @@ var ballRadius = 10;
 var paddleHeight = 10;
 var paddleWidth = 75;
 var paddleX = (canvas.width-paddleWidth) / 2;
+var paddleAir = ( (canvas.width*paddleWidth) / 2 );
 
 // Variable des toucher a presser 
 var rightPressed = false;
@@ -51,16 +49,14 @@ var brickX = (c*(brickWidth+brickPadding))+brickOffsetLeft;
 var brickY = (r*(brickHeight+brickPadding))+brickOffsetTop;
 
 // Win et score
-var score = 0;
 var win;
+var score = 0;
 
-// const URL =  Routing.generate('win-bb', 'callback')
 
 // Fonction qui définit le sprite 1 (taille position de départ, couleurs, plein ou non, forme)
 function drawBall() {
     ctx.beginPath();
     // defini forme, x, y ,rayon 
-    // ctx.arc(x, y, 10, 0, Math.PI*2);
     ctx.arc(x, y, ballRadius, 0, Math.PI*2);
     ctx.fillStyle = "red";
     ctx.fill();
@@ -68,9 +64,11 @@ function drawBall() {
 }
 // DESSINE LE SPRITE 2 (raquette)
 function drawPaddle() {
+    
     ctx.beginPath();
     ctx.rect(paddleX, canvas.height-paddleHeight, paddleWidth, paddleHeight);
-    ctx.fillStyle = "#0095DD";
+    // ctx.fillStyle = "#0095DD";
+    ctx.fillStyle = "rgba(0, 0, 200, 0.5)";
     ctx.fill();
     ctx.closePath();
 }
@@ -96,14 +94,14 @@ function drawBricks() {
 function draw() {
     // effacer la trace du sprite (lors de l'effet mouvement)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    // appels les fonction qui dessine les sprites
+    // appels les fonctions qui dessinent les sprites
     drawBricks();
     drawBall();
     drawPaddle();
     collisionDetection();
     drawScore();
     
-    // prise en compte des variable de position apres chaque recoloration (effet de mouvement)
+    // prise en compte des variables de position après chaque recoloration (effet de mouvement)
     x += dx;
     y += dy;
 
@@ -119,7 +117,7 @@ function draw() {
     }
     else if(y + dy > canvas.height-ballRadius) {
         // Si la balle ne touche pas la raquette alors rebond
-        if(x > paddleX && x < paddleX + paddleWidth) {
+        if(x > paddleX && x < paddleX + paddleWidth && x < paddleAir) {
             dy=-dy
         } else {
             alert("GAME OVER");

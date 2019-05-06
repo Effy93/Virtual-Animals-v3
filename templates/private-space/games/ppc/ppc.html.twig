@@ -6,7 +6,13 @@
 
 {% block body %}
     {{parent()}}
-    <h5> Pierre feuille ciseaux </h5>
+    {% for jeux in app.user.jeux %}
+    {% if (jeux.id == '1') %}
+        <h5> {{ jeux.nom }} </h5>
+        <p> {{ jeux.description }} </p>
+    {% endif %}
+    {% endfor %}
+
     <section class="container-body-PPC">
         {{ form_start(PPCform) }}
         <div class="container-row">

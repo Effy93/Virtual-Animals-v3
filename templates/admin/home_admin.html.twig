@@ -9,20 +9,64 @@
 </header>
 
 <main>
-    <div class="container-row-reverse">
-        <div class="container-monster"> 
-            <h5> Publier un nouvel évènement </h5>
-            [En construction]
-        </div>
-        <div class="container-monster">
-            <h5> Gérer les rôles admin  </h5>
-            [ Bientot ]
-        </div> 
-        <div class="container-monster">
-            <h5> Proposer un nouveau monstre </h5>
-            [En construction]
-        </div> 
-    </div>
+    <div>
+        <h3> [tasks] </h3>
+        <ul>
+            <li> TTT : cheat a corriger </li>
+            <li> Edition d'un monstre : controller a faire </li>
+            <li> Modification / Suppression des news </li>
+            <li> Système de gestion des rôles </li>
+        </ul>
+        
+    </div> 
+  
+        {# add_news #}
+        {% if app.request.attributes.get('_route') == 'add_news' %}
+            <div class="container-task">
+                <h5> Publier un nouvel évènement  </h5>
+                <a href='{{ path('home_admin') }}'> <button class="btn btn-error">  Retour </button> </a>
+                <div class="container-row">
+                    <div class="container-form"> 
+                    
+                {# </div>  #}
+
+        {# edit_monster #}
+        {% elseif app.request.attributes.get('_route') == 'edit_monster' %}
+            <div class="container-task">
+                <h5> Proposer un nouveau monstre </h5> 
+                {# <div class="container-row-reverse"> #}
+                <a href='{{ path('home_admin') }}'> <button class="btn btn-error">  Retour </button> </a> 
+                {# </div>    #}
+                <div class="container-row">   
+                    <div class="container-form">
+                        
+                {# </div>  #}
+
+        {% else %}
+            {# général #}
+            <div class="container-main">
+                <div class="container-row">
+                    <div class="container-task">
+                        <h5>  Publier un nouvel évènement </h5>
+                        <a href="{{ path('add_news') }}"> <button class="btn btn-primary"> News </button> </a>
+                        <p> [ liste déroulante de mes événements ]</p>
+                    </div> 
+                    <div class="container-task">
+                        <h5> Proposer un nouveau monstre </h5>
+                        <a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> Edit </button> </a> 
+                        <p> [ liste d'affichage des monstres ]</p>
+                        {# <a href="{{ path('edit_monster') }}"> <button class="btn btn-primary"> Edit </button> </a> 
+                        <a href="{{ path('edit_monster') }}"> <button class="btn btn-error"> Supprimer </button> </a>  #}
+                    </div> 
+                    <div class="container-task">
+                        <h5> Gestion des rôles  </h5>
+                        <p> [ Bientot ]</p>
+                        <p> [ formulaire ]</p>
+                        <p> [ liste déroulante ]</p>
+                    </div>
+                
+        {% endif %}
+
 
 
 {% endblock %}

@@ -18,7 +18,15 @@
 
 {% block body %}
     {{parent()}}
-    <h5> Tic Tac Toe </h5>
+    {# <h5> Tic Tac Toe </h5> #}
+
+    {% for jeux in app.user.jeux %}
+    {% if (jeux.id == '2') %}
+        <h5> {{ jeux.nom }} </h5>
+        <p> {{ jeux.description }} </p>
+    {% endif %}
+    {% endfor %}
+
     <div class="container-fluid" id="content">
         <div id="parent" class="">
             {# <h1 class="text-primary text-center">Tic Tac Toe</h1> #}

@@ -87,22 +87,24 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 8
-        echo "    <script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\" crossorigin=\"anonymous\"></script>
+        echo "
+    <script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\" crossorigin=\"anonymous\"></script>
     <script src=\"/assets/js/ttt.js\" />
     <script> var url = '";
-        // line 10
+        // line 11
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("win-ttt");
         echo "';
     </script>
 
-<script src=\"";
-        // line 13
+    <script src=\"";
+        // line 14
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("bundles/fosjsrouting/js/router.js"), "html", null, true);
         echo "\"></script>
-<script src=\"";
-        // line 14
+    <script src=\"";
+        // line 15
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("fos_js_routing_js", ["callback" => "fos.Router.setData"]);
         echo "\"></script>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -112,7 +114,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 
     }
 
-    // line 17
+    // line 19
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -121,15 +123,43 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 18
+        // line 20
         echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-    <h5> Tic Tac Toe </h5>
+    ";
+        // line 22
+        echo "
+    ";
+        // line 23
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", []), "jeux", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["jeux"]) {
+            // line 24
+            echo "    ";
+            if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "2")) {
+                // line 25
+                echo "        <h5> ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
+                echo " </h5>
+        <p> ";
+                // line 26
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "description", []), "html", null, true);
+                echo " </p>
+    ";
+            }
+            // line 28
+            echo "    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 29
+        echo "
     <div class=\"container-fluid\" id=\"content\">
         <div id=\"parent\" class=\"\">
             ";
-        // line 23
+        // line 33
         echo "            <h1 id=\"input\" class=\"\"></h1>
             <div id = \"bt\">
             <div id=\"selector\" class=\"\">choose your game
@@ -161,12 +191,12 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         </div>
     </div>
     ";
-        // line 54
+        // line 64
         echo "   
 
     <div>
         <button class=\"btn btn-error\"> <a href=\"";
-        // line 57
+        // line 67
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
     </div>
@@ -191,7 +221,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 
     public function getDebugInfo()
     {
-        return array (  170 => 57,  165 => 54,  133 => 23,  125 => 18,  116 => 17,  104 => 14,  100 => 13,  94 => 10,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
+        return array (  200 => 67,  195 => 64,  163 => 33,  158 => 29,  152 => 28,  147 => 26,  142 => 25,  139 => 24,  135 => 23,  132 => 22,  127 => 20,  118 => 19,  105 => 15,  101 => 14,  95 => 11,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -203,18 +233,28 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 {% endblock %}
 
 {% block javascripts %}
+
     <script type=\"text/javascript\" src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\" crossorigin=\"anonymous\"></script>
     <script src=\"/assets/js/ttt.js\" />
     <script> var url = '{{ path(\"win-ttt\") }}';
     </script>
 
-<script src=\"{{ asset('bundles/fosjsrouting/js/router.js') }}\"></script>
-<script src=\"{{ path('fos_js_routing_js', {\"callback\": \"fos.Router.setData\"}) }}\"></script>
+    <script src=\"{{ asset('bundles/fosjsrouting/js/router.js') }}\"></script>
+    <script src=\"{{ path('fos_js_routing_js', {\"callback\": \"fos.Router.setData\"}) }}\"></script>
+
 {% endblock %}
 
 {% block body %}
     {{parent()}}
-    <h5> Tic Tac Toe </h5>
+    {# <h5> Tic Tac Toe </h5> #}
+
+    {% for jeux in app.user.jeux %}
+    {% if (jeux.id == '2') %}
+        <h5> {{ jeux.nom }} </h5>
+        <p> {{ jeux.description }} </p>
+    {% endif %}
+    {% endfor %}
+
     <div class=\"container-fluid\" id=\"content\">
         <div id=\"parent\" class=\"\">
             {# <h1 class=\"text-primary text-center\">Tic Tac Toe</h1> #}

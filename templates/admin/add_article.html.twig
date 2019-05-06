@@ -1,14 +1,10 @@
-{% extends 'admin/layout.html.twig' %}
+{% extends 'admin/home_admin.html.twig' %}
 
 {% block title %} {{parent()}} {% endblock %}
 
 {% block body %}
 {{parent()}}
-<header>
-    <h1> Ajouter un article </h1>
-</header>
 
-<div class="container-row">
     {{ form_start(newsForm) }}
 
     {{ form_label(newsForm.nom) }}

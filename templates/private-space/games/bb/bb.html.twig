@@ -18,7 +18,14 @@
 
 {% block body %}
     {{parent()}}
-    <h5> Broken Brick </h5>
+    
+    {% for jeux in app.user.jeux %}
+        {% if (jeux.id == '3') %}
+            <h5> Broken Brick </h5>
+            <p> {{ jeux.description }} </p>
+        {% endif %}
+    {% endfor %}
+
     {# {% if (win  is defined) %}
     <p> {{ message }} </p>
     {% endif %} #}

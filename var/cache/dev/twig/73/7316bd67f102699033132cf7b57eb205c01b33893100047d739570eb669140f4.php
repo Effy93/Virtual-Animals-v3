@@ -127,13 +127,37 @@ class __TwigTemplate_86f29853b1bcedfa249325bf09c893c5050c873202a094eaa400531496a
         echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-    <h5> Broken Brick </h5>
+    
     ";
-        // line 25
+        // line 22
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "user", []), "jeux", []));
+        foreach ($context['_seq'] as $context["_key"] => $context["jeux"]) {
+            // line 23
+            echo "        ";
+            if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "3")) {
+                // line 24
+                echo "            <h5> Broken Brick </h5>
+            <p> ";
+                // line 25
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "description", []), "html", null, true);
+                echo " </p>
+        ";
+            }
+            // line 27
+            echo "    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 28
+        echo "
+    ";
+        // line 32
         echo "    <canvas id=\"bb\" width=\"460\" height=\"320\"></canvas>
     <div>
         <button class=\"btn btn-error\"> <a href=\"";
-        // line 27
+        // line 34
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
     </div>
@@ -159,7 +183,7 @@ class __TwigTemplate_86f29853b1bcedfa249325bf09c893c5050c873202a094eaa400531496a
 
     public function getDebugInfo()
     {
-        return array (  137 => 27,  133 => 25,  127 => 20,  118 => 19,  106 => 16,  101 => 14,  96 => 13,  93 => 11,  90 => 9,  81 => 8,  69 => 4,  58 => 3,  27 => 1,);
+        return array (  161 => 34,  157 => 32,  154 => 28,  148 => 27,  143 => 25,  140 => 24,  137 => 23,  133 => 22,  127 => 20,  118 => 19,  106 => 16,  101 => 14,  96 => 13,  93 => 11,  90 => 9,  81 => 8,  69 => 4,  58 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -184,7 +208,14 @@ class __TwigTemplate_86f29853b1bcedfa249325bf09c893c5050c873202a094eaa400531496a
 
 {% block body %}
     {{parent()}}
-    <h5> Broken Brick </h5>
+    
+    {% for jeux in app.user.jeux %}
+        {% if (jeux.id == '3') %}
+            <h5> Broken Brick </h5>
+            <p> {{ jeux.description }} </p>
+        {% endif %}
+    {% endfor %}
+
     {# {% if (win  is defined) %}
     <p> {{ message }} </p>
     {% endif %} #}
