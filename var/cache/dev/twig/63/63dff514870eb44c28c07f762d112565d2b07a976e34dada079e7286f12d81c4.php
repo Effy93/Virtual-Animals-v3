@@ -93,61 +93,6 @@ class __TwigTemplate_87a80753b781cf20c82d4cf832e6063040f503f645de941323d3bc951de
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", []), "nom", []), "html", null, true);
         echo " </h1>
 </header>
-";
-        // line 10
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 11
-            echo "
-\t<div class=\"container-absolute\">
-\t\t\t<div class=\"popover popover-right\">
-\t\t\t\t\t<button class=\"btn s-circle btn-primary\"> Admin </button>
-\t\t\t\t\t<div class=\"popover-container\">
-\t\t\t\t\t\t<div class=\"card container-task\">
-\t\t\t\t\t\t\t<div class=\"card-header\">
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"card-body\">
-
-\t\t\t\t\t\t\t\t\t";
-            // line 22
-            echo "\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> <a href=\"";
-            // line 23
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
-            echo "\"> Évènement </a>   </h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 24
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_news");
-            echo "\"> <button class=\"btn btn-success\"> Add news </button> </a>
-\t\t\t\t\t\t\t\t\t\t\t</div> 
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> <a href=\"";
-            // line 27
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
-            echo "\"> Proposer un nouveau monstre </a></h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"";
-            // line 28
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_monster");
-            echo "\"> <button class=\"btn btn-success\"> Edit </button> </a> 
-\t\t\t\t\t\t\t\t\t\t\t</div> 
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> Gestion des rôles  </h5>
-\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t";
-            // line 36
-            echo "
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"card-footer\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t";
-        }
-        // line 45
-        echo "
 
 ";
         
@@ -170,7 +115,7 @@ class __TwigTemplate_87a80753b781cf20c82d4cf832e6063040f503f645de941323d3bc951de
 
     public function getDebugInfo()
     {
-        return array (  150 => 45,  139 => 36,  129 => 28,  125 => 27,  119 => 24,  115 => 23,  112 => 22,  100 => 11,  98 => 10,  93 => 8,  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
+        return array (  93 => 8,  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -184,42 +129,6 @@ class __TwigTemplate_87a80753b781cf20c82d4cf832e6063040f503f645de941323d3bc951de
 <header>
     <h1> Bienvenue {{ app.user.nom }} </h1>
 </header>
-{% if (is_granted('ROLE_ADMIN')) %}
-
-\t<div class=\"container-absolute\">
-\t\t\t<div class=\"popover popover-right\">
-\t\t\t\t\t<button class=\"btn s-circle btn-primary\"> Admin </button>
-\t\t\t\t\t<div class=\"popover-container\">
-\t\t\t\t\t\t<div class=\"card container-task\">
-\t\t\t\t\t\t\t<div class=\"card-header\">
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"card-body\">
-
-\t\t\t\t\t\t\t\t\t{# <div class=\"container-column\"> #}
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> <a href=\"{{ path('home_admin') }}\"> Évènement </a>   </h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('add_news') }}\"> <button class=\"btn btn-success\"> Add news </button> </a>
-\t\t\t\t\t\t\t\t\t\t\t</div> 
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> <a href=\"{{ path('home_admin') }}\"> Proposer un nouveau monstre </a></h5>
-\t\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"{{ path('edit_monster') }}\"> <button class=\"btn btn-success\"> Edit </button> </a> 
-\t\t\t\t\t\t\t\t\t\t\t</div> 
-\t\t\t\t\t\t\t\t\t\t\t<div class=\"container-task\">
-\t\t\t\t\t\t\t\t\t\t\t\t\t<h5> Gestion des rôles  </h5>
-\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t{# </div> #}
-
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t<div class=\"card-footer\">
-\t\t\t\t\t\t
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t{% endif %}
-
 
 {% endblock %}", "private-space/layout.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/layout.html.twig");
     }

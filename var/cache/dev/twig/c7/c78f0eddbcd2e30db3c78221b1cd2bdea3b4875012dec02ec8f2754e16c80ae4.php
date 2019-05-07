@@ -208,102 +208,172 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
         echo "    
             </section>
     </div>
+
     
 
 <!-- ACHAT MONSTRES -->
     ";
-        // line 72
+        // line 73
         echo "    <section class=\"container-bestiary\">
         <h2> Élevage monstrueux </h2>
         <div class=\"container-row-reverse\">
             ";
-        // line 76
+        // line 77
         echo "            ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["monstres"]) || array_key_exists("monstres", $context) ? $context["monstres"] : (function () { throw new RuntimeError('Variable "monstres" does not exist.', 76, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["monstres"]) || array_key_exists("monstres", $context) ? $context["monstres"] : (function () { throw new RuntimeError('Variable "monstres" does not exist.', 77, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["monstre"]) {
-            // line 77
-            echo "                ";
             // line 78
             echo "                ";
-            if (twig_in_filter($context["monstre"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 78, $this->source); })()), "user", []), "monstre", []))) {
+            // line 79
+            echo "                ";
+            if (twig_in_filter($context["monstre"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 79, $this->source); })()), "user", []), "monstre", []))) {
                 echo " 
                 ";
             } else {
-                // line 80
-                echo "                    <article class=\"container-monster\">
-                        <h5> ";
                 // line 81
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "nom", []), "html", null, true);
-                echo "</h5> 
-                        <p style=color:orange;> ";
-                // line 82
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "description", []), "html", null, true);
-                echo " </p>
-                        ";
+                echo "    
+    
+                <article class=\"container-monster\">
+                    ";
                 // line 84
-                echo "                        <p> Classe : ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "nom", []), "html", null, true);
-                echo " <span> 
-                                ";
-                // line 85
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "pv", []), "html", null, true);
-                echo " PV </br>
-                                ";
-                // line 86
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "mp", []), "html", null, true);
-                echo " MP </br> 
-                            Force : ";
-                // line 87
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "puissance", []), "html", null, true);
-                echo " </br> 
-                            Defense : ";
-                // line 88
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "defense", []), "html", null, true);
-                echo "</br> 
-                            Vitesse : ";
+                if ((twig_get_attribute($this->env, $this->source, $context["monstre"], "id", []) == 14)) {
+                    // line 85
+                    echo "                        <h5> ";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "nom", []), "html", null, true);
+                    echo " ❤ </h5>     
+                    ";
+                } else {
+                    // line 87
+                    echo "                        <h5> ";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "nom", []), "html", null, true);
+                    echo "</h5> 
+                    ";
+                }
                 // line 89
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "vitesse", []), "html", null, true);
-                echo "
-                            </span>
-                        </p>
-                        <img src=";
+                echo "                     ";
+                // line 90
+                echo "                    <div class=\"container-column\" width=\"100%\">
+                        <div class=\"popover popover-bottom\">
+                            <button class=\"btn-hover\">  ";
                 // line 92
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "photo", []), "html", null, true);
-                echo " class=\"glowing-img\" width=\"150px\" height=\"150px\" alt=\"image du monstre\"/>
-                        ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "race", []), "nom", []), "html", null, true);
+                echo " </button>
+                            ";
                 // line 94
-                echo "                        <div class=\"animate-box\">
-                            <a href=\"";
-                // line 95
+                echo "                            ";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "description", []), "html", null, true);
+                echo "
+                            <div class=\"popover-container\">
+                                <div class=\"card container-pop-up\">
+                                    <div class=\"card-header\"></div>
+                                    <div class=\"card-body\">
+                                        <h2> ";
+                // line 99
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "nom", []), "html", null, true);
+                echo "  </h2>
+                                        <ul>
+                                            <li> PV :  ";
+                // line 101
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "pv", []), "html", null, true);
+                echo " </li>
+                                            <li> MP : ";
+                // line 102
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "mp", []), "html", null, true);
+                echo "  </li>
+                                            <li> Force : ";
+                // line 103
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "puissance", []), "html", null, true);
+                echo " </li>
+                                            <li>  </li>
+                                            <li> Defense : ";
+                // line 105
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "defense", []), "html", null, true);
+                echo " </li>
+                                            <li>  Vitesse : ";
+                // line 106
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "classe", []), "vitesse", []), "html", null, true);
+                echo " </li>
+                                            <li>  </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <img src=";
+                // line 115
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "photo", []), "html", null, true);
+                echo " class=\"glowing-img\" width=\"200px\" height=\"200px\" alt=\"image du monstre\"/>
+                        </div> 
+                        <div class=\"container-row\">
+                            ";
+                // line 118
+                $context['_parent'] = $context;
+                $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["monstre"], "element", []));
+                foreach ($context['_seq'] as $context["_key"] => $context["element"]) {
+                    // line 119
+                    echo "                                ";
+                    // line 120
+                    echo "                                    ";
+                    // line 121
+                    echo "                                    <img src=";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "image", []), "html", null, true);
+                    echo " class=\"glowing-img\" width=\"40px\" height=\"40px\" title=\"";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "nom", []), "html", null, true);
+                    echo "\" alt=\"image de l'element ";
+                    echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "nom", []), "html", null, true);
+                    echo "\"/>
+                                ";
+                    // line 123
+                    echo "                                ";
+                    // line 124
+                    echo "                            ";
+                }
+                $_parent = $context['_parent'];
+                unset($context['_seq'], $context['_iterated'], $context['_key'], $context['element'], $context['_parent'], $context['loop']);
+                $context = array_intersect_key($context, $_parent) + $_parent;
+                // line 125
+                echo "                        </div> 
+                            <div>
+                                <div class=\"animate-box\">
+                                    <a href=\"";
+                // line 128
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buy_monster", ["id" => twig_get_attribute($this->env, $this->source, $context["monstre"], "id", [])]), "html", null, true);
                 echo "\">  
-                                <div class=\"animate-box-hidden\">
-                                    <p style=color:orange;>  ";
-                // line 97
+                                        <div class=\"animate-box-hidden\">
+                                            <p style=color:orange;>  ";
+                // line 130
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "tarif", []), "prix", []), "html", null, true);
                 echo " ruby </p>
-                                    <button>
-                                        <span>
-                                            <span>
-                                                <span  data-attr-span=\"J'achete !\">  Acheter
+                                            <button>
+                                                <span>
+                                                    <span>
+                                                        <span  data-attr-span=\"J'achete !\">  Acheter
+                                                        </span>
+                                                    </span>
                                                 </span>
-                                            </span>
-                                        </span>
-                                    </button>
+                                            </button>
+                                        </div>
+                                    </a>
                                 </div>
-                            </a>
-                        </div>
-                    </article>
+                            </div>
+                        
+                           
+                       
+                       
+                    </div>
+            </article>
                 ";
             }
-            // line 111
+            // line 150
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['monstre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 112
+        // line 151
         echo "            </div>
         </section>
 
@@ -330,7 +400,7 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
 
     public function getDebugInfo()
     {
-        return array (  307 => 112,  301 => 111,  284 => 97,  279 => 95,  276 => 94,  272 => 92,  266 => 89,  262 => 88,  258 => 87,  254 => 86,  250 => 85,  245 => 84,  241 => 82,  237 => 81,  234 => 80,  228 => 78,  226 => 77,  221 => 76,  216 => 72,  203 => 65,  187 => 51,  181 => 49,  177 => 47,  175 => 46,  170 => 44,  165 => 42,  162 => 41,  159 => 40,  157 => 39,  154 => 38,  152 => 37,  148 => 36,  141 => 31,  129 => 25,  124 => 22,  119 => 21,  117 => 20,  104 => 13,  99 => 10,  97 => 9,  92 => 8,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
+        return array (  377 => 151,  371 => 150,  348 => 130,  343 => 128,  338 => 125,  332 => 124,  330 => 123,  321 => 121,  319 => 120,  317 => 119,  313 => 118,  307 => 115,  295 => 106,  291 => 105,  286 => 103,  282 => 102,  278 => 101,  273 => 99,  264 => 94,  260 => 92,  256 => 90,  254 => 89,  248 => 87,  242 => 85,  240 => 84,  235 => 81,  229 => 79,  227 => 78,  222 => 77,  217 => 73,  203 => 65,  187 => 51,  181 => 49,  177 => 47,  175 => 46,  170 => 44,  165 => 42,  162 => 41,  159 => 40,  157 => 39,  154 => 38,  152 => 37,  148 => 36,  141 => 31,  129 => 25,  124 => 22,  119 => 21,  117 => 20,  104 => 13,  99 => 10,  97 => 9,  92 => 8,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -402,6 +472,7 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
                 {% endfor %}    
             </section>
     </div>
+
     
 
 <!-- ACHAT MONSTRES -->
@@ -414,36 +485,74 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
                 {# Si l'utilisateur possede deja le monstre rien ne s'affiche, sinon #}
                 {% if monstre in app.user.monstre %} 
                 {% else %}
-                    <article class=\"container-monster\">
+    
+    
+                <article class=\"container-monster\">
+                    {% if (monstre.id == 14) %}
+                        <h5> {{ monstre.nom }} ❤ </h5>     
+                    {% else %}
                         <h5> {{ monstre.nom }}</h5> 
-                        <p style=color:orange;> {{monstre.description}} </p>
-                        {# Pop-up stats des monstres #}
-                        <p> Classe : {{ monstre.classe.nom }} <span> 
-                                {{ monstre.classe.pv }} PV </br>
-                                {{ monstre.classe.mp }} MP </br> 
-                            Force : {{ monstre.classe.puissance }} </br> 
-                            Defense : {{ monstre.classe.defense }}</br> 
-                            Vitesse : {{ monstre.classe.vitesse }}
-                            </span>
-                        </p>
-                        <img src={{ monstre.photo }} class=\"glowing-img\" width=\"150px\" height=\"150px\" alt=\"image du monstre\"/>
-                        {#  ACHAT  => ANIMATE BORDER BOX #}
-                        <div class=\"animate-box\">
-                            <a href=\"{{ path('buy_monster', {'id':monstre.id}) }}\">  
-                                <div class=\"animate-box-hidden\">
-                                    <p style=color:orange;>  {{ monstre.tarif.prix }} ruby </p>
-                                    <button>
-                                        <span>
-                                            <span>
-                                                <span  data-attr-span=\"J'achete !\">  Acheter
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </button>
+                    {% endif %}
+                     {# ECHO STATS DES MONSTRES dans le pop-up #}
+                    <div class=\"container-column\" width=\"100%\">
+                        <div class=\"popover popover-bottom\">
+                            <button class=\"btn-hover\">  {{ monstre.race.nom}} </button>
+                            {# PAS de <p> bug de pop up #}
+                            {{ monstre.description }}
+                            <div class=\"popover-container\">
+                                <div class=\"card container-pop-up\">
+                                    <div class=\"card-header\"></div>
+                                    <div class=\"card-body\">
+                                        <h2> {{ monstre.classe.nom }}  </h2>
+                                        <ul>
+                                            <li> PV :  {{ monstre.classe.pv }} </li>
+                                            <li> MP : {{ monstre.classe.mp }}  </li>
+                                            <li> Force : {{ monstre.classe.puissance }} </li>
+                                            <li>  </li>
+                                            <li> Defense : {{ monstre.classe.defense }} </li>
+                                            <li>  Vitesse : {{ monstre.classe.vitesse }} </li>
+                                            <li>  </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                    </article>
+                        
+                        <div>
+                            <img src={{ monstre.photo }} class=\"glowing-img\" width=\"200px\" height=\"200px\" alt=\"image du monstre\"/>
+                        </div> 
+                        <div class=\"container-row\">
+                            {% for element in monstre.element %}
+                                {# <div class=\"\"> #}
+                                    {# <p> {{ element.nom }}</p> #}
+                                    <img src={{ element.image }} class=\"glowing-img\" width=\"40px\" height=\"40px\" title=\"{{ element.nom }}\" alt=\"image de l'element {{ element.nom }}\"/>
+                                {# </div> #}
+                                {#  ACHAT  => ANIMATE BORDER BOX #}
+                            {% endfor %}
+                        </div> 
+                            <div>
+                                <div class=\"animate-box\">
+                                    <a href=\"{{ path('buy_monster', {'id':monstre.id}) }}\">  
+                                        <div class=\"animate-box-hidden\">
+                                            <p style=color:orange;>  {{ monstre.tarif.prix }} ruby </p>
+                                            <button>
+                                                <span>
+                                                    <span>
+                                                        <span  data-attr-span=\"J'achete !\">  Acheter
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                           
+                       
+                       
+                    </div>
+            </article>
                 {% endif %}
             {% endfor %}
             </div>

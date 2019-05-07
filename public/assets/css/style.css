@@ -8,7 +8,7 @@ html {
   height:100%;
 }
 body {
-  color:#FFF;
+  color: antiquewhite;
   background-color: rgb(20, 14, 18);
   background-image: url(../../images/panda2.png);
   background-attachment: fixed;
@@ -737,20 +737,41 @@ box-sizing: border-box;
 
 
 
-
+/* SPECTRE POP UP _ bestiary / shop */
 
 .container-pop-up {
   background-color: rgba(20, 14, 18, 0.8);
+  /* background-image: url(/images/monstres/foudre.png);
+  background-position: center;
+  background-repeat:no-repeat ; */
+}
+.container-pop-up ul li {
+  list-style-type: none;
+}
+.container-pop-up h2 {
+  background-color:rgba(136, 81, 9, 0.6);
+  text-transform: uppercase;
+  font-size:1em;
+  letter-spacing:0.2;
 }
 .btn-hover {
   border: solid 2px #FF9900;
   /* border-radius: 100%; */
   width: 100%;
   background: rgba(255, 145, 0, 0.8);
-  padding: 0; margin: 0;
+  padding: 0; margin: 4px 0 10px 0;
 }
 .btn-hover:focus, .btn-hover:hover {
-  background-color: #FFF;
+  background-color: wheat;
+  border: 2px solid  #FF9900;
+}
+.container-pop-up h2, .container-monster button{
+  text-transform: uppercase;
+  font-size:1em;
+  letter-spacing:0.2;
+}
+.img-monster {
+  border-bottom: 2px solid orange;
 }
 
 
@@ -786,8 +807,27 @@ box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.13);
   /* width: 80%; */
 }
+
+/* bouton admin */
+
 .container-absolute {
+  border: solid 2px rgba(50, 39, 212, 0.134);
+  border-radius:20%;
+  background-color:rgba(50, 39, 212, 0.134);
+  width: 240px;
+  height: 80px;
+  /* position */
   position:fixed;
-  left: 250px;
-  top: 450px;
+  bottom: 300px;
+  left: 90px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.btn-admin {
+  background-color: black;
+  border: black 2px solid;
+  border-radius: 100%;
+  color:antiquewhite;
 }

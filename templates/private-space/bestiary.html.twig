@@ -2,33 +2,24 @@
 
 {% block title %} {{parent()}} {% endblock %}
 
-{# {% block stylesheets %}
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
-    <link rel="stylesheet" href="/style.css">
-    <link rel="icon" type="image/png" href="/images/panda-feroce2.png"> 
-{% endblock %} #}
-
 {% block body %}
 {{parent()}} 
-
 <section class="container-bestiary">
     <h2> Bestiaire </h2>
     <div class="container-row-reverse">
-
-         
-
-            {# <div class="container-absolute"> #}
-
-
+{# Monsters data #}
     {% for monstre in app.user.monstre %}
-    
-    
+        {# 1 monster = un article container-monster #}
         <article class="container-monster">
-            <h5> {{ monstre.nom }}</h5> 
-             {# ECHO STATS DES MONSTRES dans le pop-up #}
+            {# Spécificité de monstre : si Shiva affiche le coeur sur son nom #}
+            {% if (monstre.id == 14) %}
+                <h5> {{ monstre.nom }} ❤ </h5>     
+            {% else %}
+                <h5> {{ monstre.nom }}</h5> 
+            {% endif %}
+            {# column pour agencement (centrage de tous les block infos) #}
             <div class="container-column" width="100%">
+                {# STATS DES MONSTRES dans le pop-up #}
                 <div class="popover popover-bottom">
                     <button class="btn-hover">  {{ monstre.race.nom}} </button>
                     {# PAS de <p> bug de pop up #}
@@ -39,8 +30,8 @@
                             <div class="card-body">
                                 <h2> {{ monstre.classe.nom }}  </h2>
                                 <ul>
-                                    <li>  {{ monstre.classe.pv }} PV </li>
-                                    <li> {{ monstre.classe.mp }} MP  </li>
+                                    <li> PV : {{ monstre.classe.pv }} </li>
+                                    <li> MP : {{ monstre.classe.mp }} </li>
                                     <li> Force : {{ monstre.classe.puissance }} </li>
                                     <li>  </li>
                                     <li> Defense : {{ monstre.classe.defense }} </li>
@@ -51,20 +42,25 @@
                         </div>
                     </div>
                 </div>
-                
-                <div>
+                {# Image monstre #}
+                <div class="img-monster">
                     <img src={{ monstre.photo }} class="glowing-img" width="200px" height="200px" alt="image du monstre"/>
                 </div> 
+{# ATTAQUES #}
+                {# <div class="img-monster">
+                    {% for attaque in monstre.attaque %}
+                        {{ attaque.nom }}
+                    {% endfor %}
+                </div>  #}
+{# ELEMENTS #}
+                {# <hr width="100%"> #}
                 <div class="container-row">
                     {% for element in monstre.element %}
-                        {# <div class=""> #}
-                            {# <p> {{ element.nom }}</p> #}
-                            <img src={{ element.image }} class="glowing-img" width="40px" height="40px" alt="image de l'element"/>
-                        {# </div> #}
-                        
+                        <img src={{ element.image }} class="glowing-img" width="40px" height="40px" title="{{ element.nom }}" alt="image de l'element {{ element.nom }}"/>
                     {% endfor %}
                 </div> 
                
+            {# CLOSE container-column #}
             </div>
 
              {# <p> Classe : {{ monstre.classe.nom }} <span> 

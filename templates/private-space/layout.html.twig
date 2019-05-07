@@ -7,41 +7,5 @@
 <header>
     <h1> Bienvenue {{ app.user.nom }} </h1>
 </header>
-{% if (is_granted('ROLE_ADMIN')) %}
-
-	<div class="container-absolute">
-			<div class="popover popover-right">
-					<button class="btn s-circle btn-primary"> Admin </button>
-					<div class="popover-container">
-						<div class="card container-task">
-							<div class="card-header">
-							</div>
-							<div class="card-body">
-
-									{# <div class="container-column"> #}
-											<div class="container-task">
-													<h5> <a href="{{ path('home_admin') }}"> Évènement </a>   </h5>
-													<a href="{{ path('add_news') }}"> <button class="btn btn-success"> Add news </button> </a>
-											</div> 
-											<div class="container-task">
-													<h5> <a href="{{ path('home_admin') }}"> Proposer un nouveau monstre </a></h5>
-													<a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> Edit </button> </a> 
-											</div> 
-											<div class="container-task">
-													<h5> Gestion des rôles  </h5>
-												
-											</div>
-									</div>
-								{# </div> #}
-
-							</div>
-							<div class="card-footer">
-						
-							</div>
-						</div>
-					</div>
-				</div>
-	{% endif %}
-
 
 {% endblock %}

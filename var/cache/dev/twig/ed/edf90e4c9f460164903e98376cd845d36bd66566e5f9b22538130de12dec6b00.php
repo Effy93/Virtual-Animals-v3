@@ -312,7 +312,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
                             <li><a href =\"{{path('home')}}\"> Accueil </a></li>
                         {% endif %}
 <!-- USER  -->
-                        {# Si l'utilisateur est connecté de nouveau menu apparaissent #}
+                        {# Si l'utilisateur est connecté de nouveaux menus apparaissent #}
                         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                             <li><a href =\"{{path('shop')}}\"> Boutique </a></li>
                             

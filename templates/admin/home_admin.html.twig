@@ -16,7 +16,6 @@
             <li> Edition d'un monstre : controller a faire </li>
             <li> Modification / Suppression des news </li>
             <li> Système de gestion des rôles </li>
-            <li> Finir le design des monstres, copier dans la boutique</li>
         </ul>
         
     </div> 
@@ -48,12 +47,12 @@
             <div class="container-admin">
                 <div class="container-row">
                     <div class="container-task">
-                        <h5>  Publier un nouvel évènement </h5>
+                        <h5>  Mes news </h5>
                         <a href="{{ path('add_news') }}"> <button class="btn btn-primary"> News </button> </a>
                         <p> [ liste déroulante de mes événements ]</p>
                     </div> 
                     <div class="container-task">
-                        <h5> Proposer un nouveau monstre </h5>
+                        <h5> Mes monstres </h5>
                         <a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> Edit </button> </a> 
                         <p> [ liste d'affichage des monstres ]</p>
                         {# <a href="{{ path('edit_monster') }}"> <button class="btn btn-primary"> Edit </button> </a> 

@@ -12,6 +12,50 @@
 		{# OPEN user info section #}
 		<section class="container-user-infos">
 			<h5> Mon compte </h5>
+
+{# bouton admin POP UP  #}
+{% if (is_granted('ROLE_ADMIN')) %}
+
+<div class="container-absolute">
+		<div class="popover popover-right">
+				<button class="btn-admin"> ⭐ </button>
+				<div class="popover-container">
+					<div class="card container-task">
+						<div class="card-header">
+						</div>
+						<div class="card-body">
+
+								{# <div class="container-column"> #}
+										<div class="container-task">
+												<h5> <a href="{{ path('home_admin') }}"> Évènement </a>   </h5>
+												<a href="{{ path('add_news') }}"> <button class="btn btn-success"> Add news </button> </a>
+										</div> 
+										<div class="container-task">
+												<h5> <a href="{{ path('home_admin') }}"> Proposer un nouveau monstre </a></h5>
+												<a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> Edit </button> </a> 
+										</div> 
+										<div class="container-task">
+												<h5> Gestion des rôles  </h5>
+											
+										</div>
+								</div>
+							{# </div> #}
+
+						</div>
+						<div class="card-footer">
+					
+						</div>
+					</div>
+				</div>
+			</div>
+{% endif %}
+
+
+
+
+
+
+
 			<img class="glowing-img shake" src="/images/logos/panda-feroce2.png" width="100px" heigth="100px" alt="avatar utilisateur" />
 			<h4> {{ app.user.nom }} </h4>
 			<p> Inscrit depuis le : <span style=color:orange;> {{ app.user.date|date('d-m-Y') }} </span></p>

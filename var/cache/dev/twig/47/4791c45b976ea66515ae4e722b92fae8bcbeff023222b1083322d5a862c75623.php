@@ -99,72 +99,71 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
             <li> Edition d'un monstre : controller a faire </li>
             <li> Modification / Suppression des news </li>
             <li> Système de gestion des rôles </li>
-            <li> Finir le design des monstres, copier dans la boutique</li>
         </ul>
         
     </div> 
   
         ";
-        // line 25
+        // line 24
         echo "        ";
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "request", []), "attributes", []), "get", [0 => "_route"], "method") == "add_news")) {
-            // line 26
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "request", []), "attributes", []), "get", [0 => "_route"], "method") == "add_news")) {
+            // line 25
             echo "            <div class=\"container-task\">
                 <h5> Publier un nouvel évènement  </h5>
                 <a href='";
-            // line 28
+            // line 27
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
             echo "'> <button class=\"btn btn-error\">  Retour </button> </a>
                 <div class=\"container-row\">
                     <div class=\"container-form\"> 
                     
                 ";
-            // line 33
+            // line 32
             echo "
         ";
-            // line 35
+            // line 34
             echo "        ";
-        } elseif ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "request", []), "attributes", []), "get", [0 => "_route"], "method") == "edit_monster")) {
-            // line 36
+        } elseif ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 34, $this->source); })()), "request", []), "attributes", []), "get", [0 => "_route"], "method") == "edit_monster")) {
+            // line 35
             echo "            <div class=\"container-task\">
                 <h5> Proposer un nouveau monstre </h5> 
                 ";
-            // line 39
+            // line 38
             echo "                <a href='";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
             echo "'> <button class=\"btn btn-error\">  Retour </button> </a> 
                 ";
-            // line 41
+            // line 40
             echo "                <div class=\"container-row\">   
                     <div class=\"container-form\">
                         
                 ";
-            // line 45
+            // line 44
             echo "
         ";
         } else {
-            // line 47
+            // line 46
             echo "            ";
-            // line 48
+            // line 47
             echo "            <div class=\"container-admin\">
                 <div class=\"container-row\">
                     <div class=\"container-task\">
-                        <h5>  Publier un nouvel évènement </h5>
+                        <h5>  Mes news </h5>
                         <a href=\"";
-            // line 52
+            // line 51
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_news");
             echo "\"> <button class=\"btn btn-primary\"> News </button> </a>
                         <p> [ liste déroulante de mes événements ]</p>
                     </div> 
                     <div class=\"container-task\">
-                        <h5> Proposer un nouveau monstre </h5>
+                        <h5> Mes monstres </h5>
                         <a href=\"";
-            // line 57
+            // line 56
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_monster");
             echo "\"> <button class=\"btn btn-success\"> Edit </button> </a> 
                         <p> [ liste d'affichage des monstres ]</p>
                         ";
-            // line 61
+            // line 60
             echo "                    </div> 
                     <div class=\"container-task\">
                         <h5> Gestion des rôles  </h5>
@@ -175,7 +174,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                 
         ";
         }
-        // line 70
+        // line 69
         echo "
 
 
@@ -200,7 +199,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
 
     public function getDebugInfo()
     {
-        return array (  179 => 70,  168 => 61,  163 => 57,  155 => 52,  149 => 48,  147 => 47,  143 => 45,  138 => 41,  133 => 39,  129 => 36,  126 => 35,  123 => 33,  116 => 28,  112 => 26,  109 => 25,  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
+        return array (  178 => 69,  167 => 60,  162 => 56,  154 => 51,  148 => 47,  146 => 46,  142 => 44,  137 => 40,  132 => 38,  128 => 35,  125 => 34,  122 => 32,  115 => 27,  111 => 25,  108 => 24,  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -223,7 +222,6 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
             <li> Edition d'un monstre : controller a faire </li>
             <li> Modification / Suppression des news </li>
             <li> Système de gestion des rôles </li>
-            <li> Finir le design des monstres, copier dans la boutique</li>
         </ul>
         
     </div> 
@@ -255,12 +253,12 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
             <div class=\"container-admin\">
                 <div class=\"container-row\">
                     <div class=\"container-task\">
-                        <h5>  Publier un nouvel évènement </h5>
+                        <h5>  Mes news </h5>
                         <a href=\"{{ path('add_news') }}\"> <button class=\"btn btn-primary\"> News </button> </a>
                         <p> [ liste déroulante de mes événements ]</p>
                     </div> 
                     <div class=\"container-task\">
-                        <h5> Proposer un nouveau monstre </h5>
+                        <h5> Mes monstres </h5>
                         <a href=\"{{ path('edit_monster') }}\"> <button class=\"btn btn-success\"> Edit </button> </a> 
                         <p> [ liste d'affichage des monstres ]</p>
                         {# <a href=\"{{ path('edit_monster') }}\"> <button class=\"btn btn-primary\"> Edit </button> </a> 

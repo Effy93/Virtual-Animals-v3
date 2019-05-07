@@ -65,6 +65,7 @@
                 {% endfor %}    
             </section>
     </div>
+
     
 
 <!-- ACHAT MONSTRES -->
@@ -77,36 +78,74 @@
                 {# Si l'utilisateur possede deja le monstre rien ne s'affiche, sinon #}
                 {% if monstre in app.user.monstre %} 
                 {% else %}
-                    <article class="container-monster">
+    
+    
+                <article class="container-monster">
+                    {% if (monstre.id == 14) %}
+                        <h5> {{ monstre.nom }} ❤ </h5>     
+                    {% else %}
                         <h5> {{ monstre.nom }}</h5> 
-                        <p style=color:orange;> {{monstre.description}} </p>
-                        {# Pop-up stats des monstres #}
-                        <p> Classe : {{ monstre.classe.nom }} <span> 
-                                {{ monstre.classe.pv }} PV </br>
-                                {{ monstre.classe.mp }} MP </br> 
-                            Force : {{ monstre.classe.puissance }} </br> 
-                            Defense : {{ monstre.classe.defense }}</br> 
-                            Vitesse : {{ monstre.classe.vitesse }}
-                            </span>
-                        </p>
-                        <img src={{ monstre.photo }} class="glowing-img" width="150px" height="150px" alt="image du monstre"/>
-                        {#  ACHAT  => ANIMATE BORDER BOX #}
-                        <div class="animate-box">
-                            <a href="{{ path('buy_monster', {'id':monstre.id}) }}">  
-                                <div class="animate-box-hidden">
-                                    <p style=color:orange;>  {{ monstre.tarif.prix }} ruby </p>
-                                    <button>
-                                        <span>
-                                            <span>
-                                                <span  data-attr-span="J'achete !">  Acheter
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </button>
+                    {% endif %}
+                     {# ECHO STATS DES MONSTRES dans le pop-up #}
+                    <div class="container-column" width="100%">
+                        <div class="popover popover-bottom">
+                            <button class="btn-hover">  {{ monstre.race.nom}} </button>
+                            {# PAS de <p> bug de pop up #}
+                            {{ monstre.description }}
+                            <div class="popover-container">
+                                <div class="card container-pop-up">
+                                    <div class="card-header"></div>
+                                    <div class="card-body">
+                                        <h2> {{ monstre.classe.nom }}  </h2>
+                                        <ul>
+                                            <li> PV :  {{ monstre.classe.pv }} </li>
+                                            <li> MP : {{ monstre.classe.mp }}  </li>
+                                            <li> Force : {{ monstre.classe.puissance }} </li>
+                                            <li>  </li>
+                                            <li> Defense : {{ monstre.classe.defense }} </li>
+                                            <li>  Vitesse : {{ monstre.classe.vitesse }} </li>
+                                            <li>  </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </a>
+                            </div>
                         </div>
-                    </article>
+                        
+                        <div>
+                            <img src={{ monstre.photo }} class="glowing-img" width="200px" height="200px" alt="image du monstre"/>
+                        </div> 
+                        <div class="container-row">
+                            {% for element in monstre.element %}
+                                {# <div class=""> #}
+                                    {# <p> {{ element.nom }}</p> #}
+                                    <img src={{ element.image }} class="glowing-img" width="40px" height="40px" title="{{ element.nom }}" alt="image de l'element {{ element.nom }}"/>
+                                {# </div> #}
+                                {#  ACHAT  => ANIMATE BORDER BOX #}
+                            {% endfor %}
+                        </div> 
+                            <div>
+                                <div class="animate-box">
+                                    <a href="{{ path('buy_monster', {'id':monstre.id}) }}">  
+                                        <div class="animate-box-hidden">
+                                            <p style=color:orange;>  {{ monstre.tarif.prix }} ruby </p>
+                                            <button>
+                                                <span>
+                                                    <span>
+                                                        <span  data-attr-span="J'achete !">  Acheter
+                                                        </span>
+                                                    </span>
+                                                </span>
+                                            </button>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        
+                           
+                       
+                       
+                    </div>
+            </article>
                 {% endif %}
             {% endfor %}
             </div>
