@@ -60,11 +60,12 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
                             .'|(*:159)'
                         .')'
                     .')'
+                    .'|/admin/edit/(\\d+)(*:186)'
                     .'|/shop/buy/(?'
-                        .'|(\\d+)(*:187)'
-                        .'|game(\\d+)(*:204)'
+                        .'|(\\d+)(*:212)'
+                        .'|game(\\d+)(*:229)'
                     .')'
-                    .'|/js/routing(?:\\.(js|json))?(*:240)'
+                    .'|/js/routing(?:\\.(js|json))?(*:265)'
                 .')/?$}sDu',
         ];
         $this->dynamicRoutes = [
@@ -75,9 +76,10 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception::showAction'], ['token'], null, null, false, false, null]],
             149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
             159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-            187 => [[['_route' => 'buy_monster', '_controller' => 'App\\Controller\\ShopController::buyMonster'], ['id'], null, null, false, true, null]],
-            204 => [[['_route' => 'buy_game', '_controller' => 'App\\Controller\\ShopController::buyGame'], ['id'], null, null, false, true, null]],
-            240 => [[['_route' => 'fos_js_routing_js', '_controller' => 'fos_js_routing.controller::indexAction', '_format' => 'js'], ['_format'], ['GET' => 0], null, false, true, null]],
+            186 => [[['_route' => 'edit_news', '_controller' => 'App\\Controller\\AdminController::editNews'], ['id'], null, null, false, true, null]],
+            212 => [[['_route' => 'buy_monster', '_controller' => 'App\\Controller\\ShopController::buyMonster'], ['id'], null, null, false, true, null]],
+            229 => [[['_route' => 'buy_game', '_controller' => 'App\\Controller\\ShopController::buyGame'], ['id'], null, null, false, true, null]],
+            265 => [[['_route' => 'fos_js_routing_js', '_controller' => 'fos_js_routing.controller::indexAction', '_format' => 'js'], ['_format'], ['GET' => 0], null, false, true, null]],
         ];
     }
 }

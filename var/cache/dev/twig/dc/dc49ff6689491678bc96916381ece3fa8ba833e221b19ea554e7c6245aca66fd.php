@@ -101,7 +101,7 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
             echo "
 <div class=\"container-absolute\">
 \t\t<div class=\"popover popover-right\">
-\t\t\t\t<button class=\"btn-admin\"> ⭐ </button>
+\t\t\t\t<button class=\"btn-admin\"> Admin </button>
 \t\t\t\t<div class=\"popover-container\">
 \t\t\t\t\t<div class=\"card container-task\">
 \t\t\t\t\t\t<div class=\"card-header\">
@@ -361,7 +361,7 @@ class __TwigTemplate_a2cfa8add0d44493adde46b3a6e8c95848521bdf7449453b8fe0abd0939
 
 <div class=\"container-absolute\">
 \t\t<div class=\"popover popover-right\">
-\t\t\t\t<button class=\"btn-admin\"> ⭐ </button>
+\t\t\t\t<button class=\"btn-admin\"> Admin </button>
 \t\t\t\t<div class=\"popover-container\">
 \t\t\t\t\t<div class=\"card container-task\">
 \t\t\t\t\t\t<div class=\"card-header\">

@@ -24,7 +24,7 @@ class AdminController extends AbstractController
 {
     /**
      * @Route("/" , name="home_admin")
-     * @IsGranted("ROLE_ADMIN")
+     * @IsGranted("ROLE_DESIGNER")
      */
     public function displayHome()
     {
@@ -61,7 +61,7 @@ class AdminController extends AbstractController
 
     /**
      * @Route("/add" , name="add_news")
-     * @IsGranted("ROLE_ADMIN") 
+     * @IsGranted("ROLE_DESIGNER") 
      */
     public function addNews(Request $requete)
     {
@@ -83,6 +83,38 @@ class AdminController extends AbstractController
         } else{
             return $this->render("admin/add_article.html.twig", array('newsForm' => $newsForm->createView() ));
         } 
+    }
+
+    /**
+     * @Route("/edit/{id}", name="edit_news", requirements={"id" : "\d+"})
+     * @isGranted("ROLE_DESIGNER")
+     */
+    public function editNews(int $id, Request $requete)
+    {
+        // Va chercher dans le repo
+        $depot = $this->getDoctrine()->getRepository(Article::class);
+        // Va chercher l'article avec l'id tapez dans l'url
+        $article = $depot->find($id);
+        // Si pas d'article trouvé, ne construit pas le formulaire d'édition
+        if($article === null) {
+            throw $this->createNotFoundException('Article introuvable');
+        }
+        // Créer le formulaire
+        $newsForm = $this->createForm(ArticleType::class, $article);
+        // Verification sur le newsForm
+        $newsForm->handleRequest($requete);
+        if ($newsForm->isSubmitted() && $newsForm->isValid() )
+        {
+            // Appel la fonction du manager
+            $gestionnaire = $this->getDoctrine()->getManager();
+            // Enregistre les nouvelles données avec persist(select BDD) et flush(update BDD)
+            $gestionnaire->persist($article);
+            $gestionnaire->flush();
+            $this->addFlash("success", "Cet article a bien été modifié");
+            return $this->redirect("/");
+        } else {
+            return $this->render("admin/edit_news.html.twig", array('newsForm' => $newsForm->createView() ));
+        }
     }
 
 

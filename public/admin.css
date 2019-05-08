@@ -202,15 +202,21 @@ form {
   /* min-width: 40%; */
 }
 /***************************************** ADMIN ******************************************/
+.container-add-news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  order: 4;
+  justify-content:center;
+  width: 100%;
+  /* border: solid 2px antiquewhite; */
+}
 .container-admin, .container-task, .container-form {
   background-color:rgba(27, 20, 61, 0.4);
   text-align: center;
-  border: solid 2px rgb(0, 204, 255);
+  border: solid 2px black;
   border-radius: 4px;
   margin : 2%;
-  /* padding: 2%; */
-/* GLOWING BOX A TESTER DANS LA BOUTIQUE */
-/* box-shadow:0 0 20px #FF9900, -10px 0 40px #Fff, 10px 0 20px #fff; */
 }
 .container-task a {
   color: white;
@@ -218,14 +224,19 @@ form {
 .container-task a:hover {
   color: rgba(50, 39, 212, 0.534);
 }
-/* .container-user-infos, .container-user-infos .animate-box, .container-user-infos .animate-box-hidden {
+.container-task {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:center;
+  align-items:center;
+}
+.task-item {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-} */
-
-/* items */
+  background-color: rgba(255, 255, 255, 0.13);
+  width: 100%; height: auto;
+}
 .container-task h5, .container-admin h5 {
   font-family: Helvetica, Consolas, monospace;
   letter-spacing: 0.2rem;

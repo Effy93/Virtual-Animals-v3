@@ -9,20 +9,11 @@
 </header>
 
 <main>
-    <div>
-        <h3> [tasks] </h3>
-        <ul>
-            <li> TTT : cheat a corriger </li>
-            <li> Edition d'un monstre : controller a faire </li>
-            <li> Modification / Suppression des news </li>
-            <li> Système de gestion des rôles </li>
-        </ul>
-        
-    </div> 
+   
   
         {# add_news #}
         {% if app.request.attributes.get('_route') == 'add_news' %}
-            <div class="container-task">
+            <div class="container-admin">
                 <h5> Publier un nouvel évènement  </h5>
                 <a href='{{ path('home_admin') }}'> <button class="btn btn-error">  Retour </button> </a>
                 <div class="container-row">
@@ -32,7 +23,7 @@
 
         {# edit_monster #}
         {% elseif app.request.attributes.get('_route') == 'edit_monster' %}
-            <div class="container-task">
+            <div class="container-admin">
                 <h5> Proposer un nouveau monstre </h5> 
                 {# <div class="container-row-reverse"> #}
                 <a href='{{ path('home_admin') }}'> <button class="btn btn-error">  Retour </button> </a> 
@@ -44,29 +35,69 @@
 
         {% else %}
             {# général #}
-            <div class="container-admin">
-                <div class="container-row">
-                    <div class="container-task">
-                        <h5>  Mes news </h5>
-                        <a href="{{ path('add_news') }}"> <button class="btn btn-primary"> News </button> </a>
-                        <p> [ liste déroulante de mes événements ]</p>
-                    </div> 
-                    <div class="container-task">
-                        <h5> Mes monstres </h5>
-                        <a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> Edit </button> </a> 
-                        <p> [ liste d'affichage des monstres ]</p>
-                        {# <a href="{{ path('edit_monster') }}"> <button class="btn btn-primary"> Edit </button> </a> 
-                        <a href="{{ path('edit_monster') }}"> <button class="btn btn-error"> Supprimer </button> </a>  #}
-                    </div> 
-                    <div class="container-task">
-                        <h5> Gestion des rôles  </h5>
+            <section class="container-add-news">  
+                <div class="container-task">
+                    <h3> [tasks] </h3>
+                    <ul>
+                        <li> TTT : cheat a corriger </li>
+                        <li> Edition d'un monstre : controller a faire </li>
+                        <li> Modification / Suppression des news </li>
+                        <li>  Insérer id user lors de création article </li>
+                        <li> Système de gestion des rôles </li>
+                    </ul>
+                </div>
+                           
+                <div class="container-task">
+                    <h5> Gestion des rôles  </h5>
+                    <div class="task-item">
                         <p> [ Bientot ]</p>
                         <p> [ formulaire ]</p>
                         <p> [ liste déroulante ]</p>
                     </div>
-                
+                </div>
+        
+            </section>
+            
+            <section class="container-add-news">
+                <div class="container-admin"> 
+                    <h5>  Mes news </h5>
+                    <td class=>  <a href="{{ path('add_news') }}"> <button class="btn btn-primary "> <i class="icon icon-plus"></i> </button> </a> </td>
+                    <div class="container-add-news">
+                        {% for news in app.user.articles %}
+                        <table class="container-admin">
+                            <thead>
+                                <tr>
+                                    <th> <h5> {{ news.nom }} </h5> </th>
+                                </tr>
+                            </thead>
+                            <tbody class="container-task">
+                                <tr class="task-item">
+                                        <td> <a href="{{path('edit_news', {'id':news.id} ) }}"> <button class="btn btn-success"> <i class="icon icon-edit"></i></button> </a> 
+                                    <a href="{{ path('add_news') }}"> <button class="btn btn-error"><i class="icon icon-stop"></i> </button> </a> </td>
+                                </tr> 
+                            </tbody>
+                            <tr class="container-task">
+                                <td class="task-item"> <p> Publié le : <i> {{ news.date|date('d-m-Y') }} </i></p> </td>
+                            </tr>
+                        </table>
+                        {% endfor %}
+                    </div>
+                 </div>
+            </section>        
+
+            <section>
+                <div class="container-task">
+                    <h5> Mes monstres </h5>
+                    <div class="task-item">
+                        {# bouton edition monstre #}
+                            <a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> <i class="icon icon-edit"></i> </button> </a> 
+                            <p> [ liste d'affichage des monstres ]</p>
+                            {# <a href="{{ path('edit_monster') }}"> <button class="btn btn-primary"> Edit </button> </a> 
+                            <a href="{{ path('edit_monster') }}"> <button class="btn btn-error"> Supprimer </button> </a>  #}
+                    </div> 
+                </div>
+            </section>         
         {% endif %}
-
-
-
+   
+    {# </section> #}
 {% endblock %}

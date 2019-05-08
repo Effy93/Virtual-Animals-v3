@@ -111,16 +111,12 @@
                             </div>
                         </div>
                         
-                        <div>
+                        <div class="">
                             <img src={{ monstre.photo }} class="glowing-img" width="200px" height="200px" alt="image du monstre"/>
                         </div> 
                         <div class="container-row">
                             {% for element in monstre.element %}
-                                {# <div class=""> #}
-                                    {# <p> {{ element.nom }}</p> #}
-                                    <img src={{ element.image }} class="glowing-img" width="40px" height="40px" title="{{ element.nom }}" alt="image de l'element {{ element.nom }}"/>
-                                {# </div> #}
-                                {#  ACHAT  => ANIMATE BORDER BOX #}
+                                <img src={{ element.image }} class="glowing-img" width="40px" height="40px" title="{{ element.nom }}" alt="image de l'element {{ element.nom }}"/>
                             {% endfor %}
                         </div> 
                             <div>

@@ -1,0 +1,16 @@
+{% extends 'admin/add_article.html.twig' %}
+{% block title %} {{parent()}} {% endblock %}
+{% block body %} 
+
+{{parent()}}
+
+{{ form_start(newsForm) }}
+{{ form_row(newsForm.nom) }}
+{{ form_row(newsForm.contenu) }}
+{{ form_row(newsForm.auteur) }}
+
+
+<input type="submit" value="enregistrer">
+{{ form_end(newsForm) }}
+
+{% endblock %}

@@ -301,7 +301,7 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
                             </div>
                         </div>
                         
-                        <div>
+                        <div class=\"\">
                             <img src=";
                 // line 115
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["monstre"], "photo", []), "html", null, true);
@@ -314,37 +314,29 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
                 $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, $context["monstre"], "element", []));
                 foreach ($context['_seq'] as $context["_key"] => $context["element"]) {
                     // line 119
-                    echo "                                ";
-                    // line 120
-                    echo "                                    ";
-                    // line 121
-                    echo "                                    <img src=";
+                    echo "                                <img src=";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "image", []), "html", null, true);
                     echo " class=\"glowing-img\" width=\"40px\" height=\"40px\" title=\"";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "nom", []), "html", null, true);
                     echo "\" alt=\"image de l'element ";
                     echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["element"], "nom", []), "html", null, true);
                     echo "\"/>
-                                ";
-                    // line 123
-                    echo "                                ";
-                    // line 124
-                    echo "                            ";
+                            ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['element'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 125
+                // line 121
                 echo "                        </div> 
                             <div>
                                 <div class=\"animate-box\">
                                     <a href=\"";
-                // line 128
+                // line 124
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("buy_monster", ["id" => twig_get_attribute($this->env, $this->source, $context["monstre"], "id", [])]), "html", null, true);
                 echo "\">  
                                         <div class=\"animate-box-hidden\">
                                             <p style=color:orange;>  ";
-                // line 130
+                // line 126
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["monstre"], "tarif", []), "prix", []), "html", null, true);
                 echo " ruby </p>
                                             <button>
@@ -367,13 +359,13 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
             </article>
                 ";
             }
-            // line 150
+            // line 146
             echo "            ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['monstre'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 151
+        // line 147
         echo "            </div>
         </section>
 
@@ -400,7 +392,7 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
 
     public function getDebugInfo()
     {
-        return array (  377 => 151,  371 => 150,  348 => 130,  343 => 128,  338 => 125,  332 => 124,  330 => 123,  321 => 121,  319 => 120,  317 => 119,  313 => 118,  307 => 115,  295 => 106,  291 => 105,  286 => 103,  282 => 102,  278 => 101,  273 => 99,  264 => 94,  260 => 92,  256 => 90,  254 => 89,  248 => 87,  242 => 85,  240 => 84,  235 => 81,  229 => 79,  227 => 78,  222 => 77,  217 => 73,  203 => 65,  187 => 51,  181 => 49,  177 => 47,  175 => 46,  170 => 44,  165 => 42,  162 => 41,  159 => 40,  157 => 39,  154 => 38,  152 => 37,  148 => 36,  141 => 31,  129 => 25,  124 => 22,  119 => 21,  117 => 20,  104 => 13,  99 => 10,  97 => 9,  92 => 8,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
+        return array (  369 => 147,  363 => 146,  340 => 126,  335 => 124,  330 => 121,  317 => 119,  313 => 118,  307 => 115,  295 => 106,  291 => 105,  286 => 103,  282 => 102,  278 => 101,  273 => 99,  264 => 94,  260 => 92,  256 => 90,  254 => 89,  248 => 87,  242 => 85,  240 => 84,  235 => 81,  229 => 79,  227 => 78,  222 => 77,  217 => 73,  203 => 65,  187 => 51,  181 => 49,  177 => 47,  175 => 46,  170 => 44,  165 => 42,  162 => 41,  159 => 40,  157 => 39,  154 => 38,  152 => 37,  148 => 36,  141 => 31,  129 => 25,  124 => 22,  119 => 21,  117 => 20,  104 => 13,  99 => 10,  97 => 9,  92 => 8,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -518,16 +510,12 @@ class __TwigTemplate_777ee2976a012538746307d01bb3063f9d082084d45bfb9f377bf07e851
                             </div>
                         </div>
                         
-                        <div>
+                        <div class=\"\">
                             <img src={{ monstre.photo }} class=\"glowing-img\" width=\"200px\" height=\"200px\" alt=\"image du monstre\"/>
                         </div> 
                         <div class=\"container-row\">
                             {% for element in monstre.element %}
-                                {# <div class=\"\"> #}
-                                    {# <p> {{ element.nom }}</p> #}
-                                    <img src={{ element.image }} class=\"glowing-img\" width=\"40px\" height=\"40px\" title=\"{{ element.nom }}\" alt=\"image de l'element {{ element.nom }}\"/>
-                                {# </div> #}
-                                {#  ACHAT  => ANIMATE BORDER BOX #}
+                                <img src={{ element.image }} class=\"glowing-img\" width=\"40px\" height=\"40px\" title=\"{{ element.nom }}\" alt=\"image de l'element {{ element.nom }}\"/>
                             {% endfor %}
                         </div> 
                             <div>
