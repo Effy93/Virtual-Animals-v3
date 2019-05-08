@@ -148,7 +148,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
 <!-- ADMIN / DESIGNER  -->
                         ";
         // line 24
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_DESIGNER")) {
             // line 25
             echo "                            ";
             // line 26
@@ -161,15 +161,15 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
                                         <li><a href =\"";
             // line 29
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
-            echo "\"> Admin </a></li>
+            echo "\"> Admin BOARD </a></li>
                                         <li><a href =\"";
             // line 30
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_monster");
-            echo "\"> Edition </a></li>
+            echo "\"> Édition  <i class=\"icon icon-edit\"></i> </a></li>
                                         <li><a href =\"";
             // line 31
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_news");
-            echo "\"> New </a></li>
+            echo "\"> News  <i class=\"icon icon-edit\"></i> </a></li>
                                     </ul>
                             </div>
                         ";
@@ -212,7 +212,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
                             <li><a href =\"";
             // line 50
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("logout");
-            echo "\"> Deconnexion  </a></li>
+            echo "\"> Déconnexion <i class=\"icon icon-shutdown\"></i> </a></li>
 
                         ";
             // line 53
@@ -225,7 +225,7 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
                             <li> <a href=\"";
             // line 55
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\"> Connexion</a></li>
+            echo "\"> Connexion <i class=\"icon icon-shutdown\"></i> </a></li>
                         ";
         }
         // line 57
@@ -298,14 +298,14 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
                         
                 
 <!-- ADMIN / DESIGNER  -->
-                        {% if (is_granted('ROLE_ADMIN')) %}
+                        {% if (is_granted('ROLE_DESIGNER')) %}
                             {# Sous menu ADMIN #}
                             <div class=\"dropdown\">
                                 <li class=\"dropdownbtn\"><a href =\"{{path('home')}}\"> Accueil &darr; </a></li>
                                     <ul class=\"dropdown-content\">
-                                        <li><a href =\"{{path('home_admin')}}\"> Admin </a></li>
-                                        <li><a href =\"{{path('edit_monster')}}\"> Edition </a></li>
-                                        <li><a href =\"{{path('add_news')}}\"> New </a></li>
+                                        <li><a href =\"{{path('home_admin')}}\"> Admin BOARD </a></li>
+                                        <li><a href =\"{{path('edit_monster')}}\"> Édition  <i class=\"icon icon-edit\"></i> </a></li>
+                                        <li><a href =\"{{path('add_news')}}\"> News  <i class=\"icon icon-edit\"></i> </a></li>
                                     </ul>
                             </div>
                         {% else %}
@@ -324,12 +324,12 @@ class __TwigTemplate_3c36e01c75a7574da6a8cfd6efbbf96e9aa5788ee6448980540fbde67bd
                                         <li><a href =\"{{path('inventory')}}\"> Inventaire </a></li>
                                     </ul>
                             </div>
-                            <li><a href =\"{{path('logout')}}\"> Deconnexion  </a></li>
+                            <li><a href =\"{{path('logout')}}\"> Déconnexion <i class=\"icon icon-shutdown\"></i> </a></li>
 
                         {# Sinon #}
                         {% else %}
                             <li><a href =\"{{path('app_register')}}\"> Inscription </a></li>
-                            <li> <a href=\"{{path('app_login')}}\"> Connexion</a></li>
+                            <li> <a href=\"{{path('app_login')}}\"> Connexion <i class=\"icon icon-shutdown\"></i> </a></li>
                         {% endif %}
                     </ul>
                 </nav>

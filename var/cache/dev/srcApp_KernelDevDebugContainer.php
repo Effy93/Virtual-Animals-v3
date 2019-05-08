@@ -16,6 +16,6 @@ if (!\class_exists(srcApp_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerIVwPRIM\srcApp_KernelDevDebugContainer([
     'container.build_hash' => 'IVwPRIM',
-    'container.build_id' => 'd4fd2701',
-    'container.build_time' => 1557279767,
+    'container.build_id' => '03f4c07b',
+    'container.build_time' => 1557323358,
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerIVwPRIM');

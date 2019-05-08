@@ -32,7 +32,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/edit" , name="edit_monster")
+     * @Route("/monstre/edit" , name="edit_monster")
      * @IsGranted("ROLE_DESIGNER") 
      */
     public function editNewMonstre(Request $requete)
@@ -60,7 +60,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/add" , name="add_news")
+     * @Route("/news/add" , name="add_news")
      * @IsGranted("ROLE_DESIGNER") 
      */
     public function addNews(Request $requete)
@@ -86,7 +86,7 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/edit/{id}", name="edit_news", requirements={"id" : "\d+"})
+     * @Route("/news/edit/{id}", name="edit_news", requirements={"id" : "\d+"})
      * @isGranted("ROLE_DESIGNER")
      */
     public function editNews(int $id, Request $requete)
@@ -110,11 +110,28 @@ class AdminController extends AbstractController
             // Enregistre les nouvelles données avec persist(select BDD) et flush(update BDD)
             $gestionnaire->persist($article);
             $gestionnaire->flush();
+            // alert("Article modifié !");
             $this->addFlash("success", "Cet article a bien été modifié");
-            return $this->redirect("/");
+            return $this->redirectToRoute("home_admin");
         } else {
             return $this->render("admin/edit_news.html.twig", array('newsForm' => $newsForm->createView() ));
         }
+    }
+
+
+    /**
+     * @Route("/news/delete/{id}", name="delete_news", requirements={"id" : "\d+"})
+     * @isGranted("ROLE_USER")
+     */
+    public function removeArticle($id)
+    {
+        $gestionnaire = $this->getDoctrine()->getManager();
+        $depot = $this->getDoctrine()->getRepository(Article::class)->find($id);
+        
+        $gestionnaire->remove($depot);
+        $gestionnaire->flush();
+        $this->addFlash("success", "Cet article a bien été supprimé");
+        return $this->redirectToRoute('home_admin');
     }
 
 

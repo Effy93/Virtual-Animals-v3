@@ -9,7 +9,7 @@
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/add',
+                    '/news/add',
                 ],
                 'name' => [
                     'add_news',

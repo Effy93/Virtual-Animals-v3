@@ -9,7 +9,7 @@
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/edit',
+                    '/monstre/edit',
                 ],
                 'name' => [
                     'edit_monster',

@@ -130,7 +130,7 @@ class __TwigTemplate_2f94552e7597025fb2a69127f81665be0f96dbb8780436f96d0d4cdf5ba
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 20, $this->source); })()), "auteur", []), 'errors');
         echo "
 
-    <button class=\"btn btn-lg btn-primary\"> Envoyez </button>
+    <button class=\"btn btn-lg btn-success\"> Publiez !</button>
 
     ";
         // line 24
@@ -189,7 +189,7 @@ class __TwigTemplate_2f94552e7597025fb2a69127f81665be0f96dbb8780436f96d0d4cdf5ba
     {{ form_widget(newsForm.auteur) }}
     {{ form_errors(newsForm.auteur) }}
 
-    <button class=\"btn btn-lg btn-primary\"> Envoyez </button>
+    <button class=\"btn btn-lg btn-success\"> Publiez !</button>
 
     {{ form_end(newsForm) }}
 </div>

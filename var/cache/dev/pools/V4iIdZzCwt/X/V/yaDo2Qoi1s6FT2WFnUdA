@@ -9,7 +9,7 @@
         [
             'stdClass' => [
                 'length' => [
-                    255,
+                    1000,
                 ],
                 'maxMessage' => [
                     1 => 'L\'article ne peut pas contenir plus de {{ limit }} caractères',
@@ -18,7 +18,7 @@
                     1 => 'L\'article doit contenir au moins {{ limit }}  caractères',
                 ],
                 'max' => [
-                    1 => 255,
+                    1 => 1000,
                 ],
                 'min' => [
                     1 => 6,

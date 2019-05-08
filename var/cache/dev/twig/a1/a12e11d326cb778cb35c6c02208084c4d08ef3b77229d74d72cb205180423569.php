@@ -100,7 +100,7 @@ class __TwigTemplate_a031015af8f7ed0e5ebc6515e99236c24d0d103ca06ff2dbdfb1cbcd1ba
         }
         // line 15
         echo "
-    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez-vous</h1>
+    <p class=\"\"> Vous devez être connecté pour accéder à cette page !</p>
     ";
         // line 18
         echo "    <input type=\"email\" value=\"";
@@ -175,7 +175,7 @@ class __TwigTemplate_a031015af8f7ed0e5ebc6515e99236c24d0d103ca06ff2dbdfb1cbcd1ba
         <div class=\"alert alert-danger\">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
 
-    <h1 class=\"h3 mb-3 font-weight-normal\">Connectez-vous</h1>
+    <p class=\"\"> Vous devez être connecté pour accéder à cette page !</p>
     {# <label for=\"inputEmail\" class=\"sr-only\">Email</label> #}
     <input type=\"email\" value=\"{{ last_username }}\" name=\"email\" id=\"inputEmail\" class=\"form-control\" placeholder=\"Email\" required autofocus>
     {# <label for=\"inputPassword\" class=\"sr-only\"> Mot de passe</label> #}

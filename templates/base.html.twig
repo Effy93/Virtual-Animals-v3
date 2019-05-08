@@ -21,14 +21,14 @@
                         
                 
 <!-- ADMIN / DESIGNER  -->
-                        {% if (is_granted('ROLE_ADMIN')) %}
+                        {% if (is_granted('ROLE_DESIGNER')) %}
                             {# Sous menu ADMIN #}
                             <div class="dropdown">
                                 <li class="dropdownbtn"><a href ="{{path('home')}}"> Accueil &darr; </a></li>
                                     <ul class="dropdown-content">
-                                        <li><a href ="{{path('home_admin')}}"> Admin </a></li>
-                                        <li><a href ="{{path('edit_monster')}}"> Edition </a></li>
-                                        <li><a href ="{{path('add_news')}}"> New </a></li>
+                                        <li><a href ="{{path('home_admin')}}"> Admin BOARD </a></li>
+                                        <li><a href ="{{path('edit_monster')}}"> Édition  <i class="icon icon-edit"></i> </a></li>
+                                        <li><a href ="{{path('add_news')}}"> News  <i class="icon icon-edit"></i> </a></li>
                                     </ul>
                             </div>
                         {% else %}
@@ -47,12 +47,12 @@
                                         <li><a href ="{{path('inventory')}}"> Inventaire </a></li>
                                     </ul>
                             </div>
-                            <li><a href ="{{path('logout')}}"> Deconnexion  </a></li>
+                            <li><a href ="{{path('logout')}}"> Déconnexion <i class="icon icon-shutdown"></i> </a></li>
 
                         {# Sinon #}
                         {% else %}
                             <li><a href ="{{path('app_register')}}"> Inscription </a></li>
-                            <li> <a href="{{path('app_login')}}"> Connexion</a></li>
+                            <li> <a href="{{path('app_login')}}"> Connexion <i class="icon icon-shutdown"></i> </a></li>
                         {% endif %}
                     </ul>
                 </nav>

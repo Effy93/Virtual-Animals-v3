@@ -20,6 +20,7 @@ class ArticleType extends AbstractType
             ->add('contenu', TextareaType::class)
             ->add('auteur', TextType::class)
             // ->add('date')
+            // ->add('author')
         ;
     }
 

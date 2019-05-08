@@ -9,7 +9,7 @@
         [
             'Symfony\\Component\\Routing\\Annotation\\Route' => [
                 'path' => [
-                    '/edit/{id}',
+                    '/news/edit/{id}',
                 ],
                 'name' => [
                     'edit_news',

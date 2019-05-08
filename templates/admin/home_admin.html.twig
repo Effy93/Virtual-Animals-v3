@@ -5,99 +5,173 @@
 {% block body %} 
 {{parent()}}
 <header>
-    <h1> Administration </h1>
+    <h1> HOME ADMIN BOARD </h1>
+    <div class="container-column">
+        <h5> {{ app.user.nom }} </h5>
+    </div>
 </header>
 
 <main>
-   
-  
-        {# add_news #}
-        {% if app.request.attributes.get('_route') == 'add_news' %}
-            <div class="container-admin">
-                <h5> Publier un nouvel évènement  </h5>
-                <a href='{{ path('home_admin') }}'> <button class="btn btn-error">  Retour </button> </a>
-                <div class="container-row">
-                    <div class="container-form"> 
-                    
-                {# </div>  #}
-
-        {# edit_monster #}
-        {% elseif app.request.attributes.get('_route') == 'edit_monster' %}
-            <div class="container-admin">
-                <h5> Proposer un nouveau monstre </h5> 
-                {# <div class="container-row-reverse"> #}
-                <a href='{{ path('home_admin') }}'> <button class="btn btn-error">  Retour </button> </a> 
-                {# </div>    #}
-                <div class="container-row">   
-                    <div class="container-form">
-                        
-                {# </div>  #}
-
-        {% else %}
-            {# général #}
-            <section class="container-add-news">  
-                <div class="container-task">
-                    <h3> [tasks] </h3>
-                    <ul>
-                        <li> TTT : cheat a corriger </li>
-                        <li> Edition d'un monstre : controller a faire </li>
-                        <li> Modification / Suppression des news </li>
-                        <li>  Insérer id user lors de création article </li>
-                        <li> Système de gestion des rôles </li>
-                    </ul>
+<!-- Home : current route add_news --> 
+    {% if app.request.attributes.get('_route') == 'add_news' %}
+        <div class="container-admin">
+            <h5> Publier un nouvel évènement  </h5>
+            <a href='{{ path('home_admin') }}'> 
+                <button class="btn btn-error">  Retour </button> 
+            </a>
+            <div class="container-row">
+                <div class="container-form">  
+            {# </div>  #}
+<!-- Home : current route => edit_monster-->  
+    {% elseif app.request.attributes.get('_route') == 'edit_monster' %}
+        <div class="container-admin">
+            <h5> Proposer un nouveau monstre </h5> 
+            <a href='{{ path('home_admin') }}'> 
+                <button class="btn btn-error"> Retour </button> 
+            </a> 
+            {# </div>    #}
+            <div class="container-row">   
+                <div class="container-form">
+            {# </div>  #}
+<!--  HOME ADMIN BOARD : current route => home -->
+    {% else %}
+    {% if (is_granted('ROLE_ADMIN')) %}
+        <section class="container-row-space">
+            {# <!--  DEV TASK BUTTON - POP UP  --> #}
+            <article class=""> 
+                <div class="popover popover-bottom">
+                    <h3 class="task-item"> 
+                        <button class="btn btn-primary"> TASK </button> 
+                    </h3>
+                    <div class="popover-container container-task">
+                        <div class="card container-pop-up task-item">
+                            {# <div class="card-header"></div> #}
+                            <div class="card-body container-task">
+                                <ul class="container-admin task-item">
+                                    <h5> Games </h5>
+                                    <li>
+                                        <strike style="color:black;"> Insertion gain ruby </strike>  
+                                    </li>
+                                    <li> TTT : cheat a corriger </li>
+                                </ul>
+                                <ul class="container-admin task-item">
+                                    <h5> Admin : new monstre </h5>
+                                    <li> Edition d'un monstre : controller a faire </li>
+                                </ul>
+                                <ul class="container-admin task-item">
+                                    <h5> Admin : Article news </h5>
+                                    <li><strike style="color:black;"> Suppression des news </strike>  </li>
+                                    <li> Insérer id user lors de création article </li>
+                                    <li>
+                                        <strike style="color:black;"> Relier auteur a user pour affichage news </strike>  
+                                    </li>
+                                </ul>
+                                <ul class="container-admin task-item">
+                                    <h5> Admin : attribution des rôles </h5>
+                                    <li> Système de gestion des rôles </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                           
+            </article>
+            {# </div>  #}
+            {# <!-- GESTION ROLES --> #}
+            <article>
                 <div class="container-task">
-                    <h5> Gestion des rôles  </h5>
+                    <h5> Gestion des utilisateurs  </h5>
                     <div class="task-item">
                         <p> [ Bientot ]</p>
                         <p> [ formulaire ]</p>
                         <p> [ liste déroulante ]</p>
                     </div>
                 </div>
-        
-            </section>
-            
-            <section class="container-add-news">
-                <div class="container-admin"> 
-                    <h5>  Mes news </h5>
-                    <td class=>  <a href="{{ path('add_news') }}"> <button class="btn btn-primary "> <i class="icon icon-plus"></i> </button> </a> </td>
-                    <div class="container-add-news">
-                        {% for news in app.user.articles %}
-                        <table class="container-admin">
-                            <thead>
-                                <tr>
-                                    <th> <h5> {{ news.nom }} </h5> </th>
-                                </tr>
-                            </thead>
-                            <tbody class="container-task">
-                                <tr class="task-item">
-                                        <td> <a href="{{path('edit_news', {'id':news.id} ) }}"> <button class="btn btn-success"> <i class="icon icon-edit"></i></button> </a> 
-                                    <a href="{{ path('add_news') }}"> <button class="btn btn-error"><i class="icon icon-stop"></i> </button> </a> </td>
-                                </tr> 
-                            </tbody>
-                            <tr class="container-task">
-                                <td class="task-item"> <p> Publié le : <i> {{ news.date|date('d-m-Y') }} </i></p> </td>
-                            </tr>
-                        </table>
-                        {% endfor %}
-                    </div>
-                 </div>
-            </section>        
-
-            <section>
-                <div class="container-task">
-                    <h5> Mes monstres </h5>
-                    <div class="task-item">
-                        {# bouton edition monstre #}
-                            <a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> <i class="icon icon-edit"></i> </button> </a> 
-                            <p> [ liste d'affichage des monstres ]</p>
-                            {# <a href="{{ path('edit_monster') }}"> <button class="btn btn-primary"> Edit </button> </a> 
-                            <a href="{{ path('edit_monster') }}"> <button class="btn btn-error"> Supprimer </button> </a>  #}
-                    </div> 
-                </div>
-            </section>         
+            </article>
+        </section>
         {% endif %}
-   
+        {# <!-- GESTION DES ARTICLES --> #}
+        <section class="container-add-news">
+            <div class="container-admin"> 
+                <h5>  Mes news </h5>
+                <td class=>  
+                    <a href="{{ path('add_news') }}">
+                        <button class="btn btn-primary"> 
+                            <i class="icon icon-plus"></i> 
+                        </button> 
+                    </a> 
+                </td>
+                <div class="container-add-news">
+                    {% for news in app.user.articles %}
+                    <table class="container-admin">
+                        <thead>
+                            <tr>
+                                <th>  
+                                    <div class="popover popover-bottom">
+                                    <button class="btn-hover btn btn-primary">  {{ news.nom }} </button>
+                                    <div class="popover-container container-admin">
+                                        <div class="card container-pop-up task-item">
+                                            {# <div class="card-header"></div> #}
+                                            <div class="card-body container-task">
+                                                <p class="">{{ news.contenu }}  </p>
+                                                {# <ul>
+                                                    <li> PV : {{ monstre.classe.pv }} </li>
+                                                    <li> MP : {{ monstre.classe.mp }} </li>
+                                                    <li> Force : {{ monstre.classe.puissance }} </li>
+                                                    <li>  </li>
+                                                    <li> Defense : {{ monstre.classe.defense }} </li>
+                                                    <li>  Vitesse : {{ monstre.classe.vitesse }} </li>
+                                                    <li>  </li>
+                                                </ul> #}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="container-task">
+                            <tr class="task-item">
+                                <td> 
+                                    {# <!-- bouton édition news --> #}
+                                    <a href="{{path('edit_news', {'id':news.id} ) }}"> 
+                                        <button class="btn btn-success"> 
+                                            <i class="icon icon-edit"></i>
+                                        </button> 
+                                    </a> 
+                                    {# <!-- bouton suppression news --> #}
+                                    <a href="{{ path('delete_news', {'id':news.id} ) }}"> 
+                                        <button class="btn btn-error">
+                                            <i class="icon icon-delete"></i> 
+                                        </button> 
+                                    </a> 
+                                </td>
+                            </tr> 
+                        </tbody>
+                        <tr class="container-task">
+                            <td class="task-item"> <p> Publié le : <i> {{ news.date|date('d-m-Y') }} </i></p> </td>
+                        </tr>
+                    </table>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>        
+        {# <!-- GESTION DES MONSTRES --> #}
+        <section>
+            <div class="container-task">
+                <h5> Mes monstres </h5>
+                <div class="task-item">
+                    {# <!-- bouton edition monstre --> #}
+                        <a href="{{ path('edit_monster') }}"> 
+                            <button class="btn btn-success" width="100%"> 
+                                <i class="icon icon-edit"></i> 
+                            </button> 
+                        </a> 
+                        <p> [ liste d'affichage des monstres ]</p>
+                        {# <a href="{{ path('edit_monster') }}"> <button class="btn btn-primary"> Edit </button> </a> 
+                        <a href="{{ path('edit_monster') }}"> <button class="btn btn-error"> Supprimer </button> </a>  #}
+                </div> 
+            </div>
+        </section> 
+{# <!-- CLOSE HOME BOARD --> #}
+    {% endif %}
     {# </section> #}
 {% endblock %}

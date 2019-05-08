@@ -8,7 +8,7 @@ html {
   height:100%;
 }
 body {
-  color:#FFF;
+  color:antiquewhite;
   background-color: rgb(20, 14, 18);
   /* background-color: rgb(245, 233, 241); */
   /* background-image: url(../../images/panda2.png); */
@@ -209,6 +209,7 @@ form {
   order: 4;
   justify-content:center;
   width: 100%;
+    /* background-color:rgba(27, 20, 61, 0.1); */
   /* border: solid 2px antiquewhite; */
 }
 .container-admin, .container-task, .container-form {
@@ -231,6 +232,7 @@ form {
   align-items:center;
 }
 .task-item {
+  color: antiquewhite;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -247,7 +249,7 @@ form {
   margin: 2%;
   padding: 2%;
   background-color: rgba(255, 255, 255, 0.13);
-  /* width: 80%; */
+  width: 80%; height:auto;
 }
 /********************************************************************************************/
 /*                       ANIMATION : POP-UP stats des monstres                             **/
