@@ -127,39 +127,40 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-    ";
-        // line 22
-        echo "
+    
     ";
         // line 23
+        echo "
+    ";
+        // line 24
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", []), "jeux", []));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", []), "jeux", []));
         foreach ($context['_seq'] as $context["_key"] => $context["jeux"]) {
-            // line 24
+            // line 25
             echo "    ";
             if ((twig_get_attribute($this->env, $this->source, $context["jeux"], "id", []) == "2")) {
-                // line 25
+                // line 26
                 echo "        <h5> ";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "nom", []), "html", null, true);
                 echo " </h5>
         <p> ";
-                // line 26
+                // line 27
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["jeux"], "description", []), "html", null, true);
                 echo " </p>
     ";
             }
-            // line 28
+            // line 29
             echo "    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['jeux'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 30
         echo "
     <div class=\"container-fluid\" id=\"content\">
         <div id=\"parent\" class=\"\">
             ";
-        // line 33
+        // line 34
         echo "            <h1 id=\"input\" class=\"\"></h1>
             <div id = \"bt\">
             <div id=\"selector\" class=\"\">choose your game
@@ -191,12 +192,12 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
         </div>
     </div>
     ";
-        // line 64
+        // line 65
         echo "   
 
     <div>
         <button class=\"btn btn-error\"> <a href=\"";
-        // line 67
+        // line 68
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home-private");
         echo "\"> Retour </a> </button>
     </div>
@@ -221,7 +222,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 
     public function getDebugInfo()
     {
-        return array (  200 => 67,  195 => 64,  163 => 33,  158 => 29,  152 => 28,  147 => 26,  142 => 25,  139 => 24,  135 => 23,  132 => 22,  127 => 20,  118 => 19,  105 => 15,  101 => 14,  95 => 11,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
+        return array (  201 => 68,  196 => 65,  164 => 34,  159 => 30,  153 => 29,  148 => 27,  143 => 26,  140 => 25,  136 => 24,  133 => 23,  127 => 20,  118 => 19,  105 => 15,  101 => 14,  95 => 11,  90 => 8,  81 => 7,  69 => 4,  58 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -246,6 +247,7 @@ class __TwigTemplate_54c37b6cf6f7f6dd268df9e9e82564428cfa65747f9952f694cb9312a6b
 
 {% block body %}
     {{parent()}}
+    
     {# <h5> Tic Tac Toe </h5> #}
 
     {% for jeux in app.user.jeux %}

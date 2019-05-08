@@ -2,6 +2,13 @@
 {% block title %} {{parent()}} {% endblock %}
 {% block body %}
 {{parent()}}
+<header class="container-column container-row-left">
+        <h1> Virtual Animals </h1>
+   
+    <div class="container-column container-row-left subtitle">
+        <h1> Home - {{ app.user.nom}} </h1>
+    </div>
+</header>
 {# ########################################################### #}
 {#            PRIVATE-PAGE : HOME - INFOS-USER                 #}
 {# ########################################################### #}

@@ -89,42 +89,52 @@ class __TwigTemplate_6485b42954fd30079815851245e7e76d140405f5326ad367410c884ce11
         echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo "
+    <header class=\"container-column container-row-left\">
+            <h1> Virtual Animals </h1>
+       
+        <div class=\"container-column container-row-left subtitle\">
+            <h1> Jeux - ";
+        // line 13
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "user", []), "nom", []), "html", null, true);
+        echo "</h1>
+        </div>
+    </header>
     <main class=\"container-main\">
         ";
-        // line 11
+        // line 18
         echo "        <div class=\"container-row-reverse\">
           ";
-        // line 13
+        // line 20
         echo "            <section class=\"container-user-infos\">
                 <h5> Mon compte </h5>
                 <img class=\"glowing-img\" src=\"/images/logos/panda-feroce2.png\" width=\"100px\" heigth=\"100px\" alt=\"avatar utilisateur\" />
                 <h4> ";
-        // line 16
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 16, $this->source); })()), "user", []), "nom", []), "html", null, true);
+        // line 23
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", []), "nom", []), "html", null, true);
         echo " </h4>
                 <p> Inscrit depuis le : <span style=color:orange;> ";
-        // line 17
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 17, $this->source); })()), "user", []), "date", []), "d-m-Y"), "html", null, true);
+        // line 24
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 24, $this->source); })()), "user", []), "date", []), "d-m-Y"), "html", null, true);
         echo " </span></p>
                 <p> <span style=color:red;> ";
-        // line 18
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "user", []), "argent", []), "html", null, true);
+        // line 25
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 25, $this->source); })()), "user", []), "argent", []), "html", null, true);
         echo " </span> Ruby </p>
                 
                 <div class=\"container-row\">
                     ";
-        // line 22
+        // line 29
         echo "                    <div class=\"animate-box\">
                         ";
-        // line 24
+        // line 31
         echo "                        <a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("bestiary");
         echo "\">
                             <div class=\"animate-box-hidden\">
                                 ";
-        // line 29
+        // line 36
         echo "                                <p> <span style=color:orange;> ";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", []), "monstre", []), "count", []), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 36, $this->source); })()), "user", []), "monstre", []), "count", []), "html", null, true);
         echo " </span> monstres </p>
                                 <button>
                                 <span>
@@ -139,16 +149,16 @@ class __TwigTemplate_6485b42954fd30079815851245e7e76d140405f5326ad367410c884ce11
                     </div>
                   
                   ";
-        // line 43
+        // line 50
         echo "                    <div class=\"animate-box\">
                         <a href=\"";
-        // line 44
+        // line 51
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inventory");
         echo "\">
                             <div class=\"animate-box-hidden\">
                                 <p> <span style=color:orange;> ";
-        // line 46
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 46, $this->source); })()), "user", []), "accessoire", []), "count", []), "html", null, true);
+        // line 53
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 53, $this->source); })()), "user", []), "accessoire", []), "count", []), "html", null, true);
         echo " </span> accessoires </p>
                                 <button>
                                     <span>
@@ -164,11 +174,11 @@ class __TwigTemplate_6485b42954fd30079815851245e7e76d140405f5326ad367410c884ce11
                 </div>
               
             ";
-        // line 61
+        // line 68
         echo "            </section>
       
             ";
-        // line 64
+        // line 71
         echo "            <section class=\"container-games\">
 
 ";
@@ -192,7 +202,7 @@ class __TwigTemplate_6485b42954fd30079815851245e7e76d140405f5326ad367410c884ce11
 
     public function getDebugInfo()
     {
-        return array (  172 => 64,  168 => 61,  151 => 46,  146 => 44,  143 => 43,  126 => 29,  120 => 24,  117 => 22,  111 => 18,  107 => 17,  103 => 16,  98 => 13,  95 => 11,  89 => 8,  80 => 7,  68 => 4,  57 => 3,  27 => 1,);
+        return array (  182 => 71,  178 => 68,  161 => 53,  156 => 51,  153 => 50,  136 => 36,  130 => 31,  127 => 29,  121 => 25,  117 => 24,  113 => 23,  108 => 20,  105 => 18,  98 => 13,  89 => 8,  80 => 7,  68 => 4,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -205,6 +215,13 @@ class __TwigTemplate_6485b42954fd30079815851245e7e76d140405f5326ad367410c884ce11
 
 {% block body %}
     {{parent()}}
+    <header class=\"container-column container-row-left\">
+            <h1> Virtual Animals </h1>
+       
+        <div class=\"container-column container-row-left subtitle\">
+            <h1> Jeux - {{ app.user.nom }}</h1>
+        </div>
+    </header>
     <main class=\"container-main\">
         {# Container flex pour les infos et les jeux #}
         <div class=\"container-row-reverse\">

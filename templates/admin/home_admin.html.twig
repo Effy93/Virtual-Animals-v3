@@ -5,16 +5,17 @@
 {# ########################################################################### #}
 {#                              HOME ADMIN : HOME BOARD                        #}
 {# ########################################################################### #}
-<header>
-    <h1> HOME ADMIN BOARD </h1>
-    <div class="container-column">
-        <h5> {{ app.user.nom }} </h5>
+<header class="container-column container-row-left">
+        <h1> home admin board </h1>
+   
+    <div class="container-column container-row-left subtitle">
+        <h1> {{ app.user.nom }} </h1>
     </div>
 </header>
 {# ########################################################################### #}
-{#                            HOME TASK : ADD NEWS                             #}
+{#                                 HOME : ADD NEWS                             #}
 {# ########################################################################### #}
-<main>
+<main class="container-main">
 <!-- Home : current route add_news --> 
     {% if app.request.attributes.get('_route') == 'add_news' %}
         <div class="container-admin">
@@ -26,7 +27,7 @@
                 <div class="container-form">  
             {# </div>  #}
 {# ########################################################################### #}
-{#                           HOME TASK : EDIT MONSTER                          #}
+{#                              HOME : EDIT MONSTER                            #}
 {# ########################################################################### #}           
 <!-- Home : current route => edit_monster-->  
     {% elseif app.request.attributes.get('_route') == 'edit_monster' %}
@@ -50,7 +51,7 @@
 {# ########################################################################### #}
 {#                       HOME ADMIN : DEV TASK BUTTON                          #}
 {# ########################################################################### #}
-            <article class=""> 
+            <article class="container-column"> 
                 <div class="popover popover-bottom">
                     <h3 class="task-item"> 
                         <button class="btn btn-primary"> TASK </button> 
@@ -81,6 +82,7 @@
                                 <ul class="container-admin task-item">
                                     <h5> Admin : attribution des rôles </h5>
                                     <li> Système de gestion des rôles </li>
+                                    <li> Sytème de verrou de profil admin/design</li>
                                 </ul>
                             </div>
                         </div>
@@ -111,7 +113,7 @@
         <section class="container-add-news">
             <div class="container-admin"> 
                 <h5>  Mes news </h5>
-                <td class=>  
+                <td class="">  
                     <a href="{{ path('add_news') }}">
                         <button class="btn btn-primary"> 
                             <i class="icon icon-plus"></i> 
@@ -125,7 +127,7 @@
                             <tr>
                                 <th>  
                                     <div class="popover popover-bottom">
-                                    <button class="btn-hover btn btn-primary">  {{ news.nom }} </button>
+                                    <button class="btn-hover btn btn-primary task-item">  {{ news.nom }} </button>
                                     <div class="popover-container container-admin">
                                         <div class="card container-pop-up task-item">
                                             {# <div class="card-header"></div> #}

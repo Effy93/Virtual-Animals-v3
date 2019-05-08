@@ -53,7 +53,7 @@ class __TwigTemplate_eeb3c565104a3cf45ff079b3e8db6206bc542f6a807c68056a77c199d99
 
     }
 
-    // line 3
+    // line 2
     public function block_title($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -73,7 +73,7 @@ class __TwigTemplate_eeb3c565104a3cf45ff079b3e8db6206bc542f6a807c68056a77c199d99
 
     }
 
-    // line 5
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -84,10 +84,24 @@ class __TwigTemplate_eeb3c565104a3cf45ff079b3e8db6206bc542f6a807c68056a77c199d99
 
         echo " 
 ";
-        // line 6
+        // line 4
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-<h1> Inventaire &hearts; </h1>
+";
+        // line 8
+        echo "<header class=\"container-column container-row-left\">
+        <h1> Virtual Animals </h1>
+   
+    <div class=\"container-column container-row-left subtitle\">
+        <h1> Inventaire - ";
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", []), "nom", []), "html", null, true);
+        echo " </h1>
+    </div>
+</header>
+    <main>
+        <p> page en construction</p>
+    </main>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -109,18 +123,28 @@ class __TwigTemplate_eeb3c565104a3cf45ff079b3e8db6206bc542f6a807c68056a77c199d99
 
     public function getDebugInfo()
     {
-        return array (  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
+        return array (  98 => 12,  92 => 8,  88 => 4,  77 => 3,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'private-space/layout.html.twig' %}
-
 {% block title %} {{parent()}} {% endblock %}
-
 {% block body %} 
 {{parent()}}
-<h1> Inventaire &hearts; </h1>
+{# ################################################################# #}
+{#                    PRIVATE-PAGE : INVENTAIRE                      #}
+{# ################################################################# #}
+<header class=\"container-column container-row-left\">
+        <h1> Virtual Animals </h1>
+   
+    <div class=\"container-column container-row-left subtitle\">
+        <h1> Inventaire - {{ app.user.nom}} </h1>
+    </div>
+</header>
+    <main>
+        <p> page en construction</p>
+    </main>
 {% endblock %}", "private-space/inventory.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/inventory.html.twig");
     }
 }

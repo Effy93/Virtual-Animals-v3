@@ -38,9 +38,31 @@ header {
   justify-content:flex-start;
   align-content: center;
   margin: 40px 0%;
-  padding: 0 10%;
+  padding: 0 8%;
   min-height: 100px;
   
+}
+header h1 {
+  font-family: Helvetica, Consolas, monospace;
+  letter-spacing: 0.5rem;
+  font-size: 1.8em;
+  text-transform: uppercase;
+  font-style: italic;
+  /* border-bottom: 1px solid #F17105; */
+  /* text-align: center; */
+}
+
+header .subtitle {
+  font-family: Helvetica, Consolas, monospace;
+  letter-spacing: 0.2rem;
+  font-size: 0.4em;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: bold;
+  /* color:black; */
+  display: flex;
+  align-content: flex-start;
+  justify-content: flex-start;
 }
 
 a:hover {
@@ -183,6 +205,11 @@ footer nav ul li a img {
   justify-content: center;
   align-content: flex-end;
 }
+.container-row-left {
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
 .container-column {
   display: flex;
   flex-direction: column;
@@ -196,6 +223,7 @@ form {
   /* align-content: flex-end;  */
   min-width: 40%;
 }
+
 /********************************************************************************************/
 /*                                       HOME / NEWS                                     **/
 /********************************************************************************************/
@@ -241,6 +269,7 @@ margin : 2% 30%;
 /* GLOWING BOX A TESTER DANS LA BOUTIQUE */
 /* box-shadow:0 0 20px #FF9900, -10px 0 40px #Fff, 10px 0 20px #fff; */
 }
+
 .container-games, .container-user-infos {
   box-shadow:0 0 20px #FF9900, -5px 0 10px #Fff, 5px 0 20px #fff;
   /* aligne les jeux */

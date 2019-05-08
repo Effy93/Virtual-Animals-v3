@@ -6,6 +6,13 @@
 
 {% block body %}
     {{parent()}}
+    <header class="container-column container-row-left">
+            <h1> Virtual Animals </h1>
+       
+        <div class="container-column container-row-left subtitle">
+            <h1> Jeux - {{ app.user.nom }}</h1>
+        </div>
+    </header>
     <main class="container-main">
         {# Container flex pour les infos et les jeux #}
         <div class="container-row-reverse">

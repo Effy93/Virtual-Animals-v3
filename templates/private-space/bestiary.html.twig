@@ -1,10 +1,15 @@
 {% extends 'private-space/layout.html.twig' %}
-
 {% block title %} {{parent()}} {% endblock %}
-
 {% block body %}
-{{parent()}} 
-<section class="container-bestiary">
+{{parent()}}
+<header class="container-column container-row-left">
+        <h1> Virtual Animals </h1>
+   
+    <div class="container-column container-row-left subtitle">
+        <h1> Bestiaire - {{ app.user.nom}} </h1>
+    </div>
+</header>
+    <section class="container-bestiary">
     <h2> Bestiaire </h2>
     <div class="container-row-reverse">
 {# Monsters data #}

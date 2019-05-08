@@ -2,7 +2,8 @@
 {% block title %} {{parent()}} {% endblock %}
 
 {% block body %}
-    {{parent()}} 
+    {{parent()}}
+ 
 <!-- POP UP ACHAT -->
     {# Messages flash #}
     {% for message in app.session.flashBag.get('success') %}
@@ -147,6 +148,6 @@
             </div>
         </section>
 
-
+    </main>
 
 {% endblock %}

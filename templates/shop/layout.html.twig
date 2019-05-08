@@ -4,10 +4,14 @@
 
 {% block body %} 
 {{parent()}}
-<header>
-    <h1> Bienvenue dans la Boutique </h1>
-    {# <img src="/images/logos/red-panda-shop.png" width="100px" height="100px" alt="logo dessin d'un panda roux"/> #}
+<header class="container-column container-row-left">
+        <h1> Virtual Animals </h1>
+   
+    <div class="container-column container-row-left subtitle">
+        <h1> Boutique - {{ app.user.nom }} </h1>
+    </div>
 </header>
 
+<main class="container-main">
 
 {% endblock %}

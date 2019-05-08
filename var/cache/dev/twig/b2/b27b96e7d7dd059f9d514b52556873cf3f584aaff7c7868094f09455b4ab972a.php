@@ -87,12 +87,18 @@ class __TwigTemplate_274730b5db6731d50ce0cfde4db658f363e34aaf103bfcc48522ae16583
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-<header>
-    <h1> Bienvenue dans la Boutique </h1>
-    ";
-        // line 10
-        echo "</header>
+<header class=\"container-column container-row-left\">
+        <h1> Virtual Animals </h1>
+   
+    <div class=\"container-column container-row-left subtitle\">
+        <h1> Boutique - ";
+        // line 11
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", []), "nom", []), "html", null, true);
+        echo " </h1>
+    </div>
+</header>
 
+<main class=\"container-main\">
 
 ";
         
@@ -115,7 +121,7 @@ class __TwigTemplate_274730b5db6731d50ce0cfde4db658f363e34aaf103bfcc48522ae16583
 
     public function getDebugInfo()
     {
-        return array (  94 => 10,  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
+        return array (  96 => 11,  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -126,11 +132,15 @@ class __TwigTemplate_274730b5db6731d50ce0cfde4db658f363e34aaf103bfcc48522ae16583
 
 {% block body %} 
 {{parent()}}
-<header>
-    <h1> Bienvenue dans la Boutique </h1>
-    {# <img src=\"/images/logos/red-panda-shop.png\" width=\"100px\" height=\"100px\" alt=\"logo dessin d'un panda roux\"/> #}
+<header class=\"container-column container-row-left\">
+        <h1> Virtual Animals </h1>
+   
+    <div class=\"container-column container-row-left subtitle\">
+        <h1> Boutique - {{ app.user.nom }} </h1>
+    </div>
 </header>
 
+<main class=\"container-main\">
 
 {% endblock %}", "shop/layout.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/shop/layout.html.twig");
     }

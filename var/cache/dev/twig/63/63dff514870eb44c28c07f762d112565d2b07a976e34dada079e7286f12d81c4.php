@@ -87,12 +87,6 @@ class __TwigTemplate_87a80753b781cf20c82d4cf832e6063040f503f645de941323d3bc951de
         // line 6
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-<header>
-    <h1> Bienvenue ";
-        // line 8
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 8, $this->source); })()), "user", []), "nom", []), "html", null, true);
-        echo " </h1>
-</header>
 
 ";
         
@@ -115,7 +109,7 @@ class __TwigTemplate_87a80753b781cf20c82d4cf832e6063040f503f645de941323d3bc951de
 
     public function getDebugInfo()
     {
-        return array (  93 => 8,  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
+        return array (  88 => 6,  77 => 5,  57 => 3,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -126,9 +120,6 @@ class __TwigTemplate_87a80753b781cf20c82d4cf832e6063040f503f645de941323d3bc951de
 
 {% block body %} 
 {{parent()}}
-<header>
-    <h1> Bienvenue {{ app.user.nom }} </h1>
-</header>
 
 {% endblock %}", "private-space/layout.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/private-space/layout.html.twig");
     }

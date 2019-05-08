@@ -88,9 +88,14 @@ class __TwigTemplate_2eb8d23c76c53b74a6f2c28ba0345259ac5424656592568cd2218b501ac
         $this->displayParentBlock("body", $context, $blocks);
         echo "
 
-<header>
-    <h1> Bienvenue dans Virtual Animals </h1>
+<header class=\"container-column container-row-left\">
+        <h1> Virtual Animals </h1>
+   
+    <div class=\"container-column container-row-left subtitle\">
+        <h1> Bienvenue </h1>
+    </div>
 </header>
+
 <main>
 
 
@@ -127,9 +132,14 @@ class __TwigTemplate_2eb8d23c76c53b74a6f2c28ba0345259ac5424656592568cd2218b501ac
 {% block body %} 
 {{parent()}}
 
-<header>
-    <h1> Bienvenue dans Virtual Animals </h1>
+<header class=\"container-column container-row-left\">
+        <h1> Virtual Animals </h1>
+   
+    <div class=\"container-column container-row-left subtitle\">
+        <h1> Bienvenue </h1>
+    </div>
 </header>
+
 <main>
 
 

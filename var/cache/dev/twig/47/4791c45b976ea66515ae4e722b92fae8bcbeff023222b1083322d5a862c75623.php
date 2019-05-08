@@ -89,27 +89,28 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
         echo "
 ";
         // line 8
-        echo "<header>
-    <h1> HOME ADMIN BOARD </h1>
-    <div class=\"container-column\">
-        <h5> ";
-        // line 11
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", []), "nom", []), "html", null, true);
-        echo " </h5>
+        echo "<header class=\"container-column container-row-left\">
+        <h1> home admin board </h1>
+   
+    <div class=\"container-column container-row-left subtitle\">
+        <h1> ";
+        // line 12
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "user", []), "nom", []), "html", null, true);
+        echo " </h1>
     </div>
 </header>
 ";
-        // line 17
-        echo "<main>
+        // line 18
+        echo "<main class=\"container-main\">
 <!-- Home : current route add_news --> 
     ";
-        // line 19
-        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "request", []), "attributes", []), "get", [0 => "_route"], "method") == "add_news")) {
-            // line 20
+        // line 20
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "request", []), "attributes", []), "get", [0 => "_route"], "method") == "add_news")) {
+            // line 21
             echo "        <div class=\"container-admin\">
             <h5> Publier un nouvel évènement  </h5>
             <a href='";
-            // line 22
+            // line 23
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
             echo "'> 
                 <button class=\"btn btn-error\">  Retour </button> 
@@ -117,38 +118,38 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
             <div class=\"container-row\">
                 <div class=\"container-form\">  
             ";
-            // line 30
+            // line 31
             echo "           
 <!-- Home : current route => edit_monster-->  
     ";
-        } elseif ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source,         // line 32
-(isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 32, $this->source); })()), "request", []), "attributes", []), "get", [0 => "_route"], "method") == "edit_monster")) {
-            // line 33
+        } elseif ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source,         // line 33
+(isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "request", []), "attributes", []), "get", [0 => "_route"], "method") == "edit_monster")) {
+            // line 34
             echo "        <div class=\"container-admin\">
             <h5> Proposer un nouveau monstre </h5> 
             <a href='";
-            // line 35
+            // line 36
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home_admin");
             echo "'> 
                 <button class=\"btn btn-error\"> Retour </button> 
             </a> 
             ";
-            // line 39
+            // line 40
             echo "            <div class=\"container-row\">   
                 <div class=\"container-form\">
             ";
-            // line 45
+            // line 46
             echo "<!--  HOME ADMIN BOARD : current route => home -->
     ";
         } else {
-            // line 47
+            // line 48
             echo "    ";
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 48
+                // line 49
                 echo "        <section class=\"container-row-space\">
             ";
-                // line 53
-                echo "            <article class=\"\"> 
+                // line 54
+                echo "            <article class=\"container-column\"> 
                 <div class=\"popover popover-bottom\">
                     <h3 class=\"task-item\"> 
                         <button class=\"btn btn-primary\"> TASK </button> 
@@ -156,7 +157,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                     <div class=\"popover-container container-task\">
                         <div class=\"card container-pop-up task-item\">
                             ";
-                // line 61
+                // line 62
                 echo "                            <div class=\"card-body container-task\">
                                 <ul class=\"container-admin task-item\">
                                     <h5> Games </h5>
@@ -180,6 +181,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                                 <ul class=\"container-admin task-item\">
                                     <h5> Admin : attribution des rôles </h5>
                                     <li> Système de gestion des rôles </li>
+                                    <li> Sytème de verrou de profil admin/design</li>
                                 </ul>
                             </div>
                         </div>
@@ -187,9 +189,9 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                 </div>
             </article>
             ";
-                // line 94
+                // line 96
                 echo "            ";
-                // line 95
+                // line 97
                 echo "            <article>
                 <div class=\"container-task\">
                     <h5> Gestion des utilisateurs  </h5>
@@ -203,15 +205,15 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
         </section>
         ";
             }
-            // line 110
+            // line 112
             echo "        ";
-            // line 111
+            // line 113
             echo "        <section class=\"container-add-news\">
             <div class=\"container-admin\"> 
                 <h5>  Mes news </h5>
-                <td class=>  
+                <td class=\"\">  
                     <a href=\"";
-            // line 115
+            // line 117
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_news");
             echo "\">
                         <button class=\"btn btn-primary\"> 
@@ -221,31 +223,31 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                 </td>
                 <div class=\"container-add-news\">
                     ";
-            // line 122
+            // line 124
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 122, $this->source); })()), "user", []), "articles", []));
+            $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 124, $this->source); })()), "user", []), "articles", []));
             foreach ($context['_seq'] as $context["_key"] => $context["news"]) {
-                // line 123
+                // line 125
                 echo "                    <table class=\"container-admin\">
                         <thead>
                             <tr>
                                 <th>  
                                     <div class=\"popover popover-bottom\">
-                                    <button class=\"btn-hover btn btn-primary\">  ";
-                // line 128
+                                    <button class=\"btn-hover btn btn-primary task-item\">  ";
+                // line 130
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "nom", []), "html", null, true);
                 echo " </button>
                                     <div class=\"popover-container container-admin\">
                                         <div class=\"card container-pop-up task-item\">
                                             ";
-                // line 132
+                // line 134
                 echo "                                            <div class=\"card-body container-task\">
                                                 <p class=\"\">";
-                // line 133
+                // line 135
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "contenu", []), "html", null, true);
                 echo "  </p>
                                                 ";
-                // line 143
+                // line 145
                 echo "                                            </div>
                                         </div>
                                     </div>
@@ -256,7 +258,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                             <tr class=\"task-item\">
                                 <td> 
                                     ";
-                // line 153
+                // line 155
                 echo "                                    <a href=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_news", ["id" => twig_get_attribute($this->env, $this->source, $context["news"], "id", [])]), "html", null, true);
                 echo "\"> 
@@ -265,7 +267,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                                         </button> 
                                     </a> 
                                     ";
-                // line 159
+                // line 161
                 echo "                                    <a href=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("delete_news", ["id" => twig_get_attribute($this->env, $this->source, $context["news"], "id", [])]), "html", null, true);
                 echo "\"> 
@@ -278,7 +280,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                         </tbody>
                         <tr class=\"container-task\">
                             <td class=\"task-item\"> <p> Publié le : <i> ";
-                // line 168
+                // line 170
                 echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "date", []), "d-m-Y"), "html", null, true);
                 echo " </i></p> </td>
                         </tr>
@@ -288,21 +290,21 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['news'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 172
+            // line 174
             echo "                </div>
             </div>
         </section>
 ";
-            // line 177
+            // line 179
             echo "        
         ";
-            // line 179
+            // line 181
             echo "        <section>
             <div class=\"container-task\">
                 <h5> Mes monstres </h5>
                 <div class=\"task-item\">
                     ";
-            // line 184
+            // line 186
             echo "                        <a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_monster");
             echo "\"> 
@@ -312,15 +314,15 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                         </a> 
                         <p> [ liste d'affichage des monstres ]</p>
                         ";
-            // line 192
+            // line 194
             echo "                </div> 
             </div>
         </section> 
 ";
-            // line 196
+            // line 198
             echo "    ";
         }
-        // line 197
+        // line 199
         echo "    ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -342,7 +344,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
 
     public function getDebugInfo()
     {
-        return array (  324 => 197,  321 => 196,  316 => 192,  306 => 184,  300 => 179,  297 => 177,  292 => 172,  282 => 168,  269 => 159,  260 => 153,  249 => 143,  245 => 133,  242 => 132,  236 => 128,  229 => 123,  225 => 122,  215 => 115,  209 => 111,  207 => 110,  193 => 95,  191 => 94,  160 => 61,  151 => 53,  148 => 48,  145 => 47,  141 => 45,  137 => 39,  131 => 35,  127 => 33,  125 => 32,  121 => 30,  113 => 22,  109 => 20,  107 => 19,  103 => 17,  97 => 11,  92 => 8,  88 => 4,  77 => 3,  57 => 2,  27 => 1,);
+        return array (  326 => 199,  323 => 198,  318 => 194,  308 => 186,  302 => 181,  299 => 179,  294 => 174,  284 => 170,  271 => 161,  262 => 155,  251 => 145,  247 => 135,  244 => 134,  238 => 130,  231 => 125,  227 => 124,  217 => 117,  211 => 113,  209 => 112,  195 => 97,  193 => 96,  161 => 62,  152 => 54,  149 => 49,  146 => 48,  142 => 46,  138 => 40,  132 => 36,  128 => 34,  126 => 33,  122 => 31,  114 => 23,  110 => 21,  108 => 20,  104 => 18,  98 => 12,  92 => 8,  88 => 4,  77 => 3,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -354,16 +356,17 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
 {# ########################################################################### #}
 {#                              HOME ADMIN : HOME BOARD                        #}
 {# ########################################################################### #}
-<header>
-    <h1> HOME ADMIN BOARD </h1>
-    <div class=\"container-column\">
-        <h5> {{ app.user.nom }} </h5>
+<header class=\"container-column container-row-left\">
+        <h1> home admin board </h1>
+   
+    <div class=\"container-column container-row-left subtitle\">
+        <h1> {{ app.user.nom }} </h1>
     </div>
 </header>
 {# ########################################################################### #}
-{#                            HOME TASK : ADD NEWS                             #}
+{#                                 HOME : ADD NEWS                             #}
 {# ########################################################################### #}
-<main>
+<main class=\"container-main\">
 <!-- Home : current route add_news --> 
     {% if app.request.attributes.get('_route') == 'add_news' %}
         <div class=\"container-admin\">
@@ -375,7 +378,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                 <div class=\"container-form\">  
             {# </div>  #}
 {# ########################################################################### #}
-{#                           HOME TASK : EDIT MONSTER                          #}
+{#                              HOME : EDIT MONSTER                            #}
 {# ########################################################################### #}           
 <!-- Home : current route => edit_monster-->  
     {% elseif app.request.attributes.get('_route') == 'edit_monster' %}
@@ -399,7 +402,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
 {# ########################################################################### #}
 {#                       HOME ADMIN : DEV TASK BUTTON                          #}
 {# ########################################################################### #}
-            <article class=\"\"> 
+            <article class=\"container-column\"> 
                 <div class=\"popover popover-bottom\">
                     <h3 class=\"task-item\"> 
                         <button class=\"btn btn-primary\"> TASK </button> 
@@ -430,6 +433,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                                 <ul class=\"container-admin task-item\">
                                     <h5> Admin : attribution des rôles </h5>
                                     <li> Système de gestion des rôles </li>
+                                    <li> Sytème de verrou de profil admin/design</li>
                                 </ul>
                             </div>
                         </div>
@@ -454,13 +458,13 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
         </section>
         {% endif %}
 {# ########################################################################### #}
-{#                    HOME ADMIN : GESTION NEWS TASK                           #}
+{#                    HOME DESIGNER : GESTION NEWS TASK                           #}
 {# ########################################################################### #}
         {# <!-- GESTION DES ARTICLES --> #}
         <section class=\"container-add-news\">
             <div class=\"container-admin\"> 
                 <h5>  Mes news </h5>
-                <td class=>  
+                <td class=\"\">  
                     <a href=\"{{ path('add_news') }}\">
                         <button class=\"btn btn-primary\"> 
                             <i class=\"icon icon-plus\"></i> 
@@ -474,7 +478,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                             <tr>
                                 <th>  
                                     <div class=\"popover popover-bottom\">
-                                    <button class=\"btn-hover btn btn-primary\">  {{ news.nom }} </button>
+                                    <button class=\"btn-hover btn btn-primary task-item\">  {{ news.nom }} </button>
                                     <div class=\"popover-container container-admin\">
                                         <div class=\"card container-pop-up task-item\">
                                             {# <div class=\"card-header\"></div> #}

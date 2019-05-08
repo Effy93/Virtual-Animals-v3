@@ -131,12 +131,14 @@ class __TwigTemplate_2f94552e7597025fb2a69127f81665be0f96dbb8780436f96d0d4cdf5ba
         // line 21
         echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 21, $this->source); })()), "auteur", []), 'errors');
         echo "
-
+    ";
+        // line 23
+        echo "
     <button class=\"btn btn-lg btn-success\"> Publiez !</button>
 
     ";
-        // line 25
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 25, $this->source); })()), 'form_end');
+        // line 26
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 26, $this->source); })()), 'form_end');
         echo "
 </div>
 
@@ -161,7 +163,7 @@ class __TwigTemplate_2f94552e7597025fb2a69127f81665be0f96dbb8780436f96d0d4cdf5ba
 
     public function getDebugInfo()
     {
-        return array (  139 => 25,  132 => 21,  128 => 20,  124 => 19,  119 => 17,  115 => 16,  111 => 15,  106 => 13,  102 => 12,  98 => 11,  93 => 9,  90 => 8,  86 => 4,  77 => 3,  57 => 2,  27 => 1,);
+        return array (  141 => 26,  136 => 23,  132 => 21,  128 => 20,  124 => 19,  119 => 17,  115 => 16,  111 => 15,  106 => 13,  102 => 12,  98 => 11,  93 => 9,  90 => 8,  86 => 4,  77 => 3,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -187,6 +189,7 @@ class __TwigTemplate_2f94552e7597025fb2a69127f81665be0f96dbb8780436f96d0d4cdf5ba
     {{ form_label(newsForm.auteur) }}
     {{ form_widget(newsForm.auteur) }}
     {{ form_errors(newsForm.auteur) }}
+    {# {{ form_widget(newsForm.author) }} #}
 
     <button class=\"btn btn-lg btn-success\"> Publiez !</button>
 
