@@ -1,152 +1,150 @@
 {% extends 'private-space/layout.html.twig' %}
-
-{% block title %}
-{{parent()}}
-{% endblock %}
-
+{% block title %} {{parent()}} {% endblock %}
 {% block body %}
 {{parent()}}
-<main class="container-main">
-	<div class="container-row-reverse">
-<!-- INFOS USER -->
-		{# OPEN user info section #}
-		<section class="container-user-infos">
-			<h5> Mon compte </h5>
+{# ########################################################### #}
+{#            PRIVATE-PAGE : HOME - INFOS-USER                 #}
+{# ########################################################### #}
+    <main class="container-main">
+        <div class="container-row-reverse">
+    <!-- INFOS USER -->
+            {# OPEN user info section #}
+            <section class="container-user-infos">
+                <h5> Mon compte </h5>
+                {# bouton admin POP UP  #}
+{# ############################################################## #}
+{#                      DEV BUTTON - ROLE_ADMIN                   #}
+{# ############################################################## #}
+                {% if (is_granted('ROLE_ADMIN')) %}
+                    <div class="container-absolute">
+                        <div class="popover popover-right">
+                            <button class="btn-admin"> Admin </button>
+                            <div class="popover-container">
+                                <div class="card container-task">
+                                    <div class="card-header"> </div>
+                                    <div class="card-body">
+                                        {# <div class="container-column"> #}
+                                        <div class="container-task">
+                                            <h5> <a href="{{ path('home_admin') }}"> Évènement </a></h5>
+                                            <a href="{{ path('add_news') }}">
+                                                <button class="btn btn-success"> Add news </button> 
+                                            </a>
+                                        </div> 
+                                        <div class="container-task">
+                                            <h5> <a href="{{ path('home_admin') }}"> Proposer un nouveau monstre </a></h5>
+                                            <a href="{{ path('edit_monster') }}"> 
+                                                <button class="btn btn-success"> Edit </button> 
+                                            </a> 
+                                        </div> 
+                                        <div class="container-task">
+                                            <h5> Gestion des rôles  </h5>
+                                        </div>
+                                    </div>
+                                {# </div> #}
+                                </div>
+                                <div class="card-footer"> </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
 
-{# bouton admin POP UP  #}
-{% if (is_granted('ROLE_ADMIN')) %}
+                <img class="glowing-img shake" src="/images/logos/panda-feroce2.png" width="100px" heigth="100px" alt="avatar utilisateur" />
+                <h4> {{ app.user.nom }} </h4>
+                <p> Inscrit depuis le : <span style=color:orange;> {{ app.user.date|date('d-m-Y') }} </span></p>
+                <p> <span style=color:red;> {{ app.user.argent}} </span> Ruby </p>
+{# ############################################################## #}
+{#                      ANIMATE-BOX bestiaire                     #}
+{# ############################################################## #}
+                <div class="container-row">
+                    {# ANIMATE BORDER BOX CONTAINER #}
+                    <div class="animate-box">
+                        {# ANIMATE BORDER BOX => display Bestiary button #}
+                        <a href="{{path('bestiary')}}">
+                            <div class="animate-box-hidden">
+                                {# {% for nb in nbMonstre %}
+                                    <p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
+                                    {% endfor %} #}
+                                <p> 
+                                    <span style=color:orange;> {{ app.user.monstre.count }} </span> monstres 
+                                </p>
+                                <button>
+                                    <span>
+                                        <span>
+                                            <span data-attr-span="Bestiaire"> Bestiaire
+                                            </span>
+                                        </span>
+                                    </span>
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+{# ############################################################## #}
+{#                      ANIMATE-BOX inventaire                    #}
+{# ############################################################## #}
+                    {# ANIMATE BORDER BOX => display Inventory button #}
+                    <div class="animate-box">
+                        <a href="{{path('inventory')}}">
+                        <div class="animate-box-hidden">
+                            <p> <span style=color:orange;> {{ app.user.accessoire.count }} </span> accessoires </p>
+                            <button>
+                            <span>
+                                <span>
+                                <span data-attr-span="Inventaire"> Inventaire
+                                </span>
+                                </span>
+                            </span>
+                            </button>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            {# CLOSE user info section #}
+            </section>
+{# ############################################################## #}
+{#                           ANIMATE-BOX games                    #}
+{# ############################################################## #}
+    <!-- OUVERTURE CONTAINER DES JEUX  -->
+        <section class="container-games">
+            {# Si aucun jeu acheter #}
+            <h5> Mes Jeux </h5>
+            {% if (app.user.jeux.count == '0' ) %}
+                <p> Aucun jeux disponibles </p>
+                <div class="animate-box">
+                    <a href="{{ path('shop') }}">  
+                        <div class="animate-box-hidden">
+                            <p> <span style=color:orange;> <img class="glowing-img" src="/images/logos/red-panda-sad.png" width="100px" height="100px" alt="photo d'un panda triste, car aucun jeux n'est disponible !"/> </span>  </p>
+                            <button >
+                                <span>
+                                    <span>
+                                        <span data-attr-span="Go boutique"> Acheter des jeux    
+                                        </span>
+                                    </span>
+                                </span>
+                            </button>
+                        </div>
+                    </a>
+                </div>
+            {% endif %}
+    <!-- LISTE DES JEUX -->
+        <div class="games-list">
+                <ul>
+                    {% for jeux in app.user.jeux %}
+                        {% if (jeux.id == '1') %}
+                            <li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_ppc')}}"> {{ jeux.nom }}</a> </button> </li>
+                        {% endif %}
+                        {% if (jeux.id == '2') %}
+                            <li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_ttt')}}"> {{ jeux.nom }}</a> </button>  
+                            </br>[Bug a gerer]</li>
+                        {% endif %}
+                        {% if (jeux.id == '3') %}
+                            <li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_bb')}}"> {{ jeux.nom }}</a> </button> 
+                        {% endif %}
+                    {% endfor %}
+                        
+                </ul>
+        </div>
 
-<div class="container-absolute">
-		<div class="popover popover-right">
-				<button class="btn-admin"> Admin </button>
-				<div class="popover-container">
-					<div class="card container-task">
-						<div class="card-header">
-						</div>
-						<div class="card-body">
-
-								{# <div class="container-column"> #}
-										<div class="container-task">
-												<h5> <a href="{{ path('home_admin') }}"> Évènement </a>   </h5>
-												<a href="{{ path('add_news') }}"> <button class="btn btn-success"> Add news </button> </a>
-										</div> 
-										<div class="container-task">
-												<h5> <a href="{{ path('home_admin') }}"> Proposer un nouveau monstre </a></h5>
-												<a href="{{ path('edit_monster') }}"> <button class="btn btn-success"> Edit </button> </a> 
-										</div> 
-										<div class="container-task">
-												<h5> Gestion des rôles  </h5>
-											
-										</div>
-								</div>
-							{# </div> #}
-
-						</div>
-						<div class="card-footer">
-					
-						</div>
-					</div>
-				</div>
-			</div>
-{% endif %}
-
-
-
-
-
-
-
-			<img class="glowing-img shake" src="/images/logos/panda-feroce2.png" width="100px" heigth="100px" alt="avatar utilisateur" />
-			<h4> {{ app.user.nom }} </h4>
-			<p> Inscrit depuis le : <span style=color:orange;> {{ app.user.date|date('d-m-Y') }} </span></p>
-			<p> <span style=color:red;> {{ app.user.argent}} </span> Ruby </p>
-
-			<div class="container-row">
-				{# ANIMATE BORDER BOX CONTAINER #}
-			<div class="animate-box">
-					{# ANIMATE BORDER BOX => display Bestiary button #}
-					<a href="{{path('bestiary')}}">
-					<div class="animate-box-hidden">
-						{# {% for nb in nbMonstre %}
-							<p> <span style=color:orange;> {{ nb.monstre }} </span> monstres </p>
-							{% endfor %} #}
-						<p> <span style=color:orange;> {{ app.user.monstre.count }} </span> monstres </p>
-						<button>
-						<span>
-							<span>
-							<span data-attr-span="Bestiaire"> Bestiaire
-							</span>
-							</span>
-						</span>
-						</button>
-					</div>
-					</a>
-				</div>
-				{# ANIMATE BORDER BOX => display Inventory button #}
-				<div class="animate-box">
-					<a href="{{path('inventory')}}">
-					<div class="animate-box-hidden">
-						<p> <span style=color:orange;> {{ app.user.accessoire.count }} </span> accessoires </p>
-						<button>
-						<span>
-							<span>
-							<span data-attr-span="Inventaire"> Inventaire
-							</span>
-							</span>
-						</span>
-						</button>
-					</div>
-					</a>
-				</div>
-			</div>
-		{# CLOSE user info section #}
-		</section>
-
-<!-- OUVERTURE CONTAINER DES JEUX  -->
-    <section class="container-games">
-		{# Si aucun jeu acheter #}
-		<h5> Mes Jeux </h5>
-		{% if (app.user.jeux.count == '0' ) %}
-			<p> Aucun jeux disponibles </p>
-			<div class="animate-box">
-				<a href="{{ path('shop') }}">  
-					<div class="animate-box-hidden">
-						<p> <span style=color:orange;> <img class="glowing-img" src="/images/logos/red-panda-sad.png" width="100px" height="100px" alt="photo d'un panda triste, car aucun jeux n'est disponible !"/> </span>  </p>
-						<button >
-							<span>
-								<span>
-									<span data-attr-span="Go boutique"> Acheter des jeux 
-											
-									</span>
-								</span>
-							</span>
-						</button>
-					</div>
-				</a>
-			</div>
-		{% endif %}
-<!-- LISTE DES JEUX -->
-	  <div class="games-list">
-			<ul>
-				{% for jeux in app.user.jeux %}
-					{% if (jeux.id == '1') %}
-						<li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_ppc')}}"> {{ jeux.nom }}</a> </button> </li>
-					{% endif %}
-					{% if (jeux.id == '2') %}
-						<li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_ttt')}}"> {{ jeux.nom }}</a> </button>  
-						</br>[Bug a gerer]</li>
-					{% endif %}
-					{% if (jeux.id == '3') %}
-						<li> <button class="btn btn-primary btn-lg"> <a href="{{path('home_bb')}}"> {{ jeux.nom }}</a> </button> 
-					{% endif %}
-				{% endfor %}
-					
-			</ul>
-	  </div>
-
-	  {# Le main se ferme avec le footer #}
-			{# </main> #}
+        {# Le main se ferme avec le footer #}
+                {# </main> #}
 			
-
-
 {% endblock %}

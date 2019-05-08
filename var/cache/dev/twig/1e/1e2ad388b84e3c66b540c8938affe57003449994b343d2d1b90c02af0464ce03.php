@@ -73,7 +73,7 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
 
     }
 
-    // line 4
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -82,7 +82,7 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 5
+        // line 7
         echo "    ";
         $this->displayParentBlock("body", $context, $blocks);
         echo " 
@@ -90,41 +90,41 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
             <div class=\"container-row-reverse\"> 
                 <div class=\"container-news\">
                     ";
-        // line 10
+        // line 12
         echo "                    ";
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 11
+            // line 13
             echo "                        <div>
                             <a href=\"";
-            // line 12
+            // line 14
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_news");
             echo "\"> Publier une news <i class=\"icon icon-edit\"></i> </a>
                             <hr width=\"100%\">
                         </div>
                     ";
         }
-        // line 16
+        // line 18
         echo "
                     ";
-        // line 18
+        // line 20
         echo "                    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 18, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 20, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["article"]) {
-            // line 19
+            // line 21
             echo "                        <h4 class=\"glowing\"> ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "nom", []), "html", null, true);
             echo " </h4>
                         <p> ";
-            // line 20
+            // line 22
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "contenu", []), "html", null, true);
             echo " </p>
                         <p><i> ";
-            // line 21
+            // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "auteur", []), "html", null, true);
             echo " 
                             </br> ";
-            // line 22
+            // line 24
             echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "date", []), "d-m-Y"), "html", null, true);
             echo " 
                         </i></p>
@@ -134,13 +134,13 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['article'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 26
+        // line 28
         echo "                    ";
-        // line 27
+        // line 29
         echo "                    <div class=\"menu-paginator\">
                         ";
-        // line 28
-        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 28, $this->source); })()));
+        // line 30
+        echo $this->extensions['Knp\Bundle\PaginatorBundle\Twig\Extension\PaginationExtension']->render($this->env, (isset($context["pagination"]) || array_key_exists("pagination", $context) ? $context["pagination"] : (function () { throw new RuntimeError('Variable "pagination" does not exist.', 30, $this->source); })()));
         echo "
                     </div>
                 
@@ -151,9 +151,9 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
                     <p> Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient en fait des sections 1.10.32 et 1.10.33 du \"De Finibus Bonorum et Malorum\" (Des Suprêmes Biens et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la théorie de l'éthique. Les premières lignes du Lorem Ipsum, \"Lorem ipsum dolor sit amet...\", proviennent de la section 1.10.32. </p>   
                     
                     ";
-        // line 40
+        // line 42
         echo "                    ";
-        // line 44
+        // line 46
         echo "                </div>
             </div>
         </main>
@@ -179,15 +179,17 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
 
     public function getDebugInfo()
     {
-        return array (  157 => 44,  155 => 40,  143 => 28,  140 => 27,  138 => 26,  128 => 22,  124 => 21,  120 => 20,  115 => 19,  110 => 18,  107 => 16,  100 => 12,  97 => 11,  94 => 10,  86 => 5,  77 => 4,  57 => 2,  27 => 1,);
+        return array (  157 => 46,  155 => 42,  143 => 30,  140 => 29,  138 => 28,  128 => 24,  124 => 23,  120 => 22,  115 => 21,  110 => 20,  107 => 18,  100 => 14,  97 => 13,  94 => 12,  86 => 7,  77 => 3,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'home/layout.html.twig' %}
 {% block title %} {{parent()}} {% endblock %}
-
 {% block body %}
+{# ################################################################# #}
+{#                       HOME : RANDOM USER                          #}
+{# ################################################################# #}
     {{parent()}} 
         <main class=\"container-main\">
             <div class=\"container-row-reverse\"> 

@@ -31,6 +31,10 @@ class AdminController extends AbstractController
         return $this->render("admin/home_admin.html.twig");
     }
 
+
+    /******************************************************************************** */
+    /*                       DESIGNER TASK : Edit monster                             */
+    /******************************************************************************** */
     /**
      * @Route("/monstre/edit" , name="edit_monster")
      * @IsGranted("ROLE_DESIGNER") 
@@ -53,12 +57,14 @@ class AdminController extends AbstractController
             $gestionnaire->persist();
             $gestionnaire->flush();
         }
-
         // dd($formMonster);
         return $this->render("admin/add_monster.html.twig", [ 'monsterForm' => $formMonster->createView() ]);
-    
     }
 
+
+    /******************************************************************************** */
+    /*                      ADMIN & DESIGNER TASK : Add news                          */
+    /******************************************************************************** */
     /**
      * @Route("/news/add" , name="add_news")
      * @IsGranted("ROLE_DESIGNER") 
@@ -118,16 +124,14 @@ class AdminController extends AbstractController
         }
     }
 
-
     /**
      * @Route("/news/delete/{id}", name="delete_news", requirements={"id" : "\d+"})
      * @isGranted("ROLE_USER")
      */
-    public function removeArticle($id)
+    public function deletNews($id)
     {
         $gestionnaire = $this->getDoctrine()->getManager();
         $depot = $this->getDoctrine()->getRepository(Article::class)->find($id);
-        
         $gestionnaire->remove($depot);
         $gestionnaire->flush();
         $this->addFlash("success", "Cet article a bien été supprimé");

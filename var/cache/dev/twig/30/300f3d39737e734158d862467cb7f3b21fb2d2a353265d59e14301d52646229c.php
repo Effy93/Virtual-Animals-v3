@@ -53,7 +53,7 @@ class __TwigTemplate_a105097097352ef873f96c12dd0eb8dd19f6653016f0c72e31a5155b209
 
     }
 
-    // line 3
+    // line 2
     public function block_title($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -73,7 +73,7 @@ class __TwigTemplate_a105097097352ef873f96c12dd0eb8dd19f6653016f0c72e31a5155b209
 
     }
 
-    // line 5
+    // line 3
     public function block_body($context, array $blocks = [])
     {
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
@@ -82,83 +82,85 @@ class __TwigTemplate_a105097097352ef873f96c12dd0eb8dd19f6653016f0c72e31a5155b209
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
-        // line 6
+        // line 4
         $this->displayParentBlock("body", $context, $blocks);
         echo "
-
-    ";
+";
         // line 8
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 8, $this->source); })()), 'form_start');
+        echo "
+    ";
+        // line 9
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 9, $this->source); })()), 'form_start');
         echo "
 
-    ";
-        // line 10
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 10, $this->source); })()), "nom", []), 'label');
-        echo "
     ";
         // line 11
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 11, $this->source); })()), "nom", []), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 11, $this->source); })()), "nom", []), 'label');
+        echo "
+    ";
+        // line 12
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 12, $this->source); })()), "nom", []), 'widget');
         echo "
 
-    ";
-        // line 13
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 13, $this->source); })()), "description", []), 'label');
-        echo "
     ";
         // line 14
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 14, $this->source); })()), "description", []), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 14, $this->source); })()), "description", []), 'label');
+        echo "
+    ";
+        // line 15
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 15, $this->source); })()), "description", []), 'widget');
         echo "
 
-    ";
-        // line 16
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 16, $this->source); })()), "race", []), 'label');
-        echo "
     ";
         // line 17
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 17, $this->source); })()), "race", []), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 17, $this->source); })()), "race", []), 'label');
+        echo "
+    ";
+        // line 18
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 18, $this->source); })()), "race", []), 'widget');
         echo "
 
     ";
-        // line 19
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 19, $this->source); })()), "classe", []), 'label');
+        // line 20
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 20, $this->source); })()), "classe", []), 'label');
         echo "
     ";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 20, $this->source); })()), "classe", []), 'widget');
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 21, $this->source); })()), "classe", []), 'widget');
         echo "
         
     ";
-        // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 22, $this->source); })()), "element", []), 'label');
+        // line 23
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 23, $this->source); })()), "element", []), 'label');
         echo "
     ";
-        // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 23, $this->source); })()), "element", []), 'widget');
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 24, $this->source); })()), "element", []), 'widget');
         echo "
     
     ";
-        // line 25
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 25, $this->source); })()), "habitat", []), 'label');
+        // line 26
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 26, $this->source); })()), "habitat", []), 'label');
         echo "
     ";
-        // line 26
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 26, $this->source); })()), "habitat", []), 'widget');
+        // line 27
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 27, $this->source); })()), "habitat", []), 'widget');
         echo "  
     
     <div class=\"container-row-space\">
         ";
-        // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 29, $this->source); })()), "photo", []), 'label');
+        // line 30
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 30, $this->source); })()), "photo", []), 'label');
         echo "
         ";
-        // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 30, $this->source); })()), "photo", []), 'widget');
+        // line 31
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 31, $this->source); })()), "photo", []), 'widget');
         echo "
     </div>
    
     ";
-        // line 33
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 33, $this->source); })()), "termsAccepted", []), 'widget');
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 34, $this->source); })()), "termsAccepted", []), 'widget');
         echo " <a href=\"";
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ml");
         echo "\"> Mentions légales </a>
@@ -166,15 +168,10 @@ class __TwigTemplate_a105097097352ef873f96c12dd0eb8dd19f6653016f0c72e31a5155b209
     <button class=\"btn btn-lg btn-primary\"> Envoyez </button>
 
     ";
-        // line 37
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 37, $this->source); })()), 'form_end');
+        // line 38
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["monsterForm"]) || array_key_exists("monsterForm", $context) ? $context["monsterForm"] : (function () { throw new RuntimeError('Variable "monsterForm" does not exist.', 38, $this->source); })()), 'form_end');
         echo "
 </div>
-
-
-
-
-
 
 ";
         
@@ -197,17 +194,18 @@ class __TwigTemplate_a105097097352ef873f96c12dd0eb8dd19f6653016f0c72e31a5155b209
 
     public function getDebugInfo()
     {
-        return array (  170 => 37,  161 => 33,  155 => 30,  151 => 29,  145 => 26,  141 => 25,  136 => 23,  132 => 22,  127 => 20,  123 => 19,  118 => 17,  114 => 16,  109 => 14,  105 => 13,  100 => 11,  96 => 10,  91 => 8,  86 => 6,  77 => 5,  57 => 3,  27 => 1,);
+        return array (  172 => 38,  163 => 34,  157 => 31,  153 => 30,  147 => 27,  143 => 26,  138 => 24,  134 => 23,  129 => 21,  125 => 20,  120 => 18,  116 => 17,  111 => 15,  107 => 14,  102 => 12,  98 => 11,  93 => 9,  90 => 8,  86 => 4,  77 => 3,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'admin/home_admin.html.twig' %}
-
 {% block title %} {{parent()}} {% endblock %}
-
 {% block body %}
 {{parent()}}
+{# ########################################################################### #}
+{#                       FORMULAIRE : ajouter un monstre (no lien)             #}
+{# ########################################################################### #}
 
     {{ form_start(monsterForm) }}
 
@@ -240,11 +238,6 @@ class __TwigTemplate_a105097097352ef873f96c12dd0eb8dd19f6653016f0c72e31a5155b209
 
     {{ form_end(monsterForm) }}
 </div>
-
-
-
-
-
 
 {% endblock %}", "admin/add_monster.html.twig", "/Users/dwwm/Documents/Cours/6-Symfony_p/VA-Symfony/templates/admin/add_monster.html.twig");
     }

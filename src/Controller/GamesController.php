@@ -21,6 +21,9 @@ class GamesController extends AbstractController
         return $this->render('private-space/games/layout.html.twig');
     }
 
+    /******************************************************************************** */
+    /*                                GAME : Tic Tac Toe                              */
+    /******************************************************************************** */
     /**
      * @Route("/games/home/ttt", name="home_ttt")
      */
@@ -73,6 +76,10 @@ class GamesController extends AbstractController
         // }
     }
 
+
+    /******************************************************************************** */
+    /*                                GAME : Broken Brick                             */
+    /******************************************************************************** */
     /**
      * @Route("/games/home/bb", name="home_bb")
      */
@@ -96,7 +103,6 @@ class GamesController extends AbstractController
             $win = $request->request->get('request');
             // recupère le contenu du corp de la requete
             $win = json_decode($request->getContent());
-
             // gain ruby
             if ($win >= 10) {
                 // Va chercher l'argent actuel de l'utilisateur
@@ -115,6 +121,10 @@ class GamesController extends AbstractController
         // }
     }
 
+
+    /******************************************************************************** */
+    /*                      GAME : Pierre Papier Ciseaux                              */
+    /******************************************************************************** */
     /**
      * @Route("/games/home/ppc", name="home_ppc")
      */

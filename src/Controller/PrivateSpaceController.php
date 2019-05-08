@@ -30,6 +30,9 @@ class PrivateSpaceController extends AbstractController
         return $this->render("private-space/home_private.html.twig");
     }
 
+    /******************************************************************************** */
+    /*                                    BESTIARE                                    */
+    /******************************************************************************** */
     /**
      * @Route("/bestiary", name="bestiary")
      * @IsGranted("ROLE_USER")
@@ -39,6 +42,10 @@ class PrivateSpaceController extends AbstractController
         return $this->render("private-space/bestiary.html.twig");
     }
 
+
+    /******************************************************************************** */
+    /*                                  INVENTAIRE                                    */
+    /******************************************************************************** */
     /**
      * @Route("/inventory", name="inventory")
      */

@@ -30,6 +30,9 @@ class ShopController extends AbstractController
         return $this->render("shop/shop.html.twig",['monstres' => $monstres, 'jeux' => $jeux]);
     }
 
+    /******************************************************************************** */
+    /*                               SHOP : Monsters                                   */
+    /******************************************************************************** */
     /**
      * @Route("/buy/{id}", name="buy_monster", requirements={"id" : "\d+"})
      */
@@ -69,7 +72,9 @@ class ShopController extends AbstractController
         return $this->redirectToRoute("shop");
     }
 
-
+    /******************************************************************************** */
+    /*                                SHOP : Games                                    */
+    /******************************************************************************** */
     /**
      * @Route("/buy/game{id}", name="buy_game", requirements={"id" : "\d+"})
      * @IsGranted("ROLE_USER")

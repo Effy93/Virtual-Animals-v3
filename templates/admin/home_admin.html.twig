@@ -1,16 +1,19 @@
 {% extends 'admin/layout.html.twig' %}
-
 {% block title %} {{parent()}} {% endblock %}
-
 {% block body %} 
 {{parent()}}
+{# ########################################################################### #}
+{#                              HOME ADMIN : HOME BOARD                        #}
+{# ########################################################################### #}
 <header>
     <h1> HOME ADMIN BOARD </h1>
     <div class="container-column">
         <h5> {{ app.user.nom }} </h5>
     </div>
 </header>
-
+{# ########################################################################### #}
+{#                            HOME TASK : ADD NEWS                             #}
+{# ########################################################################### #}
 <main>
 <!-- Home : current route add_news --> 
     {% if app.request.attributes.get('_route') == 'add_news' %}
@@ -22,6 +25,9 @@
             <div class="container-row">
                 <div class="container-form">  
             {# </div>  #}
+{# ########################################################################### #}
+{#                           HOME TASK : EDIT MONSTER                          #}
+{# ########################################################################### #}           
 <!-- Home : current route => edit_monster-->  
     {% elseif app.request.attributes.get('_route') == 'edit_monster' %}
         <div class="container-admin">
@@ -33,11 +39,17 @@
             <div class="container-row">   
                 <div class="container-form">
             {# </div>  #}
+{# ########################################################################### #}
+{#                            HOME ADMIN : TASK                                #}
+{# ########################################################################### #}
 <!--  HOME ADMIN BOARD : current route => home -->
     {% else %}
     {% if (is_granted('ROLE_ADMIN')) %}
         <section class="container-row-space">
             {# <!--  DEV TASK BUTTON - POP UP  --> #}
+{# ########################################################################### #}
+{#                       HOME ADMIN : DEV TASK BUTTON                          #}
+{# ########################################################################### #}
             <article class=""> 
                 <div class="popover popover-bottom">
                     <h3 class="task-item"> 
@@ -76,6 +88,9 @@
                 </div>
             </article>
             {# </div>  #}
+{# ########################################################################### #}
+{#                       HOME ADMIN : GESTION USER TASK                        #}
+{# ########################################################################### #}
             {# <!-- GESTION ROLES --> #}
             <article>
                 <div class="container-task">
@@ -89,6 +104,9 @@
             </article>
         </section>
         {% endif %}
+{# ########################################################################### #}
+{#                    HOME DESIGNER : GESTION NEWS TASK                           #}
+{# ########################################################################### #}
         {# <!-- GESTION DES ARTICLES --> #}
         <section class="container-add-news">
             <div class="container-admin"> 
@@ -153,7 +171,10 @@
                     {% endfor %}
                 </div>
             </div>
-        </section>        
+        </section>
+{# ########################################################################### #}
+{#                 HOME ADMIN : GESTION MONSTER TASK                           #}
+{# ########################################################################### #}        
         {# <!-- GESTION DES MONSTRES --> #}
         <section>
             <div class="container-task">

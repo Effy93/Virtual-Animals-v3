@@ -57,15 +57,7 @@ class HomeController extends AbstractController
         ]);
     }
 
-    // public function displayHome()
-    // {
-    //     $articleDepot = $this->getDoctrine()->getRepository(Article::class);
-    //     $article = $articleDepot->findAll() ;
-    //     return $this->render("home/home.html.twig", array('article' =>$article));
-    // }
-
-
-     /**
+    /**
      * @Route("/conditions" , name="ml")
      */
     public function displayTermsConditions()

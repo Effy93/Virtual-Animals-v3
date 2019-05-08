@@ -1,9 +1,10 @@
 {% extends 'admin/home_admin.html.twig' %}
-
 {% block title %} {{parent()}} {% endblock %}
-
 {% block body %}
 {{parent()}}
+{# ########################################################################### #}
+{#                  FORMULAIRE : Ajouter une news (entité Article)             #}
+{# ########################################################################### #}
 
     {{ form_start(newsForm) }}
 
@@ -23,9 +24,5 @@
 
     {{ form_end(newsForm) }}
 </div>
-
-
-
-
 
 {% endblock %}

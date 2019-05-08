@@ -1,9 +1,10 @@
 {% extends 'admin/home_admin.html.twig' %}
-
 {% block title %} {{parent()}} {% endblock %}
-
 {% block body %}
 {{parent()}}
+{# ########################################################################### #}
+{#                       FORMULAIRE : ajouter un monstre (no lien)             #}
+{# ########################################################################### #}
 
     {{ form_start(monsterForm) }}
 
@@ -36,10 +37,5 @@
 
     {{ form_end(monsterForm) }}
 </div>
-
-
-
-
-
 
 {% endblock %}

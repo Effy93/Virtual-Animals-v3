@@ -1,9 +1,12 @@
 {% extends 'admin/layout.html.twig' %}
 {% block title %} {{parent()}} {% endblock %}
 {% block body %} 
-    {{parent()}}
+{{parent()}}
+{# ########################################################################### #}
+{#                  FORMULAIRE : Delete une news (entité Article)             #}
+{# ########################################################################### #}
     <header>
-        <h5> Modifier un article</h5>
+        <h5> Editer avant suppression de l'article </h5>
     </header>
     <div class="container-admin">
         <h5> Modifier un évènement  </h5>
@@ -23,10 +26,9 @@
             {{ form_widget(newsForm.auteur) }}
             {{ form_errors(newsForm.auteur) }}
 
-
             <input class="btn btn-success" type="submit" value="Publiez !">
             {{ form_end(newsForm) }}
         </div>
     </div>
-    {# </div> #}
+
 {% endblock %}

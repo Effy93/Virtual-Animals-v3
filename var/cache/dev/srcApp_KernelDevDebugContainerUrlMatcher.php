@@ -80,7 +80,7 @@ class srcApp_KernelDevDebugContainerUrlMatcher extends Symfony\Bundle\FrameworkB
             149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception::cssAction'], ['token'], null, null, false, false, null]],
             159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
             194 => [[['_route' => 'edit_news', '_controller' => 'App\\Controller\\AdminController::editNews'], ['id'], null, null, false, true, null]],
-            214 => [[['_route' => 'delete_news', '_controller' => 'App\\Controller\\AdminController::removeArticle'], ['id'], null, null, false, true, null]],
+            214 => [[['_route' => 'delete_news', '_controller' => 'App\\Controller\\AdminController::deletNews'], ['id'], null, null, false, true, null]],
             241 => [[['_route' => 'buy_monster', '_controller' => 'App\\Controller\\ShopController::buyMonster'], ['id'], null, null, false, true, null]],
             258 => [[['_route' => 'buy_game', '_controller' => 'App\\Controller\\ShopController::buyGame'], ['id'], null, null, false, true, null]],
             294 => [[['_route' => 'fos_js_routing_js', '_controller' => 'fos_js_routing.controller::indexAction', '_format' => 'js'], ['_format'], ['GET' => 0], null, false, true, null]],
