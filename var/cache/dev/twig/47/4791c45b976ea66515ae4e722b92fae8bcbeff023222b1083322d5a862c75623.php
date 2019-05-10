@@ -242,10 +242,10 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                                             ";
                 // line 134
                 echo "                                            <div class=\"card-body container-task\">
-                                                <p class=\"\">";
+                                                <p class=\"\"> \"... ";
                 // line 135
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "contenu", []), "html", null, true);
-                echo "  </p>
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["news"], "breve", []), "html", null, true);
+                echo " ...\" </p>
                                                 ";
                 // line 145
                 echo "                                            </div>
@@ -483,7 +483,7 @@ class __TwigTemplate_cae26d34be9f119b58166a2baa11a2d4e6b642eae5f43bf35bb8ec81079
                                         <div class=\"card container-pop-up task-item\">
                                             {# <div class=\"card-header\"></div> #}
                                             <div class=\"card-body container-task\">
-                                                <p class=\"\">{{ news.contenu }}  </p>
+                                                <p class=\"\"> \"... {{ news.breve }} ...\" </p>
                                                 {# <ul>
                                                     <li> PV : {{ monstre.classe.pv }} </li>
                                                     <li> MP : {{ monstre.classe.mp }} </li>

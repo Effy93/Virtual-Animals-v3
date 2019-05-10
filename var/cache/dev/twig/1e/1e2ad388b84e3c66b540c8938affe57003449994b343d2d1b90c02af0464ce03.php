@@ -115,10 +115,10 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
             echo "                        <h4 class=\"glowing\"> ";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "nom", []), "html", null, true);
             echo " </h4>
-                        <p> ";
+                        <p> \"... ";
             // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "contenu", []), "html", null, true);
-            echo " </p>
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "breve", []), "html", null, true);
+            echo " ...\" </p>
                         <p><i> ";
             // line 23
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["article"], "auteur", []), "html", null, true);
@@ -205,7 +205,7 @@ class __TwigTemplate_8f10be012eaa1b2bb9c873ee808d76ad561043f78c494992ffcc58322b9
                     {# Affichage des article paginé par 4 #}
                     {% for article in pagination %}
                         <h4 class=\"glowing\"> {{ article.nom }} </h4>
-                        <p> {{ article.contenu }} </p>
+                        <p> \"... {{ article.breve }} ...\" </p>
                         <p><i> {{ article.auteur }} 
                             </br> {{ article.date|date('d-m-Y') }} 
                         </i></p>

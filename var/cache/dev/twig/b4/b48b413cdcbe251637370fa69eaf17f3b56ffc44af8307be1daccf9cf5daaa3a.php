@@ -123,35 +123,48 @@ class __TwigTemplate_042705dc16cfe2c19d65c05ed5656cd5ea77407ef985606d27521b7398d
 
             ";
         // line 25
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 25, $this->source); })()), "contenu", []), 'label');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 25, $this->source); })()), "breve", []), 'label');
         echo "
             ";
         // line 26
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 26, $this->source); })()), "contenu", []), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 26, $this->source); })()), "breve", []), 'widget');
         echo "
             ";
         // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 27, $this->source); })()), "contenu", []), 'errors');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 27, $this->source); })()), "breve", []), 'errors');
         echo "
 
             ";
         // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 29, $this->source); })()), "auteur", []), 'label');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 29, $this->source); })()), "contenu", []), 'label');
         echo "
             ";
         // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 30, $this->source); })()), "auteur", []), 'widget');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 30, $this->source); })()), "contenu", []), 'widget');
         echo "
             ";
         // line 31
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 31, $this->source); })()), "auteur", []), 'errors');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 31, $this->source); })()), "contenu", []), 'errors');
+        echo "
+
+            ";
+        // line 33
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 33, $this->source); })()), "auteur", []), 'label');
+        echo "
+            ";
+        // line 34
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 34, $this->source); })()), "auteur", []), 'widget');
+        echo "
+            ";
+        // line 35
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 35, $this->source); })()), "auteur", []), 'errors');
         echo "
 
 
             <input class=\"btn btn-success\" type=\"submit\" value=\"Publiez !\">
             ";
-        // line 35
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 35, $this->source); })()), 'form_end');
+        // line 39
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["newsForm"]) || array_key_exists("newsForm", $context) ? $context["newsForm"] : (function () { throw new RuntimeError('Variable "newsForm" does not exist.', 39, $this->source); })()), 'form_end');
         echo "
         </div>
     </div>
@@ -176,7 +189,7 @@ class __TwigTemplate_042705dc16cfe2c19d65c05ed5656cd5ea77407ef985606d27521b7398d
 
     public function getDebugInfo()
     {
-        return array (  154 => 35,  147 => 31,  143 => 30,  139 => 29,  134 => 27,  130 => 26,  126 => 25,  121 => 23,  117 => 22,  113 => 21,  108 => 20,  98 => 12,  92 => 8,  88 => 4,  77 => 3,  57 => 2,  27 => 1,);
+        return array (  167 => 39,  160 => 35,  156 => 34,  152 => 33,  147 => 31,  143 => 30,  139 => 29,  134 => 27,  130 => 26,  126 => 25,  121 => 23,  117 => 22,  113 => 21,  108 => 20,  98 => 12,  92 => 8,  88 => 4,  77 => 3,  57 => 2,  27 => 1,);
     }
 
     public function getSourceContext()
@@ -204,6 +217,10 @@ class __TwigTemplate_042705dc16cfe2c19d65c05ed5656cd5ea77407ef985606d27521b7398d
             {{ form_label(newsForm.nom) }}
             {{ form_widget(newsForm.nom) }}
             {{ form_errors(newsForm.nom) }}
+
+            {{ form_label(newsForm.breve) }}
+            {{ form_widget(newsForm.breve) }}
+            {{ form_errors(newsForm.breve) }}
 
             {{ form_label(newsForm.contenu) }}
             {{ form_widget(newsForm.contenu) }}

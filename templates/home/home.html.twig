@@ -19,7 +19,7 @@
                     {# Affichage des article paginé par 4 #}
                     {% for article in pagination %}
                         <h4 class="glowing"> {{ article.nom }} </h4>
-                        <p> {{ article.contenu }} </p>
+                        <p> "... {{ article.breve }} ..." </p>
                         <p><i> {{ article.auteur }} 
                             </br> {{ article.date|date('d-m-Y') }} 
                         </i></p>

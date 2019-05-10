@@ -50,6 +50,11 @@ class Article
      */
     private $author;
 
+    /**
+     * @ORM\Column(type="string", length=60, nullable=true)
+     */
+    private $breve;
+
     public function __construct()
     {
         $this->date = new \DateTime();
@@ -118,6 +123,18 @@ class Article
     public function setAuthor(?User $author): self
     {
         $this->author = $author;
+
+        return $this;
+    }
+
+    public function getBreve(): ?string
+    {
+        return $this->breve;
+    }
+
+    public function setBreve(?string $breve): self
+    {
+        $this->breve = $breve;
 
         return $this;
     }

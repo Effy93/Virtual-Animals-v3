@@ -17,8 +17,10 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('nom', TextType::class)
+            ->add('breve', TextType::class)
             ->add('contenu', TextareaType::class)
             ->add('auteur', TextType::class)
+            
             // ->add('date')
             // ->add('author')
         ;
