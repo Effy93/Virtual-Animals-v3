@@ -8,3 +8,6 @@ Configuration du fichier .env
 
 Tapez : ```php bin/console server:run```
 
+## Pour acceder a l'appli depuis mon mobile
+Tapez : `php bin/console server:run 192.XXXX`
+remplacez les XX par votre IP
