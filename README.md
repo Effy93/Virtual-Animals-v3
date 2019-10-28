@@ -6,6 +6,14 @@ Virtual Animals exportée sur symfony
 ## Présentation du projet
 
 ### Fonctionnalités
+## Espace personnel
+<img class="logo" src="https://user-images.githubusercontent.com/40206938/67709616-94f99d80-f9be-11e9-942b-ed378fc15e4a.png" alt="Espace personnel du compte admin" width="100%" height="100%">
+
+## Jeux
+
+## Boutique
+
+## Fonctionnalités d'adminastration : les news 
 
 ## Mise en route
 ### Base de donnée à prévoir
@@ -19,4 +27,4 @@ Tapez : ```php bin/console server:run```
 Tapez : `php bin/console server:run 192.XXXX`
 remplacez les XX par votre IP
 
-<img class="logo" src="https://user-images.githubusercontent.com/40206938/67709616-94f99d80-f9be-11e9-942b-ed378fc15e4a.png" alt="Espace personnel du compte admin" width="100%" height="100%">
+
