@@ -12,6 +12,12 @@ A terme l'idée est de faire un système de combat entre les monstres...
 
 ## Fonctionnalités
 ### Espace personnel
+Dans l'espace personnel, propre à chaque utilisateur, on trouve :
+- Les informations personnel de l'utilisateur connecté : Pseudo, date d'inscription, nombre de ruby ect ...
+- Les jeux possédés par l'utilisateur connecté
+- Les monstres, quant à eux, son accessibles depuis l'onglet 'bestiaire'
+- Les accessoires seront disponibles depuis l'onglet 'inventaire'
+
 <img class="logo" src="https://user-images.githubusercontent.com/40206938/67709616-94f99d80-f9be-11e9-942b-ed378fc15e4a.png" alt="Espace personnel du compte admin" width="100%" height="100%">
 
 ### Jeux
@@ -22,8 +28,10 @@ A terme l'idée est de faire un système de combat entre les monstres...
 
 <img class="logo" src="https://user-images.githubusercontent.com/40206938/67712081-924d7700-f9c3-11e9-83af-1bc328c2b0b1.png" alt="Espace personnel du compte admin" width="100%" height="100%">
 
-
 ### Boutique
+Une boutique personnelle à chaque utilisateur est disponbile et propose les monstres et jeux non encore possédés par l'utilisateur connecté.
+<img class="logo" src="https://user-images.githubusercontent.com/40206938/67712574-8a420700-f9c4-11e9-8d4d-4aca0da3d5ef.png" alt="Espace personnel du compte admin" width="100%" height="100%">
+
 
 ### Fonctionnalités d'adminastration : les news 
 
