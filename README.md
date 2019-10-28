@@ -15,6 +15,13 @@ A terme l'idée est de faire un système de combat entre les monstres...
 <img class="logo" src="https://user-images.githubusercontent.com/40206938/67709616-94f99d80-f9be-11e9-942b-ed378fc15e4a.png" alt="Espace personnel du compte admin" width="100%" height="100%">
 
 ### Jeux
+3 jeux sont actuellement disponibles :
+- Pierre Papier Ciseaux : Mythique jeu du pierre feuille ciseaux. Disponible gratuitement dans la boutique !
+- Tic Tac Toe : le classique jeu du morpion. A l'origine codé en JavaScript, j'ai choisi de le passer en simple formulaire sous la version 3. Disponible à l'achat dans la boutique
+- Broken Brick : un jeu de casse brique codé en CANVA. Disponible à l'achat dans la boutique
+
+<img class="logo" src="https://user-images.githubusercontent.com/40206938/67712081-924d7700-f9c3-11e9-83af-1bc328c2b0b1.png" alt="Espace personnel du compte admin" width="100%" height="100%">
+
 
 ### Boutique
 
