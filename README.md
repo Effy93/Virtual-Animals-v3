@@ -34,6 +34,11 @@ Une boutique personnelle à chaque utilisateur est disponbile et propose les mon
 
 
 ### Fonctionnalités d'adminastration : les news 
+Afin d'avertir les utilisateurs des nouveautés de la plateforme, un sytème d'articles 'news' à été mis en place. L'écriture, la modification et la suppression de ses articles sont reservés aux administrateurs.
+Seule la lecture des ses news est disponible pour tout ulisateurs (connectés ou non) dans l'accueil.
+
+<img class="logo" src="https://user-images.githubusercontent.com/40206938/67713283-d0e43100-f9c5-11e9-87fd-489462a36f6c.png" alt="Espace personnel du compte admin" width="100%" height="100%">
+
 
 ## Mise en route
 ### Base de donnée à prévoir
